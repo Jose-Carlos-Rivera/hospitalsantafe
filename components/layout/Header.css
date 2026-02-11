@@ -12,11 +12,11 @@
 }
 
 .header__container {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
-    justify-content: space-between;
     height: var(--header-height-mobile);
-    gap: var(--space-4);
+    gap: var(--space-6);
 }
 
 /* --- Logo --- */
@@ -68,6 +68,7 @@
     display: none;
     gap: var(--space-1);
     align-items: center;
+    justify-content: center;
 }
 
 .nav__link,
@@ -148,7 +149,6 @@
     display: none;
     align-items: center;
     gap: var(--space-3);
-    margin-left: auto;
     flex-shrink: 0;
 }
 

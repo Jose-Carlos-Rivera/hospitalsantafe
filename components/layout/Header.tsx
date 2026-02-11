@@ -50,16 +50,8 @@ export default function Header() {
   return (
     <header className="header">
       <div className="header__container container">
-        {/* Logo - Hidden initially on home, visible on scroll */}
-        <Link
-          href="/"
-          className="header__logo"
-          style={{
-            opacity: isScrolled ? 1 : 0,
-            pointerEvents: isScrolled ? 'auto' : 'none',
-            transition: 'opacity 0.3s ease-in-out'
-          }}
-        >
+        {/* Logo - Always visible */}
+        <Link href="/" className="header__logo">
           <div className="logo">
             <div className="logo__image">
               <img src="/images/ultimologo.svg" alt="Hospital Santa Fe" width="180" height="60" style={{ objectFit: 'contain' }} />

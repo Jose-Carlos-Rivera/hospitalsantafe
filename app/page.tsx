@@ -6,11 +6,6 @@ export default function Home() {
     <>
       {/* Hero Section con Onda Decorativa */}
       <section className="hero-wave">
-        {/* Logo — top-left, half size */}
-        <div className="hero-logo">
-          <img src="/images/logo-para-hero.svg" alt="Hospital Santa Fe Logo" />
-        </div>
-
         <div className="hero-wave__content container">
           <div className="hero-wave__text">
             <div className="hero-glass-card">
