@@ -1,0 +1,203 @@
+.footer {
+    background: linear-gradient(135deg, var(--color-primary-900) 0%, var(--color-primary-700) 100%);
+    color: var(--color-white);
+    margin-top: var(--space-20);
+}
+
+.footer__main {
+    padding-top: var(--space-16);
+    padding-bottom: var(--space-12);
+}
+
+.footer__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+}
+
+.footer__column {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+/* --- Logo --- */
+.footer__logo {
+    display: inline-flex;
+    align-items: center;
+    color: var(--color-white);
+    text-decoration: none;
+    transition: transform var(--transition-fast);
+    margin-bottom: var(--space-2);
+}
+
+.footer__logo:hover {
+    transform: scale(1.02);
+}
+
+.footer__logo .logo__icon {
+    width: 36px;
+    height: 36px;
+    color: var(--color-primary-100);
+}
+
+.footer__logo .logo__name {
+    color: var(--color-primary-100);
+}
+
+.footer__logo .logo__subtitle {
+    color: var(--color-white);
+}
+
+.footer__tagline {
+    font-size: var(--text-lg);
+    font-weight: var(--font-medium);
+    color: var(--color-primary-100);
+    font-style: italic;
+    margin-bottom: 0;
+}
+
+.footer__description {
+    font-size: var(--text-sm);
+    color: var(--color-primary-100);
+    opacity: 0.9;
+    margin-bottom: 0;
+    max-width: 300px;
+}
+
+/* --- Titles --- */
+.footer__title {
+    font-size: var(--text-lg);
+    font-weight: var(--font-semibold);
+    color: var(--color-white);
+    margin-bottom: var(--space-3);
+}
+
+/* --- Links --- */
+.footer__links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.footer__links a {
+    color: var(--color-primary-100);
+    text-decoration: none;
+    font-size: var(--text-sm);
+    transition: all var(--transition-fast);
+    display: inline-block;
+}
+
+.footer__links a:hover {
+    color: var(--color-white);
+    padding-left: var(--space-2);
+}
+
+/* --- Contact --- */
+.footer__contact {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.footer__contact li {
+    display: flex;
+    gap: var(--space-3);
+    align-items: flex-start;
+    margin-bottom: 0;
+}
+
+.footer__contact svg {
+    flex-shrink: 0;
+    color: var(--color-primary-100);
+    margin-top: 2px;
+}
+
+.footer__contact div {
+    font-size: var(--text-sm);
+    color: var(--color-primary-100);
+    line-height: 1.6;
+}
+
+.footer__contact a {
+    color: var(--color-primary-100);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+    display: block;
+}
+
+.footer__contact a:hover {
+    color: var(--color-white);
+}
+
+/* --- Bottom Bar --- */
+.footer__bottom {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: var(--space-4) 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer__bottom-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    align-items: center;
+    text-align: center;
+}
+
+.footer__copyright {
+    font-size: var(--text-sm);
+    color: var(--color-primary-100);
+    margin: 0;
+}
+
+.footer__legal {
+    display: flex;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer__legal a {
+    font-size: var(--text-sm);
+    color: var(--color-primary-100);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.footer__legal a:hover {
+    color: var(--color-white);
+    text-decoration: underline;
+}
+
+/* --- Responsive --- */
+@media (min-width: 640px) {
+    .footer__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .footer__bottom-content {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+}
+
+@media (min-width: 1024px) {
+    .footer__grid {
+        grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    }
+
+    .footer__main {
+        padding-top: var(--space-20);
+        padding-bottom: var(--space-16);
+    }
+}
