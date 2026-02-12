@@ -3,6 +3,7 @@
 import { useState, useMemo } from 'react';
 import SectionSearch from '@/components/common/SectionSearch';
 import ScrollReveal from '@/components/common/ScrollReveal';
+import { normalizeText } from '@/lib/data/search-index';
 import type { EstudioImagen } from '@/lib/data/estudios-imagen';
 
 interface Props {
@@ -15,15 +16,15 @@ export default function EstudiosGrid({ estudios }: Props) {
   const [searchQuery, setSearchQuery] = useState('');
 
   const filtered = useMemo(() => {
-    const q = searchQuery.toLowerCase().trim();
+    const q = normalizeText(searchQuery);
     if (!q) return estudios;
     return estudios.filter(
       (est) =>
-        est.nombre.toLowerCase().includes(q) ||
-        est.descripcion.toLowerCase().includes(q) ||
-        est.descripcionLarga.toLowerCase().includes(q) ||
-        (est.indicaciones && est.indicaciones.some((i) => i.toLowerCase().includes(q))) ||
-        (est.tipos && est.tipos.some((t) => t.nombre.toLowerCase().includes(q) || t.descripcion.toLowerCase().includes(q)))
+        normalizeText(est.nombre).includes(q) ||
+        normalizeText(est.descripcion).includes(q) ||
+        normalizeText(est.descripcionLarga).includes(q) ||
+        (est.indicaciones && est.indicaciones.some((i) => normalizeText(i).includes(q))) ||
+        (est.tipos && est.tipos.some((t) => normalizeText(t.nombre).includes(q) || normalizeText(t.descripcion).includes(q)))
     );
   }, [estudios, searchQuery]);
 

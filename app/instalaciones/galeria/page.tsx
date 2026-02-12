@@ -6,26 +6,28 @@ import Lightbox from '@/components/common/Lightbox';
 import '../instalaciones.css';
 
 const galeriaImages = [
-  { src: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&h=600&fit=crop&q=80', alt: 'Fachada del Hospital Santa Fe', categoria: 'instalaciones' },
-  { src: 'https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=800&h=600&fit=crop&q=80', alt: 'Recepción y sala de espera', categoria: 'instalaciones' },
-  { src: 'https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=800&h=600&fit=crop&q=80', alt: 'Habitación privada', categoria: 'habitaciones' },
-  { src: 'https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=800&h=600&fit=crop&q=80', alt: 'Área de cuneros', categoria: 'cuneros' },
-  { src: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&h=600&fit=crop&q=80', alt: 'Equipo médico moderno', categoria: 'equipos' },
-  { src: 'https://images.unsplash.com/photo-1581595220892-b0739db3ba8c?w=800&h=600&fit=crop&q=80', alt: 'Tecnología de diagnóstico', categoria: 'equipos' },
-  { src: 'https://images.unsplash.com/photo-1559757175-5700dde675bc?w=800&h=600&fit=crop&q=80', alt: 'Sala de cuneros neonatal', categoria: 'cuneros' },
-  { src: 'https://images.unsplash.com/photo-1504439468489-c8920d796a29?w=800&h=600&fit=crop&q=80', alt: 'Equipo de doctores', categoria: 'instalaciones' },
-  { src: 'https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?w=800&h=600&fit=crop&q=80', alt: 'Farmacia interna', categoria: 'instalaciones' },
-  { src: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=600&fit=crop&q=80', alt: 'Laboratorio clínico', categoria: 'equipos' },
-  { src: 'https://images.unsplash.com/photo-1516549655169-df83a0774514?w=800&h=600&fit=crop&q=80', alt: 'Habitación compartida', categoria: 'habitaciones' },
+  { src: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&h=600&fit=crop&q=80', alt: 'Fachada principal del Hospital Santa Fe', categoria: 'instalaciones' },
+  { src: 'https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=800&h=600&fit=crop&q=80', alt: 'Recepción y sala de espera principal', categoria: 'instalaciones' },
+  { src: 'https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=800&h=600&fit=crop&q=80', alt: 'Habitación privada - Vista general', categoria: 'habitaciones' },
+  { src: 'https://images.unsplash.com/photo-1516549655169-df83a0774514?w=800&h=600&fit=crop&q=80', alt: 'Habitación Suite - Espacio amplio', categoria: 'habitaciones' },
+  { src: 'https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=800&h=600&fit=crop&q=80', alt: 'Área de cuneros neonatales', categoria: 'maternidad' },
+  { src: 'https://images.unsplash.com/photo-1559757175-5700dde675bc?w=800&h=600&fit=crop&q=80', alt: 'Cunero - Cuidados del recién nacido', categoria: 'maternidad' },
+  { src: 'https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=800&h=600&fit=crop&q=80', alt: 'Área de maternidad', categoria: 'maternidad' },
+  { src: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&h=600&fit=crop&q=80', alt: 'Equipo de radiología', categoria: 'equipos' },
+  { src: 'https://images.unsplash.com/photo-1581595220892-b0739db3ba8c?w=800&h=600&fit=crop&q=80', alt: 'Equipo de ultrasonido', categoria: 'equipos' },
   { src: 'https://images.unsplash.com/photo-1551190822-a9ce113ac100?w=800&h=600&fit=crop&q=80', alt: 'Quirófano equipado', categoria: 'equipos' },
+  { src: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=600&fit=crop&q=80', alt: 'Laboratorio clínico', categoria: 'equipos' },
+  { src: 'https://images.unsplash.com/photo-1504439468489-c8920d796a29?w=800&h=600&fit=crop&q=80', alt: 'Equipo médico del hospital', categoria: 'instalaciones' },
+  { src: 'https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?w=800&h=600&fit=crop&q=80', alt: 'Farmacia interna', categoria: 'instalaciones' },
+  { src: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&h=600&fit=crop&q=80', alt: 'Cafetería Del Buen Comer', categoria: 'instalaciones' },
 ];
 
 const categorias = [
   { id: 'todas', label: 'Todas' },
   { id: 'instalaciones', label: 'Instalaciones' },
   { id: 'habitaciones', label: 'Habitaciones' },
+  { id: 'maternidad', label: 'Maternidad' },
   { id: 'equipos', label: 'Equipos' },
-  { id: 'cuneros', label: 'Cuneros' },
 ];
 
 export default function GaleriaPage() {
@@ -74,6 +76,11 @@ export default function GaleriaPage() {
             ))}
           </div>
 
+          <p style={{ textAlign: 'center', fontSize: 'var(--text-sm)', color: 'var(--color-neutral-500)', marginBottom: 'var(--space-6)' }}>
+            Mostrando {filteredImages.length} {filteredImages.length === 1 ? 'foto' : 'fotos'}
+            {filtro !== 'todas' ? ` de ${categorias.find(c => c.id === filtro)?.label}` : ''}
+          </p>
+
           <div className="galeria-grid">
             {filteredImages.map((img, index) => (
               <div key={index} className="galeria-item" onClick={() => openLightbox(index)}>
@@ -85,10 +92,15 @@ export default function GaleriaPage() {
                     <line x1="11" y1="8" x2="11" y2="14" />
                     <line x1="8" y1="11" x2="14" y2="11" />
                   </svg>
+                  <span style={{ color: 'white', fontSize: 'var(--text-sm)', marginTop: '8px' }}>{img.alt}</span>
                 </div>
               </div>
             ))}
           </div>
+
+          <p style={{ textAlign: 'center', fontSize: 'var(--text-sm)', color: 'var(--color-neutral-500)', marginTop: 'var(--space-8)' }}>
+            Próximamente más fotos de nuestras instalaciones y servicios.
+          </p>
         </div>
       </section>
 

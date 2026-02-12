@@ -1,5 +1,5 @@
 /* ============================================
-   MATERNIDAD PAGE STYLES
+   MATERNIDAD PAGE STYLES — ROSA THEME
    ============================================ */
 
 /* --- Hero Maternidad --- */
@@ -72,14 +72,14 @@
 .benefit-card:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-lg);
-    border-color: var(--color-primary-300);
+    border-color: var(--color-rosa-200);
 }
 
 .benefit-icon {
     margin-bottom: var(--space-3);
     display: flex;
     justify-content: center;
-    color: var(--color-primary-500);
+    color: var(--color-rosa-600);
 }
 
 .benefit-icon svg {
@@ -127,14 +127,14 @@
 }
 
 .package-card--featured {
-    border: 3px solid var(--color-primary-500);
+    border: 3px solid var(--color-rosa-500);
 }
 
 .package-badge {
     position: absolute;
     top: var(--space-4);
     right: var(--space-4);
-    background: var(--color-accent-500);
+    background: var(--color-rosa-600);
     color: var(--color-white);
     padding: var(--space-2) var(--space-4);
     border-radius: var(--radius-full);
@@ -144,7 +144,7 @@
 }
 
 .package-card__header {
-    background: linear-gradient(135deg, var(--color-primary-500) 0%, var(--color-primary-700) 100%);
+    background: linear-gradient(135deg, var(--color-rosa-500) 0%, var(--color-rosa-700) 100%);
     color: var(--color-white);
     padding: var(--space-8) var(--space-6);
     text-align: center;
@@ -193,7 +193,7 @@
 .package-card__content h4 {
     font-size: var(--text-lg);
     font-weight: var(--font-semibold);
-    color: var(--color-primary-700);
+    color: var(--color-rosa-700);
     margin-bottom: var(--space-4);
 }
 
@@ -218,12 +218,12 @@
     content: '✓';
     position: absolute;
     left: 0;
-    color: var(--color-success);
+    color: var(--color-rosa-500);
     font-weight: var(--font-bold);
 }
 
 .package-card__footer {
-    background: var(--color-neutral-50);
+    background: var(--color-rosa-50);
     padding: var(--space-4) var(--space-6);
     text-align: center;
     font-size: var(--text-sm);
@@ -256,12 +256,12 @@
     gap: var(--space-3);
     padding: var(--space-3);
     border-radius: var(--radius-md);
-    background: var(--color-primary-50);
+    background: var(--color-rosa-50);
 }
 
 .payment-feature svg {
     flex-shrink: 0;
-    color: var(--color-primary-500);
+    color: var(--color-rosa-600);
     margin-top: 2px;
 }
 
@@ -277,22 +277,22 @@
 }
 
 .room-card {
-    background: linear-gradient(135deg, var(--color-primary-50) 0%, var(--color-white) 100%);
+    background: linear-gradient(135deg, var(--color-rosa-50) 0%, var(--color-white) 100%);
     padding: var(--space-8) var(--space-6);
     border-radius: var(--radius-lg);
-    border: 2px solid var(--color-primary-100);
+    border: 2px solid var(--color-rosa-100);
     transition: all var(--transition-base);
     text-align: center;
 }
 
 .room-card:hover {
     transform: translateY(-4px);
-    border-color: var(--color-primary-500);
+    border-color: var(--color-rosa-500);
     box-shadow: var(--shadow-lg);
 }
 
 .room-card--featured {
-    border-color: var(--color-primary-500);
+    border-color: var(--color-rosa-500);
     border-width: 3px;
 }
 
@@ -300,7 +300,7 @@
     display: flex;
     justify-content: center;
     margin-bottom: var(--space-4);
-    color: var(--color-primary-500);
+    color: var(--color-rosa-600);
 }
 
 .room-icon svg {
@@ -310,7 +310,7 @@
 .room-card h3 {
     font-size: var(--text-2xl);
     font-weight: var(--font-bold);
-    color: var(--color-primary-700);
+    color: var(--color-rosa-700);
     margin-bottom: var(--space-2);
 }
 
@@ -346,14 +346,14 @@
     transform: translateY(-50%);
     width: 6px;
     height: 6px;
-    background: var(--color-primary-500);
+    background: var(--color-rosa-500);
     border-radius: 50%;
 }
 
 .room-price {
     font-size: var(--text-sm);
     font-weight: var(--font-semibold);
-    color: var(--color-primary-700);
+    color: var(--color-rosa-700);
     margin: 0;
 }
 
@@ -402,7 +402,7 @@
     content: '+';
     font-size: var(--text-2xl);
     font-weight: var(--font-bold);
-    color: var(--color-primary-500);
+    color: var(--color-rosa-500);
     transition: transform var(--transition-fast);
     flex-shrink: 0;
 }
@@ -423,7 +423,7 @@
 
 /* --- CTA Final --- */
 .cta-final {
-    background: linear-gradient(135deg, var(--color-primary-500) 0%, var(--color-primary-700) 100%);
+    background: linear-gradient(135deg, var(--color-rosa-500) 0%, var(--color-rosa-700) 100%);
     color: var(--color-white);
     padding: var(--space-16) 0;
 }
@@ -435,7 +435,7 @@
 }
 
 .cta-final .text-neutral {
-    color: var(--color-primary-50);
+    color: var(--color-rosa-100);
 }
 
 .cta-buttons {

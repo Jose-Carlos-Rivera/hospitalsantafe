@@ -2,6 +2,14 @@ import { especialidades } from './especialidades';
 import { categoriasPaquetes } from './paquetes';
 import { estudiosImagen } from './estudios-imagen';
 
+/**
+ * Normalize text for accent-insensitive search.
+ * Strips diacritics (é→e, ñ→n, etc.) and lowercases.
+ */
+export function normalizeText(text: string): string {
+  return text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
+}
+
 export type SearchCategory = 'especialidad' | 'paquete' | 'estudio' | 'pagina' | 'instalacion';
 
 export interface SearchItem {
@@ -180,7 +188,7 @@ export function getSearchIndex(): SearchItem[] {
  */
 export function searchAll(query: string): SearchItem[] {
   const index = getSearchIndex();
-  const q = query.toLowerCase().trim();
+  const q = normalizeText(query);
 
   if (!q) return [];
 
@@ -191,24 +199,24 @@ export function searchAll(query: string): SearchItem[] {
 
   for (const item of index) {
     let score = 0;
-    const titleLower = item.title.toLowerCase();
-    const descLower = item.description.toLowerCase();
+    const titleNorm = normalizeText(item.title);
+    const descNorm = normalizeText(item.description);
 
     for (const term of terms) {
       // Title match (highest priority)
-      if (titleLower.includes(term)) {
+      if (titleNorm.includes(term)) {
         score += 10;
         // Bonus for exact start
-        if (titleLower.startsWith(term)) score += 5;
+        if (titleNorm.startsWith(term)) score += 5;
       }
 
-      // Keyword match
-      if (item.keywords.some(kw => kw.includes(term))) {
+      // Keyword match (keywords are already lowercase but may have accents)
+      if (item.keywords.some(kw => normalizeText(kw).includes(term))) {
         score += 5;
       }
 
       // Description match
-      if (descLower.includes(term)) {
+      if (descNorm.includes(term)) {
         score += 2;
       }
     }

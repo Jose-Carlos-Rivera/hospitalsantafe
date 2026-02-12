@@ -4,6 +4,7 @@ import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import SectionSearch from '@/components/common/SectionSearch';
 import ScrollReveal from '@/components/common/ScrollReveal';
+import { normalizeText } from '@/lib/data/search-index';
 import type { CategoriaPaquete } from '@/lib/data/paquetes';
 
 interface Props {
@@ -23,7 +24,7 @@ export default function PaquetesContent({ categoriasPaquetes }: Props) {
 
   // Filter categories and paquetes
   const filteredCategorias = useMemo(() => {
-    const q = searchQuery.toLowerCase().trim();
+    const q = normalizeText(searchQuery);
     if (!q) return categoriasPaquetes;
 
     return categoriasPaquetes
@@ -31,11 +32,11 @@ export default function PaquetesContent({ categoriasPaquetes }: Props) {
         ...cat,
         paquetes: cat.paquetes.filter(
           (paq) =>
-            paq.nombre.toLowerCase().includes(q) ||
-            (paq.descripcion && paq.descripcion.toLowerCase().includes(q)) ||
-            (paq.indicaciones && paq.indicaciones.some((i) => i.toLowerCase().includes(q))) ||
-            paq.incluye.some((i) => i.toLowerCase().includes(q)) ||
-            cat.nombre.toLowerCase().includes(q)
+            normalizeText(paq.nombre).includes(q) ||
+            (paq.descripcion && normalizeText(paq.descripcion).includes(q)) ||
+            (paq.indicaciones && paq.indicaciones.some((i) => normalizeText(i).includes(q))) ||
+            paq.incluye.some((i) => normalizeText(i).includes(q)) ||
+            normalizeText(cat.nombre).includes(q)
         ),
       }))
       .filter((cat) => cat.paquetes.length > 0);
@@ -66,7 +67,7 @@ export default function PaquetesContent({ categoriasPaquetes }: Props) {
             <ScrollReveal>
               <div className="paquete-maternidad-link" data-animate>
                 <p>Conoce todos los detalles de nuestros paquetes de maternidad, beneficios, tipos de habitaciones y preguntas frecuentes.</p>
-                <Link href="/maternidad" className="btn btn--primary">
+                <Link href="/maternidad" className="btn btn--rosa">
                   Ver paquetes de maternidad completos →
                 </Link>
               </div>

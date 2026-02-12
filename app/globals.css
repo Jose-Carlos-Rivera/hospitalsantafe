@@ -23,6 +23,15 @@
   --color-naranja-urgencias: #FF6B35;
   --color-azul-confianza: #4A90E2;
 
+  /* --- Maternidad Rosa Palette --- */
+  --color-rosa-50: #FDF2F8;
+  --color-rosa-100: #FCE7F3;
+  --color-rosa-200: #FBCFE8;
+  --color-rosa-500: #D4527B;
+  --color-rosa-600: #C2185B;
+  --color-rosa-700: #AD1457;
+  --color-rosa-900: #831843;
+
   /* --- Neutrales ---  */
   --color-neutral-900: #1a1a1a;
   --color-neutral-700: #404040;
@@ -367,6 +376,27 @@ strong {
 
 .btn--whatsapp:hover {
   background-color: var(--color-primary-700);
+  color: var(--color-white);
+}
+
+.btn--rosa {
+  background-color: var(--color-rosa-600);
+  color: var(--color-white);
+}
+
+.btn--rosa:hover {
+  background-color: var(--color-rosa-700);
+  color: var(--color-white);
+}
+
+.btn--rosa-outline {
+  background-color: transparent;
+  color: var(--color-rosa-600);
+  border: 2px solid var(--color-rosa-600);
+}
+
+.btn--rosa-outline:hover {
+  background-color: var(--color-rosa-600);
   color: var(--color-white);
 }
 

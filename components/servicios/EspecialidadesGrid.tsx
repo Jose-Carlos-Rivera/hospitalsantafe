@@ -4,6 +4,7 @@ import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import SectionSearch from '@/components/common/SectionSearch';
 import ScrollReveal from '@/components/common/ScrollReveal';
+import { normalizeText } from '@/lib/data/search-index';
 import type { Especialidad } from '@/lib/data/especialidades';
 
 interface Props {
@@ -16,13 +17,13 @@ export default function EspecialidadesGrid({ especialidades }: Props) {
   const [searchQuery, setSearchQuery] = useState('');
 
   const filtered = useMemo(() => {
-    const q = searchQuery.toLowerCase().trim();
+    const q = normalizeText(searchQuery);
     if (!q) return especialidades;
     return especialidades.filter(
       (esp) =>
-        esp.nombre.toLowerCase().includes(q) ||
-        esp.descripcion.toLowerCase().includes(q) ||
-        esp.servicios.some((s) => s.toLowerCase().includes(q))
+        normalizeText(esp.nombre).includes(q) ||
+        normalizeText(esp.descripcion).includes(q) ||
+        esp.servicios.some((s) => normalizeText(s).includes(q))
     );
   }, [especialidades, searchQuery]);
 
