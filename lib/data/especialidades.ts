@@ -259,23 +259,6 @@ export const especialidades: Especialidad[] = [
     urgencias: true
   },
   {
-    slug: "oftalmologia",
-    nombre: "Oftalmología",
-    descripcion: "Cuidado integral de la visión y tratamiento de enfermedades oculares.",
-    descripcionLarga: "El servicio de Oftalmología ofrece atención completa para la salud visual. Realizamos exámenes de la vista, diagnóstico de enfermedades oculares como glaucoma, cataratas y retinopatía diabética, así como procedimientos correctivos. Contamos con equipo de diagnóstico moderno para brindar atención de calidad.",
-    iconPath: "M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z",
-    imagen: "https://plus.unsplash.com/premium_photo-1661277714739-7586d07ae3a6?w=800&q=80",
-    servicios: [
-      "Examen de la vista",
-      "Diagnóstico de glaucoma",
-      "Cirugía de cataratas",
-      "Retinopatía diabética",
-      "Graduación de lentes",
-      "Tratamiento de ojo seco"
-    ],
-    horario: "Lunes a Viernes 10:00 - 17:00 | Previa cita"
-  },
-  {
     slug: "dermatologia",
     nombre: "Dermatología",
     subtitulo: "Resección de Lesiones en Piel",
@@ -331,23 +314,6 @@ export const especialidades: Especialidad[] = [
     urgencias: true
   },
   {
-    slug: "neumologia",
-    nombre: "Neumología",
-    descripcion: "Especialistas en enfermedades respiratorias y pulmonares.",
-    descripcionLarga: "Nuestros neumólogos diagnostican y tratan enfermedades del sistema respiratorio, desde asma y EPOC hasta neumonías complejas y trastornos del sueño. Contamos con espirometría y otros estudios funcionales para un diagnóstico preciso y un tratamiento efectivo.",
-    iconPath: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2a7.2 7.2 0 0 1-6-3.22c.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08a7.2 7.2 0 0 1-6 3.22z",
-    imagen: "https://images.unsplash.com/photo-1584555613497-9ecf9dd06f68?w=800&q=80",
-    servicios: [
-      "Espirometría",
-      "Tratamiento de asma",
-      "EPOC (enfermedad pulmonar obstructiva crónica)",
-      "Neumonía y bronquitis",
-      "Estudio de sueño",
-      "Rehabilitación pulmonar"
-    ],
-    horario: "Lunes a Viernes 10:00 - 18:00 | Previa cita"
-  },
-  {
     slug: "neurologia",
     nombre: "Neurología y Neurocirugía",
     descripcion: "Atención de migraña, tumores craneales, dolor de espalda, convulsiones y cirugía de columna.",
@@ -373,58 +339,6 @@ export const especialidades: Especialidad[] = [
       "Dolor de nervio ciático y espalda"
     ],
     horario: "Lunes a Viernes 10:00 - 17:00 | Previa cita"
-  },
-  {
-    slug: "psicologia",
-    nombre: "Psicología",
-    descripcion: "Atención de salud mental, terapia individual, de pareja y familiar.",
-    descripcionLarga: "Nuestro servicio de Psicología ofrece atención profesional para la salud mental y emocional. Brindamos terapia individual, de pareja y familiar, así como evaluaciones psicológicas y acompañamiento en situaciones de crisis. La salud mental es parte fundamental de la atención integral que ofrecemos en Hospital Santa Fe.",
-    iconPath: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z",
-    imagen: "https://plus.unsplash.com/premium_photo-1661320882811-a40dbe1a1ac9?w=800&q=80",
-    servicios: [
-      "Terapia individual",
-      "Terapia de pareja",
-      "Terapia familiar",
-      "Ansiedad y depresión",
-      "Manejo de estrés",
-      "Evaluación psicológica"
-    ],
-    horario: "Lunes a Viernes 9:00 - 19:00 | Previa cita"
-  },
-  {
-    slug: "nutriologia",
-    nombre: "Nutriología",
-    descripcion: "Planes de alimentación personalizados para una vida saludable.",
-    descripcionLarga: "El servicio de Nutriología ofrece planes alimentarios personalizados para todas las etapas de la vida. Nuestros nutriólogos atienden sobrepeso, obesidad, diabetes, embarazo, lactancia y necesidades nutricionales específicas. Trabajamos de la mano con otros especialistas para lograr resultados integrales en la salud del paciente.",
-    iconPath: "M18.06 22.99h1.66c.84 0 1.53-.64 1.63-1.46L23 5.05h-5V1h-1.97v4.05h-4.97l.3 2.34c1.71.47 3.31 1.32 4.27 2.26 1.44 1.42 2.43 2.89 2.43 5.29v8.05zM1 21.99V21h15.03v.99c0 .55-.45 1-1.01 1H2.01c-.56 0-1.01-.45-1.01-1zm15.03-7c0-4.58-6.54-5.63-8.5-5.94l.49 3.93L1 13.06V19h15.03v-4.01z",
-    imagen: "https://plus.unsplash.com/premium_photo-1661400208885-11a373dffc96?w=800&q=80",
-    servicios: [
-      "Plan alimentario personalizado",
-      "Control de peso (sobrepeso/obesidad)",
-      "Nutrición en embarazo y lactancia",
-      "Nutrición deportiva",
-      "Dietas para enfermedades crónicas",
-      "Educación nutricional"
-    ],
-    horario: "Lunes a Viernes 9:00 - 18:00 | Previa cita"
-  },
-  {
-    slug: "radiologia",
-    nombre: "Radiología e Imagen",
-    descripcion: "Estudios de imagen para diagnóstico preciso: rayos X, ultrasonido, radiografías digitales.",
-    descripcionLarga: "El departamento de Radiología e Imagen del Hospital Santa Fe cuenta con equipo moderno para realizar estudios diagnósticos de alta calidad. Ofrecemos rayos X digital, ultrasonido general y especializado, mastografía, radiografías digitales y electrocardiograma, con interpretación por radiólogos certificados y resultados oportunos para apoyar el diagnóstico de nuestros pacientes.",
-    iconPath: "M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H3V5h18v14zM5 15h14v3H5z",
-    imagen: "https://plus.unsplash.com/premium_photo-1683134713196-b2865a100c37?w=800&q=80",
-    servicios: [
-      "Rayos X digital",
-      "Ultrasonido general y especializado",
-      "Radiografías digitales",
-      "Mastografía",
-      "Electrocardiograma",
-      "Interpretación por radiólogos certificados",
-      "Resultados en 24-48 horas"
-    ],
-    horario: "Lunes a Viernes 7:00 - 20:00 | Sábado 8:00 - 14:00"
   },
   {
     slug: "cirugia-plastica",
@@ -474,23 +388,6 @@ export const especialidades: Especialidad[] = [
     horario: "Lunes a Viernes 10:00 - 18:00 | Previa cita"
   },
   {
-    slug: "oncologia",
-    nombre: "Oncología",
-    descripcion: "Detección temprana y tratamiento integral del cáncer.",
-    descripcionLarga: "El servicio de Oncología del Hospital Santa Fe se enfoca en la detección temprana, diagnóstico y tratamiento integral del cáncer. Nuestros oncólogos trabajan en equipo multidisciplinario para ofrecer opciones de tratamiento personalizadas, acompañamiento emocional y seguimiento continuo para cada paciente.",
-    iconPath: "M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z",
-    imagen: "https://plus.unsplash.com/premium_photo-1722945689852-0bcf3669b894?w=800&q=80",
-    servicios: [
-      "Detección temprana de cáncer",
-      "Biopsias y estudios diagnósticos",
-      "Plan de tratamiento personalizado",
-      "Coordinación multidisciplinaria",
-      "Seguimiento oncológico",
-      "Apoyo psicológico al paciente y familia"
-    ],
-    horario: "Lunes a Viernes 9:00 - 17:00 | Previa cita"
-  },
-  {
     slug: "nefrologia",
     nombre: "Nefrología",
     descripcion: "Especialistas en enfermedades del riñón y vías urinarias altas.",
@@ -506,23 +403,6 @@ export const especialidades: Especialidad[] = [
       "Valoración prediálisis"
     ],
     horario: "Lunes a Viernes 10:00 - 17:00 | Previa cita"
-  },
-  {
-    slug: "endocrinologia",
-    nombre: "Endocrinología",
-    descripcion: "Tratamiento de diabetes, tiroides y trastornos hormonales.",
-    descripcionLarga: "El servicio de Endocrinología se especializa en el diagnóstico y tratamiento de enfermedades hormonales y metabólicas. Nuestros endocrinólogos atienden diabetes, enfermedades de tiroides, obesidad, trastornos de crecimiento y alteraciones hormonales, ofreciendo tratamientos actualizados y seguimiento personalizado.",
-    iconPath: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z",
-    imagen: "https://images.unsplash.com/photo-1599814516324-66aa0bf16425?w=800&q=80",
-    servicios: [
-      "Control de diabetes tipo 1 y 2",
-      "Enfermedades de tiroides",
-      "Obesidad y síndrome metabólico",
-      "Trastornos hormonales",
-      "Osteoporosis",
-      "Alteraciones del crecimiento"
-    ],
-    horario: "Lunes a Viernes 10:00 - 18:00 | Previa cita"
   },
   // ===== NUEVAS ESPECIALIDADES =====
   {
@@ -540,8 +420,7 @@ export const especialidades: Especialidad[] = [
       "Circuncisión pediátrica",
       "Urgencias quirúrgicas pediátricas"
     ],
-    horario: "Lunes a Viernes 9:00 - 18:00 | Urgencias 24/7",
-    urgencias: true
+    horario: "Lunes a Viernes 9:00 - 18:00 | Previa cita"
   },
   {
     slug: "angiologia",

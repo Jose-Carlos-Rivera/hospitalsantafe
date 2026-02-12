@@ -2,6 +2,12 @@
    HOSPITAL SANTA FE - DESIGN SYSTEM
    ============================================ */
 
+/* Ocultar indicador "Rendering" de Next.js dev mode */
+[data-nextjs-toast],
+nextjs-portal {
+  display: none !important;
+}
+
 /* --------------------------------------------
    1. CUSTOM PROPERTIES (CSS VARIABLES)
    -------------------------------------------- */

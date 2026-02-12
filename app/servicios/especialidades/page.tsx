@@ -7,7 +7,7 @@ import '../servicios.css';
 
 export const metadata = {
   title: 'Especialidades Médicas',
-  description: 'Más de 26 especialidades médicas en Hospital Santa Fe. Medicina general, ginecología, pediatría, cardiología, traumatología, cirugía plástica, neurología y más en Zapotlanejo, Jalisco.',
+  description: '20 especialidades médicas en Hospital Santa Fe. Medicina general, ginecología, pediatría, cardiología, traumatología, cirugía plástica, neurología y más en Zapotlanejo, Jalisco.',
 };
 
 export default function EspecialidadesPage() {
@@ -24,7 +24,7 @@ export default function EspecialidadesPage() {
           </nav>
           <h1>Especialidades Médicas</h1>
           <p className="page-hero__subtitle">
-            Contamos con más de 26 especialidades médicas para atender todas tus necesidades de salud con médicos certificados y comprometidos.
+            Contamos con 20 especialidades médicas para atender todas tus necesidades de salud con médicos certificados y comprometidos.
           </p>
         </div>
       </section>
