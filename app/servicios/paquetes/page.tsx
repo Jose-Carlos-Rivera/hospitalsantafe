@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import ScrollReveal from '@/components/common/ScrollReveal';
+import VideoPlayer from '@/components/common/VideoPlayer';
 import PaquetesContent from '@/components/servicios/PaquetesContent';
 import { categoriasPaquetes } from '@/lib/data/paquetes';
 import '../servicios.css';
@@ -45,6 +46,13 @@ export default function PaquetesPage() {
       <section className="section">
         <div className="container">
           <PaquetesContent categoriasPaquetes={categoriasPaquetes} />
+
+          <ScrollReveal>
+            <div data-animate style={{ maxWidth: '600px', margin: 'var(--space-12) auto 0', textAlign: 'center' }}>
+              <h3 style={{ marginBottom: 'var(--space-4)', color: 'var(--color-primary-900)' }}>Conoce Nuestros Quirófanos</h3>
+              <VideoPlayer src="/videos/quirofanos.mp4" style={{ width: '100%', aspectRatio: '9/16', maxHeight: '500px' }} />
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 

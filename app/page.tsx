@@ -41,34 +41,34 @@ export default function Home() {
               <div className="hero-carousel__track">
                 <img src="/images/hospital/instalaciones/recepcion.webp" alt="Recepci&oacute;n del hospital" />
                 <img src="/images/hospital/instalaciones/quirofanos.webp" alt="Quir&oacute;fanos" />
-                <img src="/images/hospital/instalaciones/consultorios.webp" alt="Consultorios" />
+                <img src="/images/hospital/instalaciones/cuartos_1.webp" alt="Suite" />
                 <img src="/images/hospital/instalaciones/recepcion.webp" alt="Recepci&oacute;n del hospital" />
                 <img src="/images/hospital/instalaciones/quirofanos.webp" alt="Quir&oacute;fanos" />
-                <img src="/images/hospital/instalaciones/consultorios.webp" alt="Consultorios" />
+                <img src="/images/hospital/instalaciones/cuartos_1.webp" alt="Suite" />
               </div>
             </div>
 
             {/* Column 2 — scrolls UP */}
             <div className="hero-carousel__col hero-carousel__col--up">
               <div className="hero-carousel__track">
-                <img src="/images/hospital/instalaciones/cuartos.webp" alt="Habitaciones" />
-                <img src="/images/hospital/instalaciones/area-de-hospitalizacion.webp" alt="&Aacute;rea de hospitalizaci&oacute;n" />
+                <img src="/images/hospital/instalaciones/area-de-hospitalizacion_3.webp" alt="&Aacute;rea de cuneros" />
                 <img src="/images/hospital/instalaciones/cafeteria.webp" alt="Cafeter&iacute;a" />
-                <img src="/images/hospital/instalaciones/cuartos.webp" alt="Habitaciones" />
-                <img src="/images/hospital/instalaciones/area-de-hospitalizacion.webp" alt="&Aacute;rea de hospitalizaci&oacute;n" />
+                <img src="/images/hospital/instalaciones/cuartos_2.webp" alt="Mastersuite" />
+                <img src="/images/hospital/instalaciones/area-de-hospitalizacion_3.webp" alt="&Aacute;rea de cuneros" />
                 <img src="/images/hospital/instalaciones/cafeteria.webp" alt="Cafeter&iacute;a" />
+                <img src="/images/hospital/instalaciones/cuartos_2.webp" alt="Mastersuite" />
               </div>
             </div>
 
             {/* Column 3 — scrolls DOWN */}
             <div className="hero-carousel__col hero-carousel__col--down">
               <div className="hero-carousel__track">
-                <img src="/images/hospital/instalaciones/quirofanos_1.webp" alt="Quir&oacute;fanos equipados" />
-                <img src="/images/hospital/instalaciones/estacionamiento_1.webp" alt="Estacionamiento" />
-                <img src="/images/hospital/instalaciones/cuartos_1.webp" alt="Habitaciones suite" />
-                <img src="/images/hospital/instalaciones/quirofanos_1.webp" alt="Quir&oacute;fanos equipados" />
-                <img src="/images/hospital/instalaciones/estacionamiento_1.webp" alt="Estacionamiento" />
-                <img src="/images/hospital/instalaciones/cuartos_1.webp" alt="Habitaciones suite" />
+                <img src="/images/hospital/instalaciones/consultorios_1.webp" alt="Equipo m&eacute;dico" />
+                <img src="/images/hospital/instalaciones/area-de-hospitalizacion.webp" alt="&Aacute;rea de hospitalizaci&oacute;n" />
+                <img src="/images/hospital/instalaciones/area-de-hospitalizacion_5.webp" alt="Sala de espera" />
+                <img src="/images/hospital/instalaciones/consultorios_1.webp" alt="Equipo m&eacute;dico" />
+                <img src="/images/hospital/instalaciones/area-de-hospitalizacion.webp" alt="&Aacute;rea de hospitalizaci&oacute;n" />
+                <img src="/images/hospital/instalaciones/area-de-hospitalizacion_5.webp" alt="Sala de espera" />
               </div>
             </div>
           </div>
@@ -390,8 +390,8 @@ export default function Home() {
 
             <div className="instalacion-item" data-animate="scale-in">
               <img
-                src="/images/hospital/instalaciones/cuartos.webp"
-                alt="Habitaciones del hospital"
+                src="/images/hospital/instalaciones/cuartos_1.webp"
+                alt="Suite del Hospital Santa Fe"
               />
               <div className="instalacion-overlay">
                 <h4>Habitaciones Privadas</h4>
@@ -400,8 +400,8 @@ export default function Home() {
 
             <div className="instalacion-item" data-animate="scale-in">
               <img
-                src="/images/hospital/instalaciones/area-de-hospitalizacion_1.webp"
-                alt="&Aacute;rea de hospitalizaci&oacute;n"
+                src="/images/hospital/instalaciones/area-de-hospitalizacion_3.webp"
+                alt="&Aacute;rea de cuneros"
               />
               <div className="instalacion-overlay">
                 <h4>&Aacute;rea de Cuneros</h4>
@@ -410,8 +410,8 @@ export default function Home() {
 
             <div className="instalacion-item instalacion-item--wide" data-animate="scale-in">
               <img
-                src="/images/hospital/instalaciones/consultorios.webp"
-                alt="Consultorios del hospital"
+                src="/images/hospital/instalaciones/consultorios_1.webp"
+                alt="Equipo m&eacute;dico de alta tecnolog&iacute;a"
               />
               <div className="instalacion-overlay">
                 <h4>Tecnolog&iacute;a Moderna</h4>

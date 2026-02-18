@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import ScrollReveal from '@/components/common/ScrollReveal';
+import VideoPlayer from '@/components/common/VideoPlayer';
 import { getWhatsAppUrl } from '@/lib/data/navigation';
 import '../instalaciones.css';
 
@@ -25,7 +26,7 @@ const habitaciones = [
       'Llamado de enfermería 24 horas',
     ],
     featured: false,
-    imagen: '/images/hospital/instalaciones/cuartos.webp',
+    imagen: '/images/hospital/instalaciones/cuartos_2.webp',
     video: '/videos/habitacion-normal.mp4',
   },
   {
@@ -105,16 +106,17 @@ export default function Habitaciones() {
             {habitaciones.map((hab, index) => (
               <div key={index} className={`habitacion-card ${hab.featured ? 'featured' : ''}`} data-animate>
                 {hab.featured && <div className="habitacion-badge">La más exclusiva</div>}
-                <div className="habitacion-image">
-                  <img src={hab.imagen} alt={hab.nombre} />
-                </div>
-                {hab.video && (
-                  <div className="habitacion-video">
-                    <video controls preload="metadata" playsInline style={{ width: '100%', borderRadius: 'var(--radius-lg)' }}>
-                      <source src={hab.video} type="video/mp4" />
-                    </video>
+
+                {/* Media row: imagen horizontal izquierda + video vertical derecha */}
+                <div className="habitacion-media-row">
+                  <div className="habitacion-media-img">
+                    <img src={hab.imagen} alt={hab.nombre} />
                   </div>
-                )}
+                  {hab.video && (
+                    <VideoPlayer src={hab.video} className="habitacion-media-video" />
+                  )}
+                </div>
+
                 <div className="habitacion-info">
                   <h2>{hab.nombre}</h2>
                   <p className="habitacion-descripcion">{hab.descripcion}</p>

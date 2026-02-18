@@ -25,7 +25,7 @@
 /* Especialidades Grid */
 .especialidades-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: var(--space-6);
 }
 
@@ -37,6 +37,8 @@
     text-align: center;
     transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
     border-left: 3px solid transparent;
+    display: flex;
+    flex-direction: column;
 }
 
 .especialidad-card:hover {
@@ -69,17 +71,20 @@
 /* Especialidad Card Image */
 .especialidad-card__image {
     position: relative;
-    height: 180px;
     overflow: hidden;
     border-radius: var(--radius-xl) var(--radius-xl) 0 0;
     margin: calc(-1 * var(--space-8)) calc(-1 * var(--space-8)) 0;
     margin-bottom: var(--space-4);
+    background: var(--color-primary-50);
+    aspect-ratio: 3 / 4;
 }
 
 .especialidad-card__image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: top;
+    display: block;
     transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -112,6 +117,7 @@
 
 .especialidad-card__body {
     text-align: center;
+    flex: 1;
 }
 
 .especialidad-card__subtitulo {
@@ -126,7 +132,7 @@
     display: flex;
     justify-content: center;
     padding-top: var(--space-4);
-    margin-top: var(--space-4);
+    margin-top: auto;
     border-top: 1px solid var(--color-neutral-100);
 }
 
@@ -894,7 +900,7 @@
 
 .paquetes-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: var(--space-6);
 }
 
@@ -1078,7 +1084,7 @@
     }
 
     .especialidad-card__image {
-        height: 150px;
+        /* image shows fully — no height override needed */
     }
 
     .destacados-grid {
@@ -1584,4 +1590,60 @@
         align-items: stretch;
         text-align: center;
     }
+}
+
+/* ========================================
+   Paquete Card — Rosa variant (Maternidad)
+   ======================================== */
+.paquete-card--rosa {
+    border-color: var(--color-rosa-100);
+}
+
+.paquete-card--rosa:hover {
+    box-shadow: 0 12px 40px rgba(236, 72, 153, 0.12);
+    border-color: var(--color-rosa-300);
+}
+
+.paquete-card--rosa.paquete-card--destacado {
+    border-color: var(--color-rosa-400);
+}
+
+.paquete-card--rosa .paquete-card__badge {
+    background: var(--color-rosa-600);
+}
+
+.paquete-card--rosa .paquete-card__nombre {
+    color: var(--color-rosa-900);
+}
+
+.paquete-card--rosa .paquete-card__precio {
+    color: var(--color-rosa-600);
+}
+
+.paquete-card--rosa .paquete-card__indicaciones {
+    background: var(--color-rosa-50);
+}
+
+.paquete-card--rosa .paquete-card__indicaciones h4 {
+    color: var(--color-rosa-700);
+}
+
+.paquete-card--rosa .paquete-card__indicaciones li::before {
+    color: var(--color-rosa-600);
+}
+
+.paquete-card--rosa .paquete-card__incluye-title {
+    color: var(--color-rosa-900);
+}
+
+.paquete-card--rosa .paquete-card__lista li svg {
+    color: var(--color-rosa-600);
+}
+
+.paquete-card--rosa .btn--whatsapp {
+    background: var(--color-rosa-600);
+}
+
+.paquete-card--rosa .btn--whatsapp:hover {
+    background: var(--color-rosa-700);
 }

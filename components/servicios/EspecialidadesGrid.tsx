@@ -52,8 +52,8 @@ export default function EspecialidadesGrid({ especialidades }: Props) {
                 src={esp.imagen}
                 alt={esp.nombre}
                 width={400}
-                height={200}
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                height={530}
+                style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: esp.slug === 'cirugia-plastica' ? 'right top' : 'top' }}
               />
               {esp.urgencias && (
                 <span className="especialidad-card__urgencias-badge">

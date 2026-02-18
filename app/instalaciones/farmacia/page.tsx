@@ -105,7 +105,7 @@ export default function Farmacia() {
 
               <div className="farmacia-image">
                 <img
-                  src="https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?w=600&h=700&fit=crop"
+                  src="https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=600&h=700&fit=crop"
                   alt="Farmacia interna del Hospital Santa Fe"
                 />
               </div>

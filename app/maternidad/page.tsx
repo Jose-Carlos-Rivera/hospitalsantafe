@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import ScrollReveal from '@/components/common/ScrollReveal';
+import VideoPlayer from '@/components/common/VideoPlayer';
 import type { Metadata } from 'next';
 import { getWhatsAppUrl, PHONE_LANDLINE, PHONE_LANDLINE_DISPLAY } from '@/lib/data/navigation';
 import './page.css';
@@ -189,9 +189,15 @@ export default function MaternidadPage() {
                                     <li>Pañalera con pañales y lácteos</li>
                                 </ul>
 
-                                <Link href="/contacto" className="btn btn--primary" style={{ width: '100%', marginTop: 'var(--space-6)' }}>
+                                <a
+                                    href={getWhatsAppUrl('Hola, me interesa información sobre el Paquete de Parto Natural de $11,000')}
+                                    className="btn btn--rosa"
+                                    style={{ width: '100%', marginTop: 'var(--space-6)' }}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
                                     Solicitar información
-                                </Link>
+                                </a>
                             </div>
 
                             <div className="package-card__footer">
@@ -227,9 +233,15 @@ export default function MaternidadPage() {
                                     <li>Material quirúrgico desechable</li>
                                 </ul>
 
-                                <Link href="/contacto" className="btn btn--primary" style={{ width: '100%', marginTop: 'var(--space-6)' }}>
+                                <a
+                                    href={getWhatsAppUrl('Hola, me interesa información sobre el Paquete de Cesárea de $15,000')}
+                                    className="btn btn--rosa"
+                                    style={{ width: '100%', marginTop: 'var(--space-6)' }}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
                                     Solicitar información
-                                </Link>
+                                </a>
                             </div>
 
                             <div className="package-card__footer">
@@ -387,6 +399,18 @@ export default function MaternidadPage() {
                             <summary>¿Los ecosonogramas 3D/4D tienen costo adicional?</summary>
                             <p>Los ecosonogramas 2D de rutina están incluidos en las consultas prenatales. Los ecosonogramas 3D/4D/5D tienen precio especial para pacientes con paquete de maternidad. Consulta tarifas en tu cita prenatal.</p>
                         </details>
+                    </ScrollReveal>
+                </div>
+            </section>
+
+            {/* Video Cuneros */}
+            <section className="section" style={{ background: 'var(--color-rosa-50)' }}>
+                <div className="container">
+                    <ScrollReveal>
+                        <div data-animate style={{ maxWidth: '400px', margin: '0 auto', textAlign: 'center' }}>
+                            <h3 style={{ marginBottom: 'var(--space-4)', color: 'var(--color-rosa-700)' }}>Conoce Nuestros Cuneros</h3>
+                            <VideoPlayer src="/videos/cuneros.mp4" style={{ width: '100%', aspectRatio: '9/16' }} />
+                        </div>
                     </ScrollReveal>
                 </div>
             </section>

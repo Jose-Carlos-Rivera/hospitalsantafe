@@ -423,19 +423,18 @@
 
 /* --- CTA Final --- */
 .cta-final {
-    background: linear-gradient(135deg, var(--color-rosa-500) 0%, var(--color-rosa-700) 100%);
-    color: var(--color-white);
+    background: var(--color-white);
     padding: var(--space-16) 0;
 }
 
 .cta-final h2 {
     font-size: var(--text-4xl);
-    color: var(--color-white);
+    color: var(--color-rosa-700);
     margin-bottom: var(--space-4);
 }
 
 .cta-final .text-neutral {
-    color: var(--color-rosa-100);
+    color: var(--color-neutral-600);
 }
 
 .cta-buttons {

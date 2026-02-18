@@ -76,7 +76,7 @@ export default function PaquetesContent({ categoriasPaquetes }: Props) {
 
           <ScrollReveal stagger className="paquetes-grid">
             {categoria.paquetes.map((paquete) => (
-              <div key={paquete.id} className={`paquete-card ${paquete.destacado ? 'paquete-card--destacado' : ''}`} data-animate>
+              <div key={paquete.id} className={`paquete-card ${paquete.destacado ? 'paquete-card--destacado' : ''} ${categoria.id === 'maternidad' ? 'paquete-card--rosa' : ''}`} data-animate>
                 {paquete.destacado && (
                   <span className="paquete-card__badge">Más solicitado</span>
                 )}

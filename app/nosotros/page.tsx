@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import ScrollReveal from '@/components/common/ScrollReveal';
+import VideoPlayer from '@/components/common/VideoPlayer';
 import type { Metadata } from 'next';
 import './nosotros.css';
 
@@ -112,14 +113,25 @@ export default function Nosotros() {
             <section className="section video-section">
                 <div className="container">
                     <h2 className="text-center">Conoce Nuestras Instalaciones</h2>
-                    <ScrollReveal className="video-container">
-                        <div className="video-responsive" data-animate="scale-in">
-                            <iframe
-                                src="https://www.youtube.com/embed/XypKu8GZSv8"
-                                title="Hospital Santa Fe - Conoce nuestras instalaciones"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowFullScreen
-                            />
+
+                    <ScrollReveal stagger>
+                        <div className="nosotros-videos-grid" data-animate>
+                            <div className="nosotros-video-item">
+                                <VideoPlayer src="/videos/instalaciones.mp4" style={{ width: '100%', aspectRatio: '9/16' }} />
+                                <p className="nosotros-video-caption">Instalaciones</p>
+                            </div>
+                            <div className="nosotros-video-item">
+                                <VideoPlayer src="/videos/quirofanos.mp4" style={{ width: '100%', aspectRatio: '9/16' }} />
+                                <p className="nosotros-video-caption">Quirófanos</p>
+                            </div>
+                            <div className="nosotros-video-item">
+                                <VideoPlayer src="/videos/cuneros.mp4" style={{ width: '100%', aspectRatio: '9/16' }} />
+                                <p className="nosotros-video-caption">Cuneros</p>
+                            </div>
+                            <div className="nosotros-video-item">
+                                <VideoPlayer src="/videos/cafeteria.mp4" style={{ width: '100%', aspectRatio: '9/16' }} />
+                                <p className="nosotros-video-caption">Cafetería</p>
+                            </div>
                         </div>
                     </ScrollReveal>
                 </div>

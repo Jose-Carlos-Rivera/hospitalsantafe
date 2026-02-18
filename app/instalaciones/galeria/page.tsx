@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import VideoPlayer from '@/components/common/VideoPlayer';
 import Lightbox from '@/components/common/Lightbox';
 import '../instalaciones.css';
 
@@ -40,6 +41,13 @@ const galeriaImages = [
   { src: '/images/hospital/instalaciones/estacionamiento_3.webp', alt: 'Estacionamiento del hospital', categoria: 'instalaciones' },
 ];
 
+const galeriaVideos = [
+  { src: '/videos/instalaciones.mp4', label: 'Instalaciones', categoria: 'videos' },
+  { src: '/videos/quirofanos.mp4', label: 'Quirófanos', categoria: 'videos' },
+  { src: '/videos/cuneros.mp4', label: 'Cuneros', categoria: 'videos' },
+  { src: '/videos/cafeteria.mp4', label: 'Cafetería', categoria: 'videos' },
+];
+
 const categorias = [
   { id: 'todas', label: 'Todas' },
   { id: 'instalaciones', label: 'Instalaciones' },
@@ -47,6 +55,7 @@ const categorias = [
   { id: 'hospitalizacion', label: 'Hospitalización' },
   { id: 'habitaciones', label: 'Habitaciones' },
   { id: 'cafeteria', label: 'Cafetería' },
+  { id: 'videos', label: 'Videos' },
 ];
 
 export default function GaleriaPage() {
@@ -54,9 +63,13 @@ export default function GaleriaPage() {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentIdx, setCurrentIdx] = useState(0);
 
-  const filteredImages = filtro === 'todas'
-    ? galeriaImages
-    : galeriaImages.filter(img => img.categoria === filtro);
+  const filteredImages = filtro === 'todas' || filtro !== 'videos'
+    ? (filtro === 'todas' ? galeriaImages : galeriaImages.filter(img => img.categoria === filtro))
+    : [];
+
+  const filteredVideos = filtro === 'todas' || filtro === 'videos'
+    ? galeriaVideos
+    : [];
 
   const openLightbox = (index: number) => {
     setCurrentIdx(index);
@@ -96,7 +109,7 @@ export default function GaleriaPage() {
           </div>
 
           <p style={{ textAlign: 'center', fontSize: 'var(--text-sm)', color: 'var(--color-neutral-500)', marginBottom: 'var(--space-6)' }}>
-            Mostrando {filteredImages.length} {filteredImages.length === 1 ? 'foto' : 'fotos'}
+            Mostrando {filteredImages.length + filteredVideos.length} {filteredImages.length + filteredVideos.length === 1 ? 'elemento' : 'elementos'}
             {filtro !== 'todas' ? ` de ${categorias.find(c => c.id === filtro)?.label}` : ''}
           </p>
 
@@ -111,14 +124,32 @@ export default function GaleriaPage() {
                     <line x1="11" y1="8" x2="11" y2="14" />
                     <line x1="8" y1="11" x2="14" y2="11" />
                   </svg>
-                  <span style={{ color: 'white', fontSize: 'var(--text-sm)', marginTop: '8px' }}>{img.alt}</span>
                 </div>
               </div>
             ))}
           </div>
 
+          {/* Videos Grid */}
+          {filteredVideos.length > 0 && (
+            <>
+              {filteredImages.length > 0 && (
+                <h3 style={{ textAlign: 'center', marginTop: 'var(--space-12)', marginBottom: 'var(--space-6)', color: 'var(--color-primary-900)', fontSize: 'var(--text-xl)', fontWeight: 700 }}>
+                  Videos
+                </h3>
+              )}
+              <div className="galeria-videos-grid">
+                {filteredVideos.map((vid, index) => (
+                  <div key={index} className="galeria-video-item">
+                    <VideoPlayer src={vid.src} style={{ width: '100%', aspectRatio: '9/16' }} />
+                    <p className="galeria-video-caption">{vid.label}</p>
+                  </div>
+                ))}
+              </div>
+            </>
+          )}
+
           <p style={{ textAlign: 'center', fontSize: 'var(--text-sm)', color: 'var(--color-neutral-500)', marginTop: 'var(--space-8)' }}>
-            Próximamente más fotos de nuestras instalaciones y servicios.
+            Próximamente más fotos y videos de nuestras instalaciones y servicios.
           </p>
         </div>
       </section>

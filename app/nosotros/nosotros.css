@@ -203,6 +203,27 @@
     flex-wrap: wrap;
 }
 
+/* Videos Grid — Nosotros */
+.nosotros-videos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-6);
+    margin-top: var(--space-12);
+}
+
+.nosotros-video-item {
+    text-align: center;
+}
+
+.nosotros-video-caption {
+    font-size: var(--text-sm);
+    font-weight: 700;
+    color: var(--color-primary-900);
+    margin-top: var(--space-3);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
 /* Responsive */
 @media (max-width: 992px) {
     .content-split {
@@ -220,5 +241,16 @@
 
     .gallery-grid {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .nosotros-videos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .nosotros-videos-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-4);
     }
 }

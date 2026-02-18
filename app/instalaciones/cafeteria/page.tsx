@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import ScrollReveal from '@/components/common/ScrollReveal';
+import VideoPlayer from '@/components/common/VideoPlayer';
 import '../instalaciones.css';
 
 export const metadata: Metadata = {
@@ -36,9 +37,10 @@ export default function Cafeteria() {
                   src="/images/hospital/instalaciones/cafeteria.webp"
                   alt="Cafetería Del Buen Comer - Hospital Santa Fe"
                 />
-                <video controls preload="metadata" playsInline style={{ width: '100%', borderRadius: 'var(--radius-lg)', marginTop: 'var(--space-4)' }}>
-                  <source src="/videos/cafeteria.mp4" type="video/mp4" />
-                </video>
+                <VideoPlayer
+                  src="/videos/cafeteria.mp4"
+                  style={{ width: '100%', marginTop: 'var(--space-4)' }}
+                />
               </div>
 
               <div className="content-text">

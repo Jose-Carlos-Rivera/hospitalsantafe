@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import ScrollReveal from '@/components/common/ScrollReveal';
+import VideoPlayer from '@/components/common/VideoPlayer';
 import { getWhatsAppUrl } from '@/lib/data/navigation';
 import '../servicios.css';
 
@@ -144,12 +145,13 @@ export default function CunerosPage() {
 
             <div className="content-image">
               <img
-                src="/images/hospital/instalaciones/area-de-hospitalizacion_4.webp"
+                src="/images/hospital/instalaciones/area-de-hospitalizacion_3.webp"
                 alt="Cunero - Cuidado neonatal en Hospital Santa Fe"
               />
-              <video controls preload="metadata" playsInline style={{ width: '100%', borderRadius: 'var(--radius-lg)', marginTop: 'var(--space-4)' }}>
-                <source src="/videos/cuneros.mp4" type="video/mp4" />
-              </video>
+              <VideoPlayer
+                src="/videos/cuneros.mp4"
+                style={{ width: '100%', marginTop: 'var(--space-4)' }}
+              />
             </div>
           </div>
         </div>

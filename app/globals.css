@@ -716,3 +716,94 @@ a:focus-visible {
   outline-offset: 3px;
   border-radius: var(--radius-sm);
 }
+
+/* ============================================
+   VIDEO PLAYER - Global Play Overlay
+   ============================================ */
+
+.video-player {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: #000;
+  cursor: pointer;
+}
+
+.video-player video {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Dark overlay */
+.video-player__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 2;
+  cursor: pointer;
+  transition: background 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.video-player__overlay:hover {
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.video-player__overlay--hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Play button — large white circle with white triangle, like the reference */
+.video-player__play-btn {
+  width: 68px;
+  height: 68px;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.video-player__overlay:hover .video-player__play-btn {
+  transform: scale(1.12);
+  box-shadow: 0 6px 32px rgba(0, 0, 0, 0.45);
+  background: rgba(255, 255, 255, 1);
+}
+
+.video-player__play-btn svg {
+  width: 28px;
+  height: 28px;
+  color: var(--color-primary-700);
+  margin-left: 3px; /* Optical center for play triangle */
+}
+
+/* Label text below button */
+.video-player__label {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-white);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Responsive: bigger button on mobile */
+@media (max-width: 640px) {
+  .video-player__play-btn {
+    width: 60px;
+    height: 60px;
+  }
+  .video-player__play-btn svg {
+    width: 24px;
+    height: 24px;
+  }
+}

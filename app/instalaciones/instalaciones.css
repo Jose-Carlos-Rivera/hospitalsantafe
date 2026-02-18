@@ -26,7 +26,7 @@
 /* Habitaciones */
 .habitaciones-container {
     display: grid;
-    gap: var(--space-10);
+    gap: var(--space-8);
     margin-bottom: var(--space-12);
 }
 
@@ -35,10 +35,8 @@
     border-radius: var(--radius-2xl);
     box-shadow: var(--shadow-xl);
     overflow: hidden;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0;
     position: relative;
+    padding: var(--space-6);
 }
 
 .habitacion-card.featured {
@@ -58,52 +56,76 @@
     z-index: 2;
 }
 
-.habitacion-image {
-    height: 100%;
-    min-height: 400px;
+/* Media row: imagen horizontal izquierda + video vertical derecha */
+.habitacion-media-row {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    gap: var(--space-4);
+    margin-bottom: var(--space-4);
+    height: 350px;
 }
 
-.habitacion-image img {
+.habitacion-media-img {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.habitacion-media-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
+}
+
+/* Video player in habitaciones — uses global .video-player styles */
+.habitacion-media-video {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: #000;
+}
+
+.habitacion-media-video video {
+    object-fit: contain;
 }
 
 .habitacion-info {
-    padding: var(--space-10);
+    padding: var(--space-4) var(--space-2);
 }
 
 .habitacion-info h2 {
-    font-size: var(--text-3xl);
+    font-size: var(--text-2xl);
     font-weight: 800;
     color: var(--color-primary-900);
-    margin-bottom: var(--space-3);
+    margin-bottom: var(--space-2);
 }
 
-.habitacion-precio {
-    font-size: var(--text-2xl);
-    font-weight: 700;
-    color: var(--color-primary-600);
-    margin-bottom: var(--space-6);
+.habitacion-descripcion {
+    font-size: var(--text-base);
+    color: var(--color-neutral-600);
+    margin-bottom: var(--space-4);
+    line-height: 1.6;
 }
 
 .habitacion-info h3 {
-    font-size: var(--text-xl);
+    font-size: var(--text-lg);
     font-weight: 700;
     color: var(--color-primary-700);
-    margin: var(--space-6) 0 var(--space-4);
+    margin: var(--space-4) 0 var(--space-3);
 }
 
 .habitacion-info ul {
     list-style: none;
     padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
 }
 
 .habitacion-info li {
-    padding: var(--space-3);
-    font-size: var(--text-base);
+    padding: var(--space-2) var(--space-3);
+    font-size: var(--text-sm);
     color: var(--color-neutral-700);
-    border-bottom: 1px solid var(--color-neutral-300);
+    border-bottom: 1px solid var(--color-neutral-200);
     display: flex;
     align-items: center;
 }
@@ -112,8 +134,28 @@
     content: "✓";
     color: var(--color-primary-600);
     font-weight: 700;
-    margin-right: var(--space-3);
-    font-size: var(--text-lg);
+    margin-right: var(--space-2);
+    font-size: var(--text-base);
+}
+
+/* Mobile: stack media vertically */
+@media (max-width: 640px) {
+    .habitacion-media-row {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .habitacion-media-img {
+        height: 200px;
+    }
+
+    .habitacion-media-video {
+        height: 350px;
+    }
+
+    .habitacion-info ul {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Farmacia & Cafeteria */
@@ -445,11 +487,7 @@
 /* Responsive */
 @media (max-width: 992px) {
     .habitacion-card {
-        grid-template-columns: 1fr;
-    }
-
-    .habitacion-image {
-        min-height: 300px;
+        padding: var(--space-4);
     }
 
     .farmacia-content,
@@ -478,4 +516,56 @@
     .galeria-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* Galería Videos Grid */
+.galeria-videos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-6);
+}
+
+.galeria-video-item {
+    text-align: center;
+}
+
+.galeria-video-caption {
+    font-size: var(--text-sm);
+    font-weight: 700;
+    color: var(--color-primary-900);
+    margin-top: var(--space-3);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+@media (max-width: 992px) {
+    .galeria-videos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .galeria-videos-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-4);
+    }
+}
+
+/* CTA Instalaciones — white background */
+.instalaciones-cta {
+    background: var(--color-white);
+    padding: var(--space-16) 0;
+}
+
+.instalaciones-cta h2 {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 700;
+    color: var(--color-primary-900);
+    margin-bottom: var(--space-4);
+}
+
+.instalaciones-cta p {
+    font-size: var(--text-lg);
+    color: var(--color-neutral-600);
+    margin-bottom: var(--space-8);
 }

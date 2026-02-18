@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, type ReactNode } from 'react';
+import { useEffect, useRef, useCallback, type ReactNode } from 'react';
 
 interface ScrollRevealProps {
   children: ReactNode;
@@ -17,8 +17,9 @@ export default function ScrollReveal({
   ...props
 }: ScrollRevealProps) {
   const ref = useRef<HTMLDivElement>(null);
+  const observerRef = useRef<IntersectionObserver | null>(null);
 
-  useEffect(() => {
+  const observeElements = useCallback(() => {
     const el = ref.current;
     if (!el) return;
 
@@ -30,26 +31,38 @@ export default function ScrollReveal({
       return;
     }
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px',
-      }
-    );
+    if (!observerRef.current) {
+      observerRef.current = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observerRef.current?.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.1,
+          rootMargin: '0px 0px -50px 0px',
+        }
+      );
+    }
 
-    const animatedElements = el.querySelectorAll('[data-animate]');
-    animatedElements.forEach((child) => observer.observe(child));
-
-    return () => observer.disconnect();
+    // Observe any new elements that don't have is-visible yet
+    const animatedElements = el.querySelectorAll('[data-animate]:not(.is-visible)');
+    animatedElements.forEach((child) => observerRef.current!.observe(child));
   }, []);
+
+  // Initial observation
+  useEffect(() => {
+    observeElements();
+    return () => observerRef.current?.disconnect();
+  }, [observeElements]);
+
+  // Re-observe when children change (e.g. search filtering)
+  useEffect(() => {
+    observeElements();
+  }, [children, observeElements]);
 
   return (
     <Tag

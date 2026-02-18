@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import ScrollReveal from '@/components/common/ScrollReveal';
+import VideoPlayer from '@/components/common/VideoPlayer';
 import EspecialidadesGrid from '@/components/servicios/EspecialidadesGrid';
 import { especialidades } from '@/lib/data/especialidades';
 import { getWhatsAppUrl, PHONE_LANDLINE, PHONE_LANDLINE_DISPLAY } from '@/lib/data/navigation';
@@ -32,6 +33,13 @@ export default function EspecialidadesPage() {
       <section className="section">
         <div className="container">
           <EspecialidadesGrid especialidades={especialidades} />
+
+          <ScrollReveal>
+            <div data-animate style={{ maxWidth: '600px', margin: 'var(--space-12) auto 0', textAlign: 'center' }}>
+              <h3 style={{ marginBottom: 'var(--space-4)', color: 'var(--color-primary-900)' }}>Nuestros Quirófanos</h3>
+              <VideoPlayer src="/videos/quirofanos.mp4" style={{ width: '100%', aspectRatio: '9/16', maxHeight: '500px' }} />
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 

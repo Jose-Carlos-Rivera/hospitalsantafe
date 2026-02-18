@@ -26,7 +26,6 @@ export default function Footer() {
                                 className="footer__logo-img"
                             />
                         </Link>
-                        <p className="footer__tagline">Vivimos para servir</p>
                         <p className="footer__description">
                             Atención médica de calidad y personalizada desde 2003
                         </p>

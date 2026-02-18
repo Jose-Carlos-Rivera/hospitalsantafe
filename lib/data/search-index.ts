@@ -239,12 +239,10 @@ export function searchAll(query: string): SearchItem[] {
 export const popularSearches: { label: string; href: string }[] = [
   { label: 'Urgencias', href: '/contacto' },
   { label: 'Maternidad', href: '/maternidad' },
-  { label: 'Ginecología', href: '/servicios/especialidades/ginecologia-obstetricia' },
-  { label: 'Pediatría', href: '/servicios/especialidades/pediatria' },
+  { label: 'Especialidades', href: '/servicios/especialidades' },
   { label: 'Paquetes Quirúrgicos', href: '/servicios/paquetes' },
   { label: 'Estudios de Imagen', href: '/servicios/estudios-imagen' },
   { label: 'Habitaciones', href: '/instalaciones/habitaciones' },
-  { label: 'Cardiología', href: '/servicios/especialidades/cardiologia' },
-  { label: 'Traumatología', href: '/servicios/especialidades/traumatologia-ortopedia' },
+  { label: 'Instalaciones', href: '/instalaciones' },
   { label: 'Contacto', href: '/contacto' },
 ];
