@@ -145,7 +145,7 @@
 /* Estudios Grid */
 .estudios-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
     gap: var(--space-6);
     margin-bottom: var(--space-12);
 }
@@ -305,7 +305,7 @@
 /* Paquetes */
 .paquetes-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
     gap: var(--space-8);
     margin-bottom: var(--space-12);
 }
@@ -900,7 +900,7 @@
 
 .paquetes-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr));
     gap: var(--space-6);
 }
 
@@ -1646,4 +1646,174 @@
 
 .paquete-card--rosa .btn--whatsapp:hover {
     background: var(--color-rosa-700);
+}
+
+/* ========================================
+   Mobile-specific responsive fixes
+   ======================================== */
+
+@media (max-width: 640px) {
+    /* Heroes */
+    .servicios-hero {
+        padding: var(--space-12) 0 var(--space-8);
+    }
+
+    .servicios-hero h1 {
+        font-size: clamp(1.8rem, 6vw, 2.5rem);
+    }
+
+    .servicios-hero .lead {
+        font-size: var(--text-base);
+    }
+
+    .page-hero h1 {
+        font-size: clamp(1.5rem, 5vw, 2.5rem);
+    }
+
+    .page-hero__subtitle {
+        font-size: var(--text-base);
+    }
+
+    /* Content splits */
+    .content-split {
+        gap: var(--space-6);
+    }
+
+    .content-image {
+        height: 280px;
+    }
+
+    .content-text h2 {
+        font-size: clamp(1.4rem, 5vw, 2rem);
+    }
+
+    .content-text p {
+        font-size: var(--text-base);
+    }
+
+    /* Servicios lista */
+    .servicios-lista li {
+        font-size: var(--text-base);
+        padding: var(--space-2) 0;
+    }
+
+    /* Paquetes */
+    .paquete-header {
+        padding: var(--space-6);
+    }
+
+    .paquete-header h2 {
+        font-size: var(--text-2xl);
+    }
+
+    .paquete-precio-grande {
+        font-size: clamp(2rem, 8vw, 3rem);
+    }
+
+    .paquete-contenido {
+        padding: var(--space-6);
+    }
+
+    .paquete-contenido li {
+        font-size: var(--text-base);
+    }
+
+    .paquete-card {
+        padding: var(--space-6);
+    }
+
+    /* Especialidades */
+    .especialidades-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .especialidad-card {
+        padding: var(--space-6);
+    }
+
+    .especialidad-card__image {
+        margin: calc(-1 * var(--space-6)) calc(-1 * var(--space-6)) 0;
+    }
+
+    .especialidad-layout {
+        gap: var(--space-6);
+    }
+
+    .especialidad-info-card {
+        padding: var(--space-6);
+    }
+
+    /* Estudios */
+    .estudio-card {
+        padding: var(--space-6);
+    }
+
+    /* Info sections */
+    .info-adicional {
+        padding: var(--space-6);
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .highlight-box {
+        padding: var(--space-4);
+    }
+
+    /* CTA */
+    .cta-final {
+        padding: var(--space-12) 0;
+    }
+
+    .cta-final__content h2 {
+        font-size: clamp(1.3rem, 5vw, 2rem);
+    }
+
+    .cta-final__buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    /* Hub grids */
+    .servicio-hub-card {
+        padding: var(--space-6);
+    }
+
+    /* Payment */
+    .payment-method {
+        padding: var(--space-4);
+    }
+
+    /* Paquetes nav */
+    .paquetes-nav {
+        margin-bottom: var(--space-6);
+    }
+
+    .paquetes-nav__btn {
+        font-size: var(--text-xs);
+        padding: var(--space-2) var(--space-4);
+    }
+
+    /* Quick nav */
+    .paquetes-quick-nav__pill {
+        font-size: var(--text-xs);
+        padding: var(--space-1) var(--space-3);
+    }
+
+    /* Highlight section */
+    .highlight-price {
+        padding: var(--space-4);
+        min-width: 0;
+    }
+
+    .highlight-price__amount {
+        font-size: var(--text-2xl);
+    }
+
+    /* Maternidad link */
+    .paquete-maternidad-link {
+        padding: var(--space-4);
+        gap: var(--space-4);
+    }
 }

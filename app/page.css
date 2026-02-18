@@ -225,6 +225,39 @@
     }
 }
 
+@media (max-width: 640px) {
+    .hero-wave {
+        min-height: auto;
+        padding: var(--space-8) 0 var(--space-12);
+    }
+
+    .hero-glass-card {
+        padding: 24px 20px;
+    }
+
+    .hero-wave__title {
+        font-size: clamp(1.6rem, 6vw, 2.2rem);
+    }
+
+    .hero-wave__subtitle {
+        font-size: var(--text-base);
+        margin-bottom: var(--space-8);
+    }
+
+    .hero-badge {
+        font-size: var(--text-xs);
+        padding: var(--space-1) var(--space-3);
+    }
+
+    .hero-logo {
+        width: 60px;
+    }
+
+    .wave-shape {
+        height: 80px;
+    }
+}
+
 /* Wave Shape */
 .wave-shape {
     position: absolute;
@@ -303,6 +336,22 @@
     }
 }
 
+@media (max-width: 480px) {
+    .trust-bar {
+        padding: var(--space-6) 0;
+    }
+    .trust-bar__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-3);
+    }
+    .trust-bar__number {
+        font-size: var(--text-xl);
+    }
+    .trust-bar__label {
+        font-size: 0.65rem;
+    }
+}
+
 /* ========================================
    TESTIMONIALS
    ======================================== */
@@ -374,6 +423,46 @@
     .testimonials-grid {
         grid-template-columns: 1fr;
         max-width: 500px;
+    }
+}
+
+@media (max-width: 640px) {
+    .testimonials-section {
+        padding: var(--space-12) 0;
+    }
+
+    .testimonial-card {
+        padding: 24px;
+        border-radius: 16px;
+    }
+
+    .departments-modern {
+        padding: var(--space-12) 0;
+    }
+
+    .departments-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .department-card-modern {
+        padding: 28px 24px 24px;
+        border-radius: 16px;
+    }
+
+    .card-icon-wrapper {
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+    }
+
+    .doctors-section {
+        padding: var(--space-12) 0;
+    }
+
+    .doctors-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
     }
 }
 
@@ -702,6 +791,42 @@
     }
 }
 
+@media (max-width: 640px) {
+    .about-preview {
+        padding: var(--space-12) 0;
+    }
+
+    .about-image {
+        max-height: 300px;
+    }
+
+    .about-stats {
+        gap: var(--space-3);
+    }
+
+    .about-stat {
+        flex: 1;
+        min-width: 0;
+        padding: var(--space-3) var(--space-4);
+    }
+
+    .about-stat__number {
+        font-size: var(--text-xl);
+    }
+
+    .about-stat__label {
+        font-size: 0.65rem;
+    }
+
+    .about-content h2 {
+        font-size: clamp(1.5rem, 5vw, 2rem);
+    }
+
+    .about-content p {
+        font-size: var(--text-base);
+    }
+}
+
 /* ========================================
    DOCTORS — Soft Green Gradient + Glass Cards
    ======================================== */
@@ -930,6 +1055,40 @@
     }
 }
 
+@media (max-width: 640px) {
+    .maternidad-destacada {
+        padding: var(--space-12) 0;
+    }
+
+    .maternidad-image {
+        max-height: 300px;
+    }
+
+    .maternidad-content h2 {
+        font-size: clamp(1.5rem, 5vw, 2rem);
+    }
+
+    .paquete-mini {
+        padding: var(--space-4);
+    }
+
+    .paquete-precio {
+        font-size: var(--text-2xl);
+    }
+
+    .beneficio-item {
+        font-size: var(--text-base);
+    }
+
+    .instalaciones-preview {
+        padding: var(--space-12) 0;
+    }
+
+    .instalacion-item img {
+        height: 200px;
+    }
+}
+
 /* ========================================
    FACILITIES — Bento Grid + Glass Overlays
    ======================================== */
@@ -1045,6 +1204,14 @@
 
     .hero-wave__title {
         font-size: 2.5rem;
+    }
+
+    .cta-final {
+        padding: var(--space-12) 0;
+    }
+
+    .cta-final__content h2 {
+        font-size: clamp(1.4rem, 5vw, 2rem);
     }
 }
 

@@ -4,6 +4,14 @@
     margin-top: var(--space-20);
 }
 
+/* Bottom padding on mobile for fixed CTA bar */
+@media (max-width: 767px) {
+    .footer {
+        padding-bottom: 72px;
+        margin-top: var(--space-12);
+    }
+}
+
 .footer__main {
     padding-top: var(--space-16);
     padding-bottom: var(--space-12);

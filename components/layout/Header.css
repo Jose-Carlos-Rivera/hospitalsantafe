@@ -342,7 +342,51 @@
 }
 
 /* --- Tablet & Desktop --- */
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1023px) {
+    .header__container {
+        height: var(--header-height);
+        gap: var(--space-3);
+    }
+
+    .header__nav {
+        display: flex;
+        gap: 0;
+    }
+
+    .nav__link,
+    .nav__link--dropdown {
+        padding: var(--space-2) var(--space-2);
+        font-size: var(--text-xs);
+    }
+
+    .header__actions {
+        display: flex;
+        gap: var(--space-2);
+    }
+
+    .header__menu-btn {
+        display: none;
+    }
+
+    .header__mobile-nav {
+        display: none;
+    }
+
+    .logo__name {
+        font-size: var(--text-sm);
+    }
+
+    .logo__subtitle {
+        font-size: var(--text-xl);
+    }
+
+    .btn--urgencias {
+        padding: var(--space-2) var(--space-4);
+        font-size: var(--text-xs);
+    }
+}
+
+@media (min-width: 1024px) {
     .header__container {
         height: var(--header-height);
     }
