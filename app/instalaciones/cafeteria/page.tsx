@@ -32,14 +32,16 @@ export default function Cafeteria() {
         <div className="container">
           <ScrollReveal>
             <div className="cafeteria-content" data-animate>
-              <div className="cafeteria-image">
-                <img
-                  src="/images/hospital/instalaciones/cafeteria.webp"
-                  alt="Cafetería Del Buen Comer - Hospital Santa Fe"
-                />
+              <div>
+                <div className="cafeteria-image">
+                  <img
+                    src="/images/hospital/instalaciones/cafeteria.webp"
+                    alt="Cafetería Del Buen Comer - Hospital Santa Fe"
+                  />
+                </div>
                 <VideoPlayer
                   src="/videos/cafeteria.mp4"
-                  style={{ width: '100%', marginTop: 'var(--space-4)' }}
+                  style={{ width: '100%', marginTop: 'var(--space-6)', aspectRatio: '9/16' }}
                 />
               </div>
 
