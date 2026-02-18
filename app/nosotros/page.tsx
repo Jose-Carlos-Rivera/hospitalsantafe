@@ -46,8 +46,8 @@ export default function Nosotros() {
                         </div>
                         <div className="content-image" data-animate="fade-left">
                             <img
-                                src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&h=700&fit=crop"
-                                alt="Hospital Santa Fe - Instalaciones modernas"
+                                src="/images/hospital/instalaciones/recepcion.webp"
+                                alt="Hospital Santa Fe - Recepci&oacute;n"
                             />
                         </div>
                     </ScrollReveal>
@@ -133,38 +133,38 @@ export default function Nosotros() {
                     <ScrollReveal stagger className="gallery-grid">
                         <div className="gallery-item" data-animate="scale-in">
                             <img
-                                src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=500&h=400&fit=crop"
-                                alt="Quirófano equipado"
+                                src="/images/hospital/instalaciones/quirofanos.webp"
+                                alt="Quir&oacute;fano equipado"
                             />
                         </div>
                         <div className="gallery-item" data-animate="scale-in">
                             <img
-                                src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=500&h=400&fit=crop"
-                                alt="Habitación privada"
+                                src="/images/hospital/instalaciones/cuartos.webp"
+                                alt="Habitaci&oacute;n privada"
                             />
                         </div>
                         <div className="gallery-item" data-animate="scale-in">
                             <img
-                                src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=500&h=400&fit=crop"
-                                alt="Área de cuneros"
+                                src="/images/hospital/instalaciones/area-de-hospitalizacion.webp"
+                                alt="&Aacute;rea de hospitalizaci&oacute;n"
                             />
                         </div>
                         <div className="gallery-item" data-animate="scale-in">
                             <img
-                                src="https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?w=500&h=400&fit=crop"
-                                alt="Equipamiento médico"
+                                src="/images/hospital/instalaciones/consultorios.webp"
+                                alt="Consultorios m&eacute;dicos"
                             />
                         </div>
                         <div className="gallery-item" data-animate="scale-in">
                             <img
-                                src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=500&h=400&fit=crop"
-                                alt="Área de urgencias"
+                                src="/images/hospital/instalaciones/cafeteria.webp"
+                                alt="Cafeter&iacute;a"
                             />
                         </div>
                         <div className="gallery-item" data-animate="scale-in">
                             <img
-                                src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=500&h=400&fit=crop"
-                                alt="Recepción"
+                                src="/images/hospital/instalaciones/estacionamiento_1.webp"
+                                alt="Estacionamiento"
                             />
                         </div>
                     </ScrollReveal>

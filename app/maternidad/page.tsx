@@ -16,16 +16,17 @@ export default function MaternidadPage() {
             <section className="hero-maternidad">
                 <div className="hero-maternidad__content container">
                     <div className="hero-icon">
-                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-                            <circle cx="12" cy="7" r="4" />
-                        </svg>
+                        <img
+                            src="/images/hospital/maternidad/paquetes-de-maternidad.webp"
+                            alt="Paquetes de Maternidad Hospital Santa Fe"
+                            style={{ width: '100%', maxWidth: '500px', borderRadius: 'var(--radius-xl)', margin: '0 auto var(--space-6)' }}
+                        />
                     </div>
                     <h1 className="hero-maternidad__title">
                         Paquetes de Maternidad
                     </h1>
                     <p className="hero-maternidad__subtitle">
-                        Tu embarazo en buenas manos • Atención personalizada desde 2003
+                        Tu embarazo en buenas manos &bull; Atenci&oacute;n personalizada desde 2003
                     </p>
                 </div>
             </section>
@@ -163,6 +164,7 @@ export default function MaternidadPage() {
                     <ScrollReveal stagger className="packages-grid">
                         {/* Paquete Parto */}
                         <div className="package-card" data-animate>
+                            <img src="/images/hospital/maternidad/paquete-parto.webp" alt="Paquete de Parto" style={{ width: '100%', borderRadius: 'var(--radius-lg) var(--radius-lg) 0 0' }} />
                             <div className="package-card__header">
                                 <h3>Paquete de Parto</h3>
                                 <div className="package-card__price">
@@ -199,9 +201,10 @@ export default function MaternidadPage() {
 
                         {/* Paquete Cesárea */}
                         <div className="package-card package-card--featured" data-animate>
-                            <div className="package-badge">Más popular</div>
+                            <img src="/images/hospital/maternidad/paquete-cesarea.webp" alt="Paquete de Ces&aacute;rea" style={{ width: '100%', borderRadius: 'var(--radius-lg) var(--radius-lg) 0 0' }} />
+                            <div className="package-badge">M&aacute;s popular</div>
                             <div className="package-card__header">
-                                <h3>Paquete de Cesárea</h3>
+                                <h3>Paquete de Ces&aacute;rea</h3>
                                 <div className="package-card__price">
                                     <span className="price-currency">$</span>
                                     <span className="price-amount">15,000</span>

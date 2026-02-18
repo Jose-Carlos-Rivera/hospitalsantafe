@@ -6,28 +6,47 @@ import Lightbox from '@/components/common/Lightbox';
 import '../instalaciones.css';
 
 const galeriaImages = [
-  { src: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&h=600&fit=crop&q=80', alt: 'Fachada principal del Hospital Santa Fe', categoria: 'instalaciones' },
-  { src: 'https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=800&h=600&fit=crop&q=80', alt: 'Recepción y sala de espera principal', categoria: 'instalaciones' },
-  { src: 'https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=800&h=600&fit=crop&q=80', alt: 'Habitación privada - Vista general', categoria: 'habitaciones' },
-  { src: 'https://images.unsplash.com/photo-1516549655169-df83a0774514?w=800&h=600&fit=crop&q=80', alt: 'Habitación Suite - Espacio amplio', categoria: 'habitaciones' },
-  { src: 'https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=800&h=600&fit=crop&q=80', alt: 'Área de cuneros neonatales', categoria: 'maternidad' },
-  { src: 'https://images.unsplash.com/photo-1559757175-5700dde675bc?w=800&h=600&fit=crop&q=80', alt: 'Cunero - Cuidados del recién nacido', categoria: 'maternidad' },
-  { src: 'https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=800&h=600&fit=crop&q=80', alt: 'Área de maternidad', categoria: 'maternidad' },
-  { src: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&h=600&fit=crop&q=80', alt: 'Equipo de radiología', categoria: 'equipos' },
-  { src: 'https://images.unsplash.com/photo-1581595220892-b0739db3ba8c?w=800&h=600&fit=crop&q=80', alt: 'Equipo de ultrasonido', categoria: 'equipos' },
-  { src: 'https://images.unsplash.com/photo-1551190822-a9ce113ac100?w=800&h=600&fit=crop&q=80', alt: 'Quirófano equipado', categoria: 'equipos' },
-  { src: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=600&fit=crop&q=80', alt: 'Laboratorio clínico', categoria: 'equipos' },
-  { src: 'https://images.unsplash.com/photo-1504439468489-c8920d796a29?w=800&h=600&fit=crop&q=80', alt: 'Equipo médico del hospital', categoria: 'instalaciones' },
-  { src: 'https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?w=800&h=600&fit=crop&q=80', alt: 'Farmacia interna', categoria: 'instalaciones' },
-  { src: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&h=600&fit=crop&q=80', alt: 'Cafetería Del Buen Comer', categoria: 'instalaciones' },
+  // Recepción
+  { src: '/images/hospital/instalaciones/recepcion.webp', alt: 'Recepción del Hospital Santa Fe', categoria: 'instalaciones' },
+  // Quirófanos (8)
+  { src: '/images/hospital/instalaciones/quirofanos.webp', alt: 'Quirófano principal', categoria: 'quirofanos' },
+  { src: '/images/hospital/instalaciones/quirofanos_1.webp', alt: 'Quirófano equipado', categoria: 'quirofanos' },
+  { src: '/images/hospital/instalaciones/quirofanos_2.webp', alt: 'Área de quirófanos', categoria: 'quirofanos' },
+  { src: '/images/hospital/instalaciones/quirofanos_3.webp', alt: 'Equipo quirúrgico', categoria: 'quirofanos' },
+  { src: '/images/hospital/instalaciones/quirofanos_4.webp', alt: 'Sala de operaciones', categoria: 'quirofanos' },
+  { src: '/images/hospital/instalaciones/quirofanos_5.webp', alt: 'Instrumental quirúrgico', categoria: 'quirofanos' },
+  { src: '/images/hospital/instalaciones/quirofanos_6.webp', alt: 'Monitor de quirófano', categoria: 'quirofanos' },
+  { src: '/images/hospital/instalaciones/quirofanos_7.webp', alt: 'Quirófano vista completa', categoria: 'quirofanos' },
+  // Hospitalización (6)
+  { src: '/images/hospital/instalaciones/area-de-hospitalizacion.webp', alt: 'Área de hospitalización', categoria: 'hospitalizacion' },
+  { src: '/images/hospital/instalaciones/area-de-hospitalizacion_1.webp', alt: 'Pasillo de hospitalización', categoria: 'hospitalizacion' },
+  { src: '/images/hospital/instalaciones/area-de-hospitalizacion_3.webp', alt: 'Zona de hospitalización', categoria: 'hospitalizacion' },
+  { src: '/images/hospital/instalaciones/area-de-hospitalizacion_4.webp', alt: 'Área de enfermería', categoria: 'hospitalizacion' },
+  { src: '/images/hospital/instalaciones/area-de-hospitalizacion_51.webp', alt: 'Estación de enfermería', categoria: 'hospitalizacion' },
+  { src: '/images/hospital/instalaciones/area-de-hospitalizacion_5.webp', alt: 'Hospitalización general', categoria: 'hospitalizacion' },
+  // Habitaciones (3)
+  { src: '/images/hospital/instalaciones/cuartos.webp', alt: 'Habitación Normal', categoria: 'habitaciones' },
+  { src: '/images/hospital/instalaciones/cuartos_1.webp', alt: 'Habitación Suite', categoria: 'habitaciones' },
+  { src: '/images/hospital/instalaciones/cuartos_2.webp', alt: 'Habitación Mastersuite', categoria: 'habitaciones' },
+  // Cafetería (2)
+  { src: '/images/hospital/instalaciones/cafeteria.webp', alt: 'Cafetería Del Buen Comer', categoria: 'cafeteria' },
+  { src: '/images/hospital/instalaciones/cafeteria_1.webp', alt: 'Cafetería interior', categoria: 'cafeteria' },
+  // Consultorios (2)
+  { src: '/images/hospital/instalaciones/consultorios.webp', alt: 'Consultorio médico', categoria: 'instalaciones' },
+  { src: '/images/hospital/instalaciones/consultorios_1.webp', alt: 'Área de consultorios', categoria: 'instalaciones' },
+  // Estacionamiento (3)
+  { src: '/images/hospital/instalaciones/estacionamiento_1.webp', alt: 'Estacionamiento principal', categoria: 'instalaciones' },
+  { src: '/images/hospital/instalaciones/estacionamiento_2.webp', alt: 'Estacionamiento vista', categoria: 'instalaciones' },
+  { src: '/images/hospital/instalaciones/estacionamiento_3.webp', alt: 'Estacionamiento del hospital', categoria: 'instalaciones' },
 ];
 
 const categorias = [
   { id: 'todas', label: 'Todas' },
   { id: 'instalaciones', label: 'Instalaciones' },
+  { id: 'quirofanos', label: 'Quirófanos' },
+  { id: 'hospitalizacion', label: 'Hospitalización' },
   { id: 'habitaciones', label: 'Habitaciones' },
-  { id: 'maternidad', label: 'Maternidad' },
-  { id: 'equipos', label: 'Equipos' },
+  { id: 'cafeteria', label: 'Cafetería' },
 ];
 
 export default function GaleriaPage() {

@@ -144,9 +144,12 @@ export default function CunerosPage() {
 
             <div className="content-image">
               <img
-                src="https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=600&h=700&fit=crop"
+                src="/images/hospital/instalaciones/area-de-hospitalizacion_4.webp"
                 alt="Cunero - Cuidado neonatal en Hospital Santa Fe"
               />
+              <video controls preload="metadata" playsInline style={{ width: '100%', borderRadius: 'var(--radius-lg)', marginTop: 'var(--space-4)' }}>
+                <source src="/videos/cuneros.mp4" type="video/mp4" />
+              </video>
             </div>
           </div>
         </div>

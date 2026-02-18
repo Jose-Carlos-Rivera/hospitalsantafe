@@ -33,9 +33,12 @@ export default function Cafeteria() {
             <div className="cafeteria-content" data-animate>
               <div className="cafeteria-image">
                 <img
-                  src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=700&h=600&fit=crop"
+                  src="/images/hospital/instalaciones/cafeteria.webp"
                   alt="Cafetería Del Buen Comer - Hospital Santa Fe"
                 />
+                <video controls preload="metadata" playsInline style={{ width: '100%', borderRadius: 'var(--radius-lg)', marginTop: 'var(--space-4)' }}>
+                  <source src="/videos/cafeteria.mp4" type="video/mp4" />
+                </video>
               </div>
 
               <div className="content-text">

@@ -39,36 +39,36 @@ export default function Home() {
             {/* Column 1 — scrolls DOWN */}
             <div className="hero-carousel__col hero-carousel__col--down">
               <div className="hero-carousel__track">
-                <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=400&h=300&fit=crop&q=80" alt="Hospital moderno" />
-                <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=400&h=300&fit=crop&q=80" alt="Habitaci&oacute;n privada" />
-                <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=400&h=300&fit=crop&q=80" alt="Equipo m&eacute;dico" />
-                <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=400&h=300&fit=crop&q=80" alt="Hospital moderno" />
-                <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=400&h=300&fit=crop&q=80" alt="Habitaci&oacute;n privada" />
-                <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=400&h=300&fit=crop&q=80" alt="Equipo m&eacute;dico" />
+                <img src="/images/hospital/instalaciones/recepcion.webp" alt="Recepci&oacute;n del hospital" />
+                <img src="/images/hospital/instalaciones/quirofanos.webp" alt="Quir&oacute;fanos" />
+                <img src="/images/hospital/instalaciones/consultorios.webp" alt="Consultorios" />
+                <img src="/images/hospital/instalaciones/recepcion.webp" alt="Recepci&oacute;n del hospital" />
+                <img src="/images/hospital/instalaciones/quirofanos.webp" alt="Quir&oacute;fanos" />
+                <img src="/images/hospital/instalaciones/consultorios.webp" alt="Consultorios" />
               </div>
             </div>
 
             {/* Column 2 — scrolls UP */}
             <div className="hero-carousel__col hero-carousel__col--up">
               <div className="hero-carousel__track">
-                <img src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=400&h=300&fit=crop&q=80" alt="Recepci&oacute;n hospital" />
-                <img src="https://images.unsplash.com/photo-1559757175-5700dde675bc?w=400&h=300&fit=crop&q=80" alt="Cunero" />
-                <img src="https://images.unsplash.com/photo-1581595220892-b0739db3ba8c?w=400&h=300&fit=crop&q=80" alt="Tecnolog&iacute;a m&eacute;dica" />
-                <img src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=400&h=300&fit=crop&q=80" alt="Recepci&oacute;n hospital" />
-                <img src="https://images.unsplash.com/photo-1559757175-5700dde675bc?w=400&h=300&fit=crop&q=80" alt="Cunero" />
-                <img src="https://images.unsplash.com/photo-1581595220892-b0739db3ba8c?w=400&h=300&fit=crop&q=80" alt="Tecnolog&iacute;a m&eacute;dica" />
+                <img src="/images/hospital/instalaciones/cuartos.webp" alt="Habitaciones" />
+                <img src="/images/hospital/instalaciones/area-de-hospitalizacion.webp" alt="&Aacute;rea de hospitalizaci&oacute;n" />
+                <img src="/images/hospital/instalaciones/cafeteria.webp" alt="Cafeter&iacute;a" />
+                <img src="/images/hospital/instalaciones/cuartos.webp" alt="Habitaciones" />
+                <img src="/images/hospital/instalaciones/area-de-hospitalizacion.webp" alt="&Aacute;rea de hospitalizaci&oacute;n" />
+                <img src="/images/hospital/instalaciones/cafeteria.webp" alt="Cafeter&iacute;a" />
               </div>
             </div>
 
             {/* Column 3 — scrolls DOWN */}
             <div className="hero-carousel__col hero-carousel__col--down">
               <div className="hero-carousel__track">
-                <img src="https://images.unsplash.com/photo-1504439468489-c8920d796a29?w=400&h=300&fit=crop&q=80" alt="Doctores profesionales" />
-                <img src="https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?w=400&h=300&fit=crop&q=80" alt="Farmacia" />
-                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=300&fit=crop&q=80" alt="Laboratorio" />
-                <img src="https://images.unsplash.com/photo-1504439468489-c8920d796a29?w=400&h=300&fit=crop&q=80" alt="Doctores profesionales" />
-                <img src="https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?w=400&h=300&fit=crop&q=80" alt="Farmacia" />
-                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=300&fit=crop&q=80" alt="Laboratorio" />
+                <img src="/images/hospital/instalaciones/quirofanos_1.webp" alt="Quir&oacute;fanos equipados" />
+                <img src="/images/hospital/instalaciones/estacionamiento_1.webp" alt="Estacionamiento" />
+                <img src="/images/hospital/instalaciones/cuartos_1.webp" alt="Habitaciones suite" />
+                <img src="/images/hospital/instalaciones/quirofanos_1.webp" alt="Quir&oacute;fanos equipados" />
+                <img src="/images/hospital/instalaciones/estacionamiento_1.webp" alt="Estacionamiento" />
+                <img src="/images/hospital/instalaciones/cuartos_1.webp" alt="Habitaciones suite" />
               </div>
             </div>
           </div>
@@ -178,8 +178,8 @@ export default function Home() {
 
             <div className="maternidad-image" data-animate="fade-left">
               <img
-                src="https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=800&h=600&fit=crop"
-                alt="Mam&aacute; con beb&eacute; reci&eacute;n nacido"
+                src="/images/hospital/maternidad/paquetes-de-maternidad.webp"
+                alt="Paquetes de maternidad Hospital Santa Fe"
               />
             </div>
           </ScrollReveal>
@@ -284,8 +284,8 @@ export default function Home() {
           <ScrollReveal className="about-split">
             <div className="about-image" data-animate="fade-left">
               <img
-                src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&h=700&fit=crop"
-                alt="Doctora profesional"
+                src="/images/hospital/instalaciones/recepcion.webp"
+                alt="Recepci&oacute;n Hospital Santa Fe"
               />
             </div>
             <div className="about-content" data-animate="fade-right">
@@ -329,39 +329,26 @@ export default function Home() {
             <div className="doctor-card" data-animate>
               <div className="doctor-image">
                 <img
-                  src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&h=500&fit=crop"
-                  alt="Dra. Ana Mart&iacute;nez"
+                  src="/images/hospital/medicos/dr-javier-barajas.webp"
+                  alt="Dr. Javier Barajas"
                 />
               </div>
               <div className="doctor-info">
-                <h3>Dra. Ana Mart&iacute;nez</h3>
-                <span className="doctor-badge">Ginecolog&iacute;a y Obstetricia</span>
+                <h3>Dr. Javier Barajas</h3>
+                <span className="doctor-badge">M&eacute;dico Principal</span>
               </div>
             </div>
 
             <div className="doctor-card" data-animate>
               <div className="doctor-image">
                 <img
-                  src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=500&fit=crop"
-                  alt="Dr. Carlos Gonz&aacute;lez"
+                  src="/images/hospital/medicos/dra-maria-gonzalez.webp"
+                  alt="Dra. Mar&iacute;a Gonz&aacute;lez"
                 />
               </div>
               <div className="doctor-info">
-                <h3>Dr. Carlos Gonz&aacute;lez</h3>
-                <span className="doctor-badge">Medicina General</span>
-              </div>
-            </div>
-
-            <div className="doctor-card" data-animate>
-              <div className="doctor-image">
-                <img
-                  src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=500&fit=crop"
-                  alt="Dra. Mar&iacute;a L&oacute;pez"
-                />
-              </div>
-              <div className="doctor-info">
-                <h3>Dra. Mar&iacute;a L&oacute;pez</h3>
-                <span className="doctor-badge">Pediatr&iacute;a</span>
+                <h3>Dra. Mar&iacute;a Gonz&aacute;lez</h3>
+                <span className="doctor-badge">M&eacute;dica Principal</span>
               </div>
             </div>
           </ScrollReveal>
@@ -393,8 +380,8 @@ export default function Home() {
           <ScrollReveal stagger className="instalaciones-grid">
             <div className="instalacion-item instalacion-item--wide" data-animate="scale-in">
               <img
-                src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&h=500&fit=crop"
-                alt="Quir&oacute;fano moderno"
+                src="/images/hospital/instalaciones/quirofanos.webp"
+                alt="Quir&oacute;fanos del Hospital Santa Fe"
               />
               <div className="instalacion-overlay">
                 <h4>Quir&oacute;fanos Equipados</h4>
@@ -403,8 +390,8 @@ export default function Home() {
 
             <div className="instalacion-item" data-animate="scale-in">
               <img
-                src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=600&h=400&fit=crop"
-                alt="Habitaci&oacute;n privada"
+                src="/images/hospital/instalaciones/cuartos.webp"
+                alt="Habitaciones del hospital"
               />
               <div className="instalacion-overlay">
                 <h4>Habitaciones Privadas</h4>
@@ -413,8 +400,8 @@ export default function Home() {
 
             <div className="instalacion-item" data-animate="scale-in">
               <img
-                src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=600&h=400&fit=crop"
-                alt="&Aacute;rea de cuneros"
+                src="/images/hospital/instalaciones/area-de-hospitalizacion_1.webp"
+                alt="&Aacute;rea de hospitalizaci&oacute;n"
               />
               <div className="instalacion-overlay">
                 <h4>&Aacute;rea de Cuneros</h4>
@@ -423,8 +410,8 @@ export default function Home() {
 
             <div className="instalacion-item instalacion-item--wide" data-animate="scale-in">
               <img
-                src="https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?w=800&h=500&fit=crop"
-                alt="Equipamiento m&eacute;dico"
+                src="/images/hospital/instalaciones/consultorios.webp"
+                alt="Consultorios del hospital"
               />
               <div className="instalacion-overlay">
                 <h4>Tecnolog&iacute;a Moderna</h4>

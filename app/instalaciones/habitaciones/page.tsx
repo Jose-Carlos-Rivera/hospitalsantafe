@@ -25,7 +25,8 @@ const habitaciones = [
       'Llamado de enfermería 24 horas',
     ],
     featured: false,
-    imagen: 'https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=800&h=500&fit=crop',
+    imagen: '/images/hospital/instalaciones/cuartos.webp',
+    video: '/videos/habitacion-normal.mp4',
   },
   {
     nombre: 'Suite',
@@ -44,7 +45,8 @@ const habitaciones = [
       'Llamado de enfermería 24 horas',
     ],
     featured: false,
-    imagen: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&h=500&fit=crop',
+    imagen: '/images/hospital/instalaciones/cuartos_1.webp',
+    video: '/videos/habitacion-suite.mp4',
   },
   {
     nombre: 'Mastersuite',
@@ -63,7 +65,8 @@ const habitaciones = [
       'Llamado de enfermería 24 horas',
     ],
     featured: true,
-    imagen: 'https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=800&h=500&fit=crop',
+    imagen: '/images/hospital/instalaciones/cuartos_2.webp',
+    video: '/videos/habitacion-master-suite.mp4',
   },
 ];
 
@@ -105,6 +108,13 @@ export default function Habitaciones() {
                 <div className="habitacion-image">
                   <img src={hab.imagen} alt={hab.nombre} />
                 </div>
+                {hab.video && (
+                  <div className="habitacion-video">
+                    <video controls preload="metadata" playsInline style={{ width: '100%', borderRadius: 'var(--radius-lg)' }}>
+                      <source src={hab.video} type="video/mp4" />
+                    </video>
+                  </div>
+                )}
                 <div className="habitacion-info">
                   <h2>{hab.nombre}</h2>
                   <p className="habitacion-descripcion">{hab.descripcion}</p>

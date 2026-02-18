@@ -34,8 +34,8 @@ export default function InstalacionesPage() {
             <Link href="/instalaciones/habitaciones" className="instalacion-hub-card" data-animate>
               <div className="instalacion-hub-card__image">
                 <img
-                  src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=600&h=400&fit=crop"
-                  alt="Habitación privada del hospital"
+                  src="/images/hospital/instalaciones/cuartos.webp"
+                  alt="Habitaciones del Hospital Santa Fe"
                 />
               </div>
               <div className="instalacion-hub-card__content">
@@ -53,7 +53,7 @@ export default function InstalacionesPage() {
               <div className="instalacion-hub-card__image">
                 <img
                   src="https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?w=600&h=400&fit=crop"
-                  alt="Farmacia del hospital"
+                  alt="Farmacia del Hospital Santa Fe"
                 />
               </div>
               <div className="instalacion-hub-card__content">
@@ -70,8 +70,8 @@ export default function InstalacionesPage() {
             <Link href="/instalaciones/cafeteria" className="instalacion-hub-card" data-animate>
               <div className="instalacion-hub-card__image">
                 <img
-                  src="https://images.unsplash.com/photo-1567521464027-f127ff144326?w=600&h=400&fit=crop"
-                  alt="Cafetería del hospital"
+                  src="/images/hospital/instalaciones/cafeteria.webp"
+                  alt="Cafeter&iacute;a del Hospital Santa Fe"
                 />
               </div>
               <div className="instalacion-hub-card__content">
@@ -88,8 +88,8 @@ export default function InstalacionesPage() {
             <Link href="/instalaciones/galeria" className="instalacion-hub-card" data-animate>
               <div className="instalacion-hub-card__image">
                 <img
-                  src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&h=400&fit=crop"
-                  alt="Vista general del hospital"
+                  src="/images/hospital/instalaciones/quirofanos.webp"
+                  alt="Instalaciones del Hospital Santa Fe"
                 />
               </div>
               <div className="instalacion-hub-card__content">
