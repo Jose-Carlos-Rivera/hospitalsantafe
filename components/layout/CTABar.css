@@ -60,13 +60,14 @@
 .cta-bar__btn--location {
     background-color: var(--color-white);
     color: var(--color-primary-600);
-    border: 2px solid var(--color-primary-200);
+    border: 2px solid var(--color-primary-500);
+    font-weight: var(--font-bold);
 }
 
 .cta-bar__btn--location:hover {
     background-color: var(--color-primary-50);
     color: var(--color-primary-700);
-    border-color: var(--color-primary-300);
+    border-color: var(--color-primary-600);
 }
 
 /* Hide on desktop */
