@@ -288,5 +288,16 @@
 
     .contacto-mapa__wrapper {
         border-radius: var(--radius-lg);
+        margin-left: calc(-1 * var(--space-4));
+        margin-right: calc(-1 * var(--space-4));
+    }
+
+    .contacto-mapa__wrapper iframe {
+        height: 300px;
+        width: 100%;
+    }
+
+    .contacto-mapa__address {
+        font-size: var(--text-xs);
     }
 }

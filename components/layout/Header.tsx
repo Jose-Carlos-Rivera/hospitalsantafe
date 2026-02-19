@@ -167,7 +167,7 @@ export default function Header() {
           </Link>
         </nav>
 
-        {/* Actions group: Search + Urgencias — aligned far right */}
+        {/* Desktop: Search + Urgencias — far right */}
         <div className="header__actions">
           <button
             className="header__search"
@@ -189,18 +189,39 @@ export default function Header() {
           </a>
         </div>
 
-        {/* Mobile Menu Button */}
-        <button
-          className={`header__menu-btn ${isMobileMenuOpen ? 'is-active' : ''}`}
-          aria-label={isMobileMenuOpen ? 'Cerrar menú' : 'Abrir menú'}
-          aria-expanded={isMobileMenuOpen}
-          type="button"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+        {/* Mobile: Lupa + Urgencias + Hamburger — far right */}
+        <div className="header__mobile-actions">
+          <button
+            className="header__search"
+            aria-label="Buscar"
+            type="button"
+            onClick={() => setIsSearchOpen(true)}
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.35-4.35" />
+            </svg>
+          </button>
+
+          <a href={`tel:${PHONE_LANDLINE}`} className="btn btn--urgencias header__cta--mobile">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg>
+            <span>24/7</span>
+          </a>
+
+          <button
+            className={`header__menu-btn ${isMobileMenuOpen ? 'is-active' : ''}`}
+            aria-label={isMobileMenuOpen ? 'Cerrar menú' : 'Abrir menú'}
+            aria-expanded={isMobileMenuOpen}
+            type="button"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
       </div>
 
       {/* ====== Search Overlay ====== */}

@@ -4,7 +4,6 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import CTABar from "@/components/layout/CTABar";
-import WhatsAppButton from "@/components/common/WhatsAppButton";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -155,7 +154,6 @@ export default function RootLayout({
         <main id="main-content">{children}</main>
         <Footer />
         <CTABar />
-        <WhatsAppButton />
       </body>
     </html>
   );

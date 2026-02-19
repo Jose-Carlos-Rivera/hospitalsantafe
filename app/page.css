@@ -783,7 +783,12 @@
     }
 
     .about-image {
-        max-height: 400px;
+        max-height: none;
+    }
+
+    .about-image img {
+        object-fit: contain;
+        height: auto;
     }
 
     .about-stats {
@@ -797,7 +802,12 @@
     }
 
     .about-image {
-        max-height: 300px;
+        max-height: none;
+    }
+
+    .about-image img {
+        object-fit: contain;
+        height: auto;
     }
 
     .about-stats {
@@ -1047,7 +1057,11 @@
 
     .maternidad-image {
         order: -1;
-        max-height: 400px;
+    }
+
+    .maternidad-image img {
+        object-fit: contain;
+        height: auto;
     }
 
     .paquetes-preview {
@@ -1061,7 +1075,12 @@
     }
 
     .maternidad-image {
-        max-height: 300px;
+        max-height: none;
+    }
+
+    .maternidad-image img {
+        object-fit: contain;
+        height: auto;
     }
 
     .maternidad-content h2 {

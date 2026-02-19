@@ -58,13 +58,15 @@
 }
 
 .cta-bar__btn--location {
-    background-color: var(--color-accent-500);
-    color: var(--color-white);
+    background-color: var(--color-white);
+    color: var(--color-primary-600);
+    border: 2px solid var(--color-primary-200);
 }
 
 .cta-bar__btn--location:hover {
-    background-color: #e8935a;
-    color: var(--color-white);
+    background-color: var(--color-primary-50);
+    color: var(--color-primary-700);
+    border-color: var(--color-primary-300);
 }
 
 /* Hide on desktop */

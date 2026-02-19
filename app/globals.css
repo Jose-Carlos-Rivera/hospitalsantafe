@@ -191,6 +191,11 @@ h6 {
   line-height: 1.2;
   color: var(--color-primary-900);
   margin-bottom: var(--space-4);
+  text-wrap: balance;
+}
+
+p, li, span, .lead {
+  text-wrap: pretty;
 }
 
 h1 {
@@ -814,6 +819,17 @@ a:focus-visible {
   .btn--whatsapp-float {
     bottom: var(--space-8);
     right: var(--space-8);
+  }
+}
+
+/* Responsive: cap vertical video height on mobile */
+@media (max-width: 640px) {
+  .video-player {
+    max-height: 420px;
+  }
+  .video-player video {
+    max-height: 420px;
+    object-fit: contain;
   }
 }
 
