@@ -34,7 +34,7 @@
     background: var(--color-white);
     border-radius: var(--radius-2xl);
     box-shadow: var(--shadow-xl);
-    overflow: hidden;
+    overflow: visible;
     position: relative;
     padding: var(--space-6);
 }
@@ -45,15 +45,16 @@
 
 .habitacion-badge {
     position: absolute;
-    top: var(--space-4);
-    right: var(--space-4);
+    top: -12px;
+    right: var(--space-6);
     background: var(--color-primary-600);
     color: var(--color-white);
-    padding: var(--space-2) var(--space-4);
+    padding: var(--space-2) var(--space-5);
     border-radius: var(--radius-full);
     font-size: var(--text-sm);
     font-weight: 700;
-    z-index: 2;
+    z-index: 10;
+    box-shadow: var(--shadow-md);
 }
 
 /* Media row: imagen horizontal izquierda + video vertical derecha */
@@ -62,19 +63,14 @@
     grid-template-columns: 1fr 200px;
     gap: var(--space-4);
     margin-bottom: var(--space-4);
-    height: 350px;
+    height: 450px;
 }
 
 .habitacion-media-img {
     border-radius: var(--radius-lg);
     overflow: hidden;
-}
-
-.habitacion-media-img img {
-    width: 100%;
     height: 100%;
-    object-fit: cover;
-    display: block;
+    position: relative;
 }
 
 /* Video player in habitaciones — uses global .video-player styles */
@@ -138,23 +134,34 @@
     font-size: var(--text-base);
 }
 
-/* Mobile: stack media vertically */
-@media (max-width: 640px) {
+/* Tablet: stack media vertically */
+@media (max-width: 768px) {
     .habitacion-media-row {
         grid-template-columns: 1fr;
         height: auto;
     }
 
     .habitacion-media-img {
-        height: 200px;
+        height: 320px;
     }
 
     .habitacion-media-video {
-        height: 350px;
+        height: 400px;
     }
 
     .habitacion-info ul {
         grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile: smaller media */
+@media (max-width: 480px) {
+    .habitacion-media-img {
+        height: 250px;
+    }
+
+    .habitacion-media-video {
+        height: 350px;
     }
 }
 

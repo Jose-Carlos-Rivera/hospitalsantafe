@@ -1,12 +1,14 @@
 import Link from 'next/link';
 import ScrollReveal from '@/components/common/ScrollReveal';
+import VideoPlayer from '@/components/common/VideoPlayer';
 import EstudiosGrid from '@/components/servicios/EstudiosGrid';
-import { estudiosImagen } from '@/lib/data/estudios-imagen';
+import { estudiosImagen, otrosServicios } from '@/lib/data/estudios-imagen';
+import { getWhatsAppUrl } from '@/lib/data/navigation';
 import '../servicios.css';
 
 export const metadata = {
   title: 'Estudios de Imagen',
-  description: 'Estudios de imagen con tecnología de vanguardia: Rayos X digital, Ecosonogramas 2D/3D/4D/5D, Doppler, Electrocardiograma, Endoscopía, Colonoscopía, Mastografía y más en Hospital Santa Fe.',
+  description: 'Estudios de imagen: Rayos X digital, Ecosonogramas 2D/3D/4D/5D, Doppler, Electrocardiograma, Endoscopía, Colonoscopía y más en Hospital Santa Fe, Zapotlanejo.',
 };
 
 export default function EstudiosImagenPage() {
@@ -27,7 +29,7 @@ export default function EstudiosImagenPage() {
           </nav>
           <h1>Estudios de Imagen</h1>
           <p className="page-hero__subtitle">
-            Contamos con equipos de última generación para ofrecer diagnósticos precisos y oportunos. Nuestro personal técnico está altamente capacitado para brindarte la mejor atención.
+            Contamos con equipos de vanguardia para ofrecer diagnósticos precisos y oportunos. Nuestro personal técnico está capacitado para brindarte la mejor atención.
           </p>
         </div>
       </section>
@@ -53,17 +55,6 @@ export default function EstudiosImagenPage() {
                     {eco3d4d.nombre}
                   </h2>
                   <p className="highlight-section__desc">{eco3d4d.descripcionLarga}</p>
-
-                  <div className="highlight-section__prices">
-                    <div className="highlight-price">
-                      <span className="highlight-price__amount">$790</span>
-                      <span className="highlight-price__label">Estudio completo</span>
-                    </div>
-                    <div className="highlight-price highlight-price--promo">
-                      <span className="highlight-price__amount">$590</span>
-                      <span className="highlight-price__label">Con paquete de maternidad</span>
-                    </div>
-                  </div>
 
                   {eco3d4d.indicaciones && (
                     <ul className="highlight-section__tips">
@@ -96,6 +87,34 @@ export default function EstudiosImagenPage() {
         </section>
       )}
 
+      {/* Media Section */}
+      <section className="section">
+        <div className="container">
+          <ScrollReveal>
+            <div className="text-center" data-animate>
+              <h2>Nuestro Equipo de Diagnóstico</h2>
+              <p style={{ maxWidth: '700px', margin: '0 auto var(--space-8)' }}>
+                Conoce el equipo con el que realizamos nuestros estudios de imagen.
+              </p>
+            </div>
+          </ScrollReveal>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: 'var(--space-6)', maxWidth: '900px', margin: '0 auto' }}>
+            <ScrollReveal>
+              <div data-animate>
+                <VideoPlayer src="/videos/radiografia.mp4" style={{ width: '100%', aspectRatio: '9/16', maxHeight: '400px' }} />
+                <p style={{ textAlign: 'center', marginTop: 'var(--space-3)', fontSize: 'var(--text-sm)', color: 'var(--color-neutral-600)' }}>Equipo de Radiografía Digital</p>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal>
+              <div data-animate>
+                <img src="/images/hospital/servicios/electrocardiograma.webp" alt="Electrocardiograma" style={{ width: '100%', borderRadius: 'var(--radius-xl)', boxShadow: 'var(--shadow-md)' }} />
+                <p style={{ textAlign: 'center', marginTop: 'var(--space-3)', fontSize: 'var(--text-sm)', color: 'var(--color-neutral-600)' }}>Electrocardiograma</p>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
       {/* Info Box */}
       <section className="section">
         <div className="container">
@@ -108,13 +127,43 @@ export default function EstudiosImagenPage() {
               <p>
                 <strong>Horarios:</strong> Servicio de lunes a sábado de 7:00 AM a 8:00 PM. Urgencias con disponibilidad las 24 horas.
               </p>
-              <p>
-                <strong>Precios accesibles:</strong> Todos nuestros estudios tienen precios competitivos. Pregunta por descuentos en paquetes de estudios combinados.
-              </p>
-              <p>
-                <strong>Equipo de última generación:</strong> Gracias a su preferencia, le ofrecemos servicio de calidad con equipo de última generación. Ultrasonido 2D, 3D, 5D, Doppler y Elastografía.
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Otros Servicios */}
+      <section id="otros-servicios" className="section" style={{ background: 'var(--color-neutral-50)' }}>
+        <div className="container">
+          <ScrollReveal>
+            <div className="text-center" data-animate>
+              <h2>Otros Servicios</h2>
+              <p style={{ maxWidth: '700px', margin: '0 auto var(--space-8)' }}>
+                Además de estudios de imagen, ofrecemos una variedad de servicios médicos para tu atención integral.
               </p>
             </div>
+          </ScrollReveal>
+          <ScrollReveal stagger className="otros-servicios-grid">
+            {otrosServicios.map((servicio) => (
+              <div key={servicio.id} className="otro-servicio-card" data-animate>
+                {servicio.video && (
+                  <VideoPlayer src={servicio.video} style={{ width: '100%', aspectRatio: '9/16', maxHeight: '300px', marginBottom: 'var(--space-4)' }} />
+                )}
+                {servicio.imagen && !servicio.video && (
+                  <img src={servicio.imagen} alt={servicio.nombre} style={{ width: '100%', borderRadius: 'var(--radius-lg)', marginBottom: 'var(--space-4)' }} />
+                )}
+                <h4>{servicio.nombre}</h4>
+                <p>{servicio.descripcion}</p>
+                <a
+                  href={getWhatsAppUrl(`Hola, me gustaría información sobre ${servicio.nombre}`)}
+                  className="btn btn--whatsapp btn--small"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Consultar
+                </a>
+              </div>
+            ))}
           </ScrollReveal>
         </div>
       </section>
@@ -128,7 +177,7 @@ export default function EstudiosImagenPage() {
               <p>Contáctanos por WhatsApp o llámanos para programar tu cita. No necesitas referencia médica para la mayoría de los estudios.</p>
               <div className="cta-final__buttons">
                 <a
-                  href="https://wa.me/523331198625?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20un%20estudio%20de%20imagen"
+                  href={getWhatsAppUrl('Hola, me gustaría agendar un estudio de imagen')}
                   className="btn btn--whatsapp btn--large"
                   target="_blank"
                   rel="noopener noreferrer"

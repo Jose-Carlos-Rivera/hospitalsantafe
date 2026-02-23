@@ -5,30 +5,14 @@ import { getWhatsAppUrl } from '@/lib/data/navigation';
 import '../servicios.css';
 
 export const metadata = {
-  title: 'Cuneros y Neonatología',
-  description: 'Cunero con atención especializada las 24 horas, seguridad de primer nivel, servicio de video, cuidados neonatales y enfermeras especializadas en Hospital Santa Fe, Zapotlanejo.',
+  title: 'Cuneros',
+  description: 'Cunero con atención las 24 horas, seguridad de primer nivel, cuidados neonatales y personal de enfermería dedicado en Hospital Santa Fe, Zapotlanejo.',
 };
 
 const serviciosCunero = [
   {
     titulo: 'Monitoreo continuo 24/7',
-    descripcion: 'Vigilancia constante de signos vitales del recién nacido con equipo de última generación.',
-  },
-  {
-    titulo: 'Enfermeras especializadas',
-    descripcion: 'Personal de enfermería con especialidad en neonatología y cuidados del recién nacido.',
-  },
-  {
-    titulo: 'Tamiz neonatal',
-    descripcion: 'Prueba de detección temprana de enfermedades metabólicas realizada en las primeras horas de vida.',
-  },
-  {
-    titulo: 'Vacunación inicial',
-    descripcion: 'Aplicación de las primeras vacunas (BCG y Hepatitis B) según el esquema nacional de vacunación.',
-  },
-  {
-    titulo: 'Prueba de audición',
-    descripcion: 'Tamiz auditivo neonatal para detectar problemas de audición desde el nacimiento.',
+    descripcion: 'Vigilancia constante de signos vitales del recién nacido.',
   },
   {
     titulo: 'Registro civil en el hospital',
@@ -106,9 +90,9 @@ export default function CunerosPage() {
             <span className="breadcrumb__separator">/</span>
             <span className="breadcrumb__current">Cuneros</span>
           </nav>
-          <h1>Cuneros y Neonatología</h1>
+          <h1>Cuneros</h1>
           <p className="page-hero__subtitle">
-            Bienvenido Bebé — El primer hogar de tu recién nacido fuera del vientre materno, con la mejor atención especializada las 24 horas.
+            Bienvenido Bebé — El primer hogar de tu recién nacido fuera del vientre materno, con la mejor atención las 24 horas.
           </p>
         </div>
       </section>
@@ -146,48 +130,16 @@ export default function CunerosPage() {
             <div>
               <div className="content-image">
                 <img
-                  src="/images/hospital/instalaciones/area-de-hospitalizacion_3.webp"
+                  src="/images/hospital/instalaciones/cuneros.webp"
                   alt="Cunero - Cuidado neonatal en Hospital Santa Fe"
                 />
               </div>
               <VideoPlayer
                 src="/videos/cuneros.mp4"
-                style={{ width: '100%', marginTop: 'var(--space-6)', aspectRatio: '9/16' }}
+                style={{ width: '100%', maxWidth: '300px', maxHeight: '450px', margin: 'var(--space-6) auto 0', aspectRatio: '9/16' }}
               />
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Paquete de Video */}
-      <section className="section" style={{ background: 'var(--color-rosa-50)' }}>
-        <div className="container">
-          <ScrollReveal>
-            <div className="text-center" data-animate>
-              <h2>Paquete de Video — Un Recuerdo para Siempre</h2>
-              <p style={{ maxWidth: '700px', margin: '0 auto var(--space-8)' }}>
-                Captura los momentos más especiales del nacimiento de tu bebé con nuestro servicio profesional de video.
-              </p>
-            </div>
-          </ScrollReveal>
-          <ScrollReveal stagger className="info-grid">
-            <div className="info-item" data-animate>
-              <h4>Filmación desde el parto</h4>
-              <p>Nuestro equipo documenta desde antes del parto hasta los primeros momentos de vida de tu bebé, con discreción y profesionalismo.</p>
-            </div>
-            <div className="info-item" data-animate>
-              <h4>Cámaras HD profesionales</h4>
-              <p>Utilizamos equipo de video de alta definición para capturar cada detalle con la mejor calidad de imagen.</p>
-            </div>
-            <div className="info-item" data-animate>
-              <h4>Edición personalizada</h4>
-              <p>Cada video es editado de manera personalizada, creando un recuerdo único que tu familia atesorará por siempre.</p>
-            </div>
-            <div className="info-item" data-animate>
-              <h4>Reunión familiar del bebé</h4>
-              <p>Incluye la filmación de los primeros momentos del bebé con la familia, capturando esas expresiones y emociones irrepetibles.</p>
-            </div>
-          </ScrollReveal>
         </div>
       </section>
 

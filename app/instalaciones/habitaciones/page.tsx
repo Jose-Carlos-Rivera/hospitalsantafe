@@ -2,6 +2,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import ScrollReveal from '@/components/common/ScrollReveal';
 import VideoPlayer from '@/components/common/VideoPlayer';
+import ImageCarousel from '@/components/common/ImageCarousel';
 import { getWhatsAppUrl } from '@/lib/data/navigation';
 import '../instalaciones.css';
 
@@ -26,7 +27,11 @@ const habitaciones = [
       'Llamado de enfermería 24 horas',
     ],
     featured: false,
-    imagen: '/images/hospital/instalaciones/cuartos_2.webp',
+    imagenes: [
+      { src: '/images/hospital/habitaciones/normal-1.webp', alt: 'Habitación Normal 1' },
+      { src: '/images/hospital/habitaciones/normal-2.webp', alt: 'Habitación Normal 2' },
+      { src: '/images/hospital/habitaciones/normal-3.webp', alt: 'Habitación Normal 3' },
+    ],
     video: '/videos/habitacion-normal.mp4',
   },
   {
@@ -46,7 +51,10 @@ const habitaciones = [
       'Llamado de enfermería 24 horas',
     ],
     featured: false,
-    imagen: '/images/hospital/instalaciones/cuartos_1.webp',
+    imagenes: [
+      { src: '/images/hospital/habitaciones/suite-1.webp', alt: 'Suite 1' },
+      { src: '/images/hospital/habitaciones/suite-2.webp', alt: 'Suite 2' },
+    ],
     video: '/videos/habitacion-suite.mp4',
   },
   {
@@ -66,7 +74,15 @@ const habitaciones = [
       'Llamado de enfermería 24 horas',
     ],
     featured: true,
-    imagen: '/images/hospital/instalaciones/cuartos_2.webp',
+    imagenes: [
+      { src: '/images/hospital/habitaciones/mastersuite-1.webp', alt: 'Mastersuite 1' },
+      { src: '/images/hospital/habitaciones/mastersuite-2.webp', alt: 'Mastersuite 2' },
+      { src: '/images/hospital/habitaciones/mastersuite-3.webp', alt: 'Mastersuite 3' },
+      { src: '/images/hospital/habitaciones/mastersuite-4.webp', alt: 'Mastersuite 4' },
+      { src: '/images/hospital/habitaciones/mastersuite-5.webp', alt: 'Mastersuite 5' },
+      { src: '/images/hospital/habitaciones/mastersuite-6.webp', alt: 'Mastersuite 6' },
+      { src: '/images/hospital/habitaciones/mastersuite-bano.webp', alt: 'Baño Mastersuite' },
+    ],
     video: '/videos/habitacion-master-suite.mp4',
   },
 ];
@@ -107,10 +123,10 @@ export default function Habitaciones() {
               <div key={index} className={`habitacion-card ${hab.featured ? 'featured' : ''}`} data-animate>
                 {hab.featured && <div className="habitacion-badge">La más exclusiva</div>}
 
-                {/* Media row: imagen horizontal izquierda + video vertical derecha */}
+                {/* Media row: carrusel de fotos + video */}
                 <div className="habitacion-media-row">
                   <div className="habitacion-media-img">
-                    <img src={hab.imagen} alt={hab.nombre} />
+                    <ImageCarousel images={hab.imagenes} />
                   </div>
                   {hab.video && (
                     <VideoPlayer src={hab.video} className="habitacion-media-video" />

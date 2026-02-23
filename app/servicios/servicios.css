@@ -900,7 +900,7 @@
 
 .paquetes-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--space-6);
 }
 
@@ -1441,7 +1441,7 @@
    ======================================== */
 
 .highlight-section {
-    background: linear-gradient(135deg, var(--color-primary-50), #f0f9ff);
+    background: linear-gradient(135deg, var(--color-rosa-50, #FDF2F8), #FFF0F5);
 }
 
 .highlight-section__content {
@@ -1455,12 +1455,12 @@
     gap: var(--space-3);
     font-size: clamp(1.75rem, 4vw, 2.25rem);
     font-weight: var(--font-bold);
-    color: var(--color-primary-900);
+    color: var(--color-rosa-700, #AD1457);
     margin-bottom: var(--space-4);
 }
 
 .highlight-section__text h2 svg {
-    color: var(--color-primary-600);
+    color: var(--color-rosa-600, #C2185B);
     flex-shrink: 0;
 }
 
@@ -1490,15 +1490,15 @@
 }
 
 .highlight-price--promo {
-    border-color: var(--color-primary-300);
-    background: linear-gradient(135deg, var(--color-white), var(--color-primary-50));
+    border-color: var(--color-rosa-300, #F48FB1);
+    background: linear-gradient(135deg, var(--color-white), var(--color-rosa-50, #FDF2F8));
 }
 
 .highlight-price__amount {
     display: block;
     font-size: var(--text-3xl);
     font-weight: var(--font-bold);
-    color: var(--color-primary-600);
+    color: var(--color-rosa-600, #C2185B);
     margin-bottom: var(--space-1);
 }
 
@@ -1524,7 +1524,7 @@
 
 .highlight-section__tips li svg {
     flex-shrink: 0;
-    color: var(--color-primary-600);
+    color: var(--color-rosa-600, #C2185B);
     margin-top: 2px;
 }
 
@@ -1540,7 +1540,7 @@
 .highlight-section__delivery h4 {
     font-size: var(--text-base);
     font-weight: var(--font-bold);
-    color: var(--color-primary-900);
+    color: var(--color-rosa-700, #AD1457);
     margin-bottom: var(--space-2);
 }
 
@@ -1815,5 +1815,152 @@
     .paquete-maternidad-link {
         padding: var(--space-4);
         gap: var(--space-4);
+    }
+}
+
+/* ========================================
+   Procedimientos Quirúrgicos Grid
+   ======================================== */
+
+.procedimientos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(350px, 100%), 1fr));
+    gap: var(--space-6);
+}
+
+.procedimiento-categoria-card {
+    background: var(--color-white);
+    border-radius: var(--radius-xl);
+    padding: var(--space-8);
+    box-shadow: var(--shadow-md);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-left: 4px solid var(--color-primary-600);
+    transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
+}
+
+.procedimiento-categoria-card:hover {
+    box-shadow: 0 12px 40px rgba(27, 127, 94, 0.10);
+    transform: translateY(-4px);
+    border-color: var(--color-primary-100);
+    border-left-color: var(--color-primary-600);
+}
+
+.procedimiento-categoria-card__title {
+    font-size: var(--text-xl);
+    font-weight: var(--font-bold);
+    color: var(--color-primary-900);
+    margin-bottom: var(--space-4);
+    padding-bottom: var(--space-3);
+    border-bottom: 2px solid var(--color-primary-100);
+}
+
+.procedimiento-categoria-card__list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--space-6) 0;
+}
+
+.procedimiento-categoria-card__list li {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-2) 0;
+    font-size: var(--text-sm);
+    color: var(--color-neutral-700);
+    border-bottom: 1px solid var(--color-neutral-100);
+}
+
+.procedimiento-categoria-card__list li:last-child {
+    border-bottom: none;
+}
+
+.procedimiento-categoria-card__list li svg {
+    flex-shrink: 0;
+    color: var(--color-primary-600);
+}
+
+/* Quirófano Gallery */
+.quirofano-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: var(--space-4);
+}
+
+.quirofano-gallery__item {
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    aspect-ratio: 4/3;
+}
+
+/* Otros Servicios Grid */
+.otros-servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+    gap: var(--space-6);
+}
+
+.otro-servicio-card {
+    background: var(--color-white);
+    border-radius: var(--radius-xl);
+    padding: var(--space-6);
+    box-shadow: var(--shadow-md);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.otro-servicio-card:hover {
+    box-shadow: 0 8px 30px rgba(27, 127, 94, 0.10);
+    transform: translateY(-3px);
+}
+
+.otro-servicio-card h4 {
+    font-size: var(--text-lg);
+    font-weight: var(--font-bold);
+    color: var(--color-primary-900);
+    margin-bottom: var(--space-2);
+}
+
+.otro-servicio-card p {
+    font-size: var(--text-sm);
+    color: var(--color-neutral-600);
+    line-height: 1.6;
+    margin-bottom: var(--space-4);
+}
+
+/* Highlighted estudio tipo (Obstétrico, Mamario) */
+.estudio-tipo-item--destacado {
+    background: var(--color-rosa-50);
+    border-left-color: var(--color-rosa-600);
+}
+
+.estudio-tipo-item--destacado strong {
+    color: var(--color-rosa-700);
+}
+
+@media (max-width: 992px) {
+    .procedimientos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .quirofano-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .otros-servicios-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .procedimiento-categoria-card {
+        padding: var(--space-6);
+    }
+
+    .quirofano-gallery {
+        grid-template-columns: 1fr 1fr;
     }
 }

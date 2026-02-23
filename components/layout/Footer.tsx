@@ -19,7 +19,7 @@ export default function Footer() {
                     <div className="footer__column">
                         <Link href="/" className="footer__logo">
                             <img
-                                src="/images/ultimologo.svg"
+                                src="/images/logo-fondo-blanco.webp"
                                 alt="Hospital Santa Fe"
                                 width="160"
                                 height="53"
@@ -38,7 +38,7 @@ export default function Footer() {
                             <li><Link href="/maternidad">Maternidad</Link></li>
                             <li><Link href="/servicios/especialidades">Especialidades</Link></li>
                             <li><Link href="/servicios/estudios-imagen">Estudios de Imagen</Link></li>
-                            <li><Link href="/servicios/paquetes">Paquetes Quirúrgicos</Link></li>
+                            <li><Link href="/servicios/paquetes">Procedimientos Quirúrgicos</Link></li>
                             <li><Link href="/servicios/cuneros">Cuneros</Link></li>
                         </ul>
                     </div>

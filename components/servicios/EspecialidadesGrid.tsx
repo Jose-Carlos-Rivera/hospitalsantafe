@@ -65,11 +65,6 @@ export default function EspecialidadesGrid({ especialidades }: Props) {
               )}
             </div>
             <div className="especialidad-card__body">
-              <div className="especialidad-icon">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                  <path d={esp.iconPath} />
-                </svg>
-              </div>
               <h3>{esp.nombre}</h3>
               {esp.subtitulo && <p className="especialidad-card__subtitulo">{esp.subtitulo}</p>}
               <p>{esp.descripcion}</p>

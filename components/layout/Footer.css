@@ -47,7 +47,9 @@
     display: block;
     width: 160px;
     height: auto;
-    filter: brightness(0) invert(1);
+    background: white;
+    padding: 8px 12px;
+    border-radius: 10px;
     opacity: 0.95;
     transition: opacity var(--transition-fast);
 }

@@ -164,7 +164,6 @@ function buildSearchIndex(): SearchItem[] {
       category: 'estudio',
       keywords: [
         est.nombre.toLowerCase(),
-        est.precio.toLowerCase(),
         ...(est.indicaciones || []).map(i => i.toLowerCase()),
         ...(est.tipos || []).map(t => t.nombre.toLowerCase()),
       ],
@@ -240,7 +239,7 @@ export const popularSearches: { label: string; href: string }[] = [
   { label: 'Urgencias', href: '/contacto' },
   { label: 'Maternidad', href: '/maternidad' },
   { label: 'Especialidades', href: '/servicios/especialidades' },
-  { label: 'Paquetes Quirúrgicos', href: '/servicios/paquetes' },
+  { label: 'Procedimientos Quirúrgicos', href: '/servicios/paquetes' },
   { label: 'Estudios de Imagen', href: '/servicios/estudios-imagen' },
   { label: 'Habitaciones', href: '/instalaciones/habitaciones' },
   { label: 'Instalaciones', href: '/instalaciones' },

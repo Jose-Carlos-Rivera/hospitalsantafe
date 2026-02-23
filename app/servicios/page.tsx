@@ -53,20 +53,20 @@ export default function ServiciosPage() {
               </span>
             </Link>
 
-            {/* Paquetes Quirúrgicos */}
+            {/* Procedimientos Quirúrgicos */}
             <Link href="/servicios/paquetes" className="servicio-hub-card" data-animate>
               <div className="servicio-hub-card__icon">
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                   <path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z" />
                 </svg>
               </div>
-              <h2 className="servicio-hub-card__title">Paquetes Quirúrgicos</h2>
+              <h2 className="servicio-hub-card__title">Procedimientos Quirúrgicos</h2>
               <p className="servicio-hub-card__desc">
-                Paquetes a precio cerrado para maternidad, artroscopía, cirugía bariátrica, cirugía plástica y más de 14 procedimientos quirúrgicos programados.
+                Realizamos una amplia variedad de cirugías: ginecología, cirugía general, urología, cirugía plástica y otorrinolaringología. Contáctanos para cotización.
               </p>
-              <span className="servicio-hub-card__count">5 categorías de paquetes</span>
+              <span className="servicio-hub-card__count">5 especialidades quirúrgicas</span>
               <span className="servicio-hub-card__link">
-                Ver paquetes
+                Ver procedimientos
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>

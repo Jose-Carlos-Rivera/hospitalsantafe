@@ -6,7 +6,7 @@ import './page.css';
 
 export const metadata: Metadata = {
     title: 'Paquetes de Maternidad',
-    description: 'Paquetes de maternidad desde $11,000. Consultas prenatales, ecosonogramas 3D/4D, atención por especialistas. Apartado desde $500 pesos.',
+    description: 'Paquetes de maternidad desde $28,450. Consultas prenatales, ecosonogramas 3D/4D, atención por especialistas. Apartado desde $1,000 pesos.',
 };
 
 export default function MaternidadPage() {
@@ -19,7 +19,7 @@ export default function MaternidadPage() {
                         <img
                             src="/images/hospital/maternidad/paquetes-de-maternidad.webp"
                             alt="Paquetes de Maternidad Hospital Santa Fe"
-                            style={{ width: '100%', maxWidth: '500px', borderRadius: 'var(--radius-xl)', margin: '0 auto var(--space-6)' }}
+                            style={{ width: '100%', maxWidth: '350px', borderRadius: 'var(--radius-xl)', margin: '0 auto var(--space-6)' }}
                         />
                     </div>
                     <h1 className="hero-maternidad__title">
@@ -48,7 +48,7 @@ export default function MaternidadPage() {
                                 </svg>
                             </div>
                             <h3>Precios accesibles</h3>
-                            <p>Paquetes desde $11,000 con facilidad de pago</p>
+                            <p>Paquetes desde $28,450 con facilidad de pago</p>
                         </div>
 
                         <div className="benefit-card" data-animate>
@@ -60,8 +60,8 @@ export default function MaternidadPage() {
                                     <line x1="3" y1="10" x2="21" y2="10" />
                                 </svg>
                             </div>
-                            <h3>Apartado $500</h3>
-                            <p>Aparta tu paquete con solo $500 pesos</p>
+                            <h3>Apartado $1,000</h3>
+                            <p>Aparta tu paquete con solo $1,000 pesos</p>
                         </div>
 
                         <div className="benefit-card" data-animate>
@@ -70,7 +70,7 @@ export default function MaternidadPage() {
                                     <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
                                 </svg>
                             </div>
-                            <h3>Consultas incluidas</h3>
+                            <h3>Descuento en consultas prenatales</h3>
                             <p>Consultas prenatales con especialistas</p>
                         </div>
 
@@ -169,7 +169,7 @@ export default function MaternidadPage() {
                                 <h3>Paquete de Parto</h3>
                                 <div className="package-card__price">
                                     <span className="price-currency">$</span>
-                                    <span className="price-amount">11,000</span>
+                                    <span className="price-amount">28,450</span>
                                     <span className="price-note">*</span>
                                 </div>
                                 <p className="price-description">Habitación Normal</p>
@@ -190,7 +190,7 @@ export default function MaternidadPage() {
                                 </ul>
 
                                 <a
-                                    href={getWhatsAppUrl('Hola, me interesa información sobre el Paquete de Parto Natural de $11,000')}
+                                    href={getWhatsAppUrl('Hola, me interesa información sobre el Paquete de Parto Natural de $28,450')}
                                     className="btn btn--rosa"
                                     style={{ width: '100%', marginTop: 'var(--space-6)' }}
                                     target="_blank"
@@ -201,7 +201,7 @@ export default function MaternidadPage() {
                             </div>
 
                             <div className="package-card__footer">
-                                <p>*Apartado con $500 pesos • Abonos mensuales durante control prenatal</p>
+                                <p>*Apartado con $1,000 pesos • Abonos mensuales durante control prenatal</p>
                             </div>
                         </div>
 
@@ -213,7 +213,7 @@ export default function MaternidadPage() {
                                 <h3>Paquete de Ces&aacute;rea</h3>
                                 <div className="package-card__price">
                                     <span className="price-currency">$</span>
-                                    <span className="price-amount">15,000</span>
+                                    <span className="price-amount">33,000</span>
                                     <span className="price-note">*</span>
                                 </div>
                                 <p className="price-description">Habitación Normal</p>
@@ -234,7 +234,7 @@ export default function MaternidadPage() {
                                 </ul>
 
                                 <a
-                                    href={getWhatsAppUrl('Hola, me interesa información sobre el Paquete de Cesárea de $15,000')}
+                                    href={getWhatsAppUrl('Hola, me interesa información sobre el Paquete de Cesárea de $33,000')}
                                     className="btn btn--rosa"
                                     style={{ width: '100%', marginTop: 'var(--space-6)' }}
                                     target="_blank"
@@ -245,7 +245,7 @@ export default function MaternidadPage() {
                             </div>
 
                             <div className="package-card__footer">
-                                <p>*Apartado con $500 pesos • Abonos mensuales durante control prenatal</p>
+                                <p>*Apartado con $1,000 pesos • Abonos mensuales durante control prenatal</p>
                             </div>
                         </div>
                     </ScrollReveal>
@@ -270,7 +270,7 @@ export default function MaternidadPage() {
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                                     <polyline points="20 6 9 17 4 12" />
                                 </svg>
-                                <p>Facilidad de pago: Aparta con $500 y abona mensualmente</p>
+                                <p>Facilidad de pago: Aparta con $1,000 y abona mensualmente</p>
                             </div>
                         </div>
                         <p className="text-neutral text-sm" style={{ marginTop: 'var(--space-4)' }}>
@@ -367,7 +367,7 @@ export default function MaternidadPage() {
 
                         <details className="faq-item" data-animate>
                             <summary>¿Cuánto debo de abonar cada mes?</summary>
-                            <p>No hay una cantidad fija obligatoria. Lo recomendable es abonar mínimo $500 pesos cada mes durante tu control prenatal para que el paquete esté casi pagado al final del embarazo. Puedes hacer abonos mayores según tu conveniencia.</p>
+                            <p>No hay una cantidad fija obligatoria. Lo recomendable es abonar mínimo $1,000 pesos cada mes durante tu control prenatal para que el paquete esté casi pagado al final del embarazo. Puedes hacer abonos mayores según tu conveniencia.</p>
                         </details>
 
                         <details className="faq-item" data-animate>
@@ -409,7 +409,7 @@ export default function MaternidadPage() {
                     <ScrollReveal>
                         <div data-animate style={{ maxWidth: '400px', margin: '0 auto', textAlign: 'center' }}>
                             <h3 style={{ marginBottom: 'var(--space-4)', color: 'var(--color-rosa-700)' }}>Conoce Nuestros Cuneros</h3>
-                            <VideoPlayer src="/videos/cuneros.mp4" style={{ width: '100%', aspectRatio: '9/16' }} />
+                            <VideoPlayer src="/videos/maternidad.mp4" style={{ width: '100%', aspectRatio: '9/16' }} />
                         </div>
                     </ScrollReveal>
                 </div>

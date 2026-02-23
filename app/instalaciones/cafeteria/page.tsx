@@ -41,7 +41,7 @@ export default function Cafeteria() {
                 </div>
                 <VideoPlayer
                   src="/videos/cafeteria.mp4"
-                  style={{ width: '100%', marginTop: 'var(--space-6)', aspectRatio: '9/16' }}
+                  style={{ width: '100%', maxWidth: '300px', maxHeight: '450px', margin: 'var(--space-6) auto 0', aspectRatio: '9/16' }}
                 />
               </div>
 
@@ -56,41 +56,45 @@ export default function Cafeteria() {
                 <div className="horarios-box">
                   <h3>Horario de Servicio</h3>
                   <div className="horario-item">
-                    <strong>Lunes a Domingo:</strong>
-                    <span>7:00 AM - 8:00 PM</span>
+                    <strong>Lunes a Viernes:</strong>
+                    <span>9:00 AM - 8:00 PM</span>
+                  </div>
+                  <div className="horario-item">
+                    <strong>Sábado y Domingo:</strong>
+                    <span>9:00 AM - 4:00 PM</span>
                   </div>
                 </div>
 
                 <h3>Menú</h3>
                 <div className="menu-section">
-                  <h4>Desayunos (7:00 AM - 11:00 AM)</h4>
+                  <h4>Desayunos (9:00 AM - 11:00 AM)</h4>
                   <ul>
-                    <li>Desayunos completos desde $50</li>
-                    <li>Pan dulce y café</li>
+                    <li>Desayunos completos desde $60.00</li>
                     <li>Jugos naturales</li>
                     <li>Fruta fresca</li>
+                    <li>Chilaquiles</li>
+                    <li>Huevo al gusto</li>
                   </ul>
 
-                  <h4>Comidas (1:00 PM - 5:00 PM)</h4>
+                  <h4>Comidas (1:00 PM - 4:00 PM)</h4>
                   <ul>
-                    <li>Menú del día $80</li>
+                    <li>Menú del día $90.00</li>
                     <li>Platos a la carta</li>
                     <li>Ensaladas</li>
-                    <li>Comida balanceada para diabéticos</li>
                   </ul>
 
                   <h4>Todo el día</h4>
                   <ul>
-                    <li>Café y bebidas calientes</li>
+                    <li>Café y bebidas</li>
                     <li>Refrescos y agua</li>
-                    <li>Snacks saludables</li>
+                    <li>Snacks</li>
                     <li>Sandwiches</li>
+                    <li>Burritos</li>
                   </ul>
                 </div>
 
                 <div className="info-box">
-                  <strong>Servicio a habitaciones:</strong> Disponible para pacientes hospitalizados.
-                  Pregunta al personal de enfermería.
+                  <strong>Servicio a habitaciones:</strong> Disponible para pacientes hospitalizados y sus familiares, Ext. 30.
                 </div>
               </div>
             </div>
@@ -111,7 +115,7 @@ export default function Cafeteria() {
             </div>
             <div className="info-item" data-animate>
               <h4>Precios accesibles</h4>
-              <p>Desayunos desde $50 y comidas completas desde $80. Ofrecemos opciones para todos los presupuestos.</p>
+              <p>Desayunos desde $60 y comidas completas desde $90. Ofrecemos opciones para todos los presupuestos.</p>
             </div>
             <div className="info-item" data-animate>
               <h4>Variedad de opciones</h4>

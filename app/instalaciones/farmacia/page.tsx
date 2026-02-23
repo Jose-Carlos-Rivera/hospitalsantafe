@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import ScrollReveal from '@/components/common/ScrollReveal';
+import VideoPlayer from '@/components/common/VideoPlayer';
 import '../instalaciones.css';
 
 export const metadata: Metadata = {
@@ -11,11 +12,11 @@ export const metadata: Metadata = {
 const serviciosFarmacia = [
   {
     titulo: 'Medicamentos de patente y genéricos',
-    descripcion: 'Amplio inventario de medicamentos tanto de marca como genéricos intercambiables de la más alta calidad.',
+    descripcion: 'Amplio inventario de medicamentos tanto de marca como genéricos intercambiables de alta calidad.',
   },
   {
     titulo: 'Material de curación',
-    descripcion: 'Gasas, vendajes, algodón, cintas adhesivas y todo el material necesario para curaciones y cuidados postquirúrgicos.',
+    descripcion: 'Gasas, vendas, algodón, cintas adhesivas y todo el material necesario para curaciones, cuidados postquirúrgicos y artículos de ortopedia.',
   },
   {
     titulo: 'Productos para la salud',
@@ -26,8 +27,8 @@ const serviciosFarmacia = [
     descripcion: 'Surtimos recetas de los médicos del hospital y de consultorios externos. Medicamentos controlados con receta retenida.',
   },
   {
-    titulo: 'Toma de presión arterial',
-    descripcion: 'Servicio gratuito de medición de presión arterial disponible durante el horario de atención de la farmacia.',
+    titulo: 'Productos de Maternidad y bebés',
+    descripcion: 'Artículos para bebé, lactancia, fajas post parto.',
   },
 ];
 
@@ -45,7 +46,7 @@ export default function Farmacia() {
           </nav>
           <h1>Farmacia</h1>
           <p className="page-hero__subtitle">
-            Medicamentos y productos de salud dentro del hospital, siempre disponibles
+            Medicamentos y productos de salud dentro del hospital.
           </p>
         </div>
       </section>
@@ -59,23 +60,18 @@ export default function Farmacia() {
                 <p>
                   Nuestra farmacia se encuentra ubicada dentro de las instalaciones del Hospital Santa Fe,
                   brindando comodidad y acceso inmediato a medicamentos para pacientes hospitalizados,
-                  sus familiares y público en general. Contamos con farmacéuticos capacitados que te
-                  orientarán en el correcto uso de tus medicamentos.
+                  sus familiares y público en general.
                 </p>
 
                 <div className="horarios-box">
                   <h3>Horario de Atención</h3>
                   <div className="horario-item">
-                    <strong>Lunes a Viernes:</strong>
-                    <span>8:00 AM - 8:00 PM</span>
+                    <strong>Lunes a Sábado:</strong>
+                    <span>8:00 AM - 9:00 PM</span>
                   </div>
                   <div className="horario-item">
-                    <strong>Sábados:</strong>
-                    <span>9:00 AM - 6:00 PM</span>
-                  </div>
-                  <div className="horario-item">
-                    <strong>Domingos y festivos:</strong>
-                    <span>9:00 AM - 2:00 PM</span>
+                    <strong>Domingos y días festivos:</strong>
+                    <span>9:00 AM - 3:00 PM</span>
                   </div>
                 </div>
 
@@ -105,8 +101,12 @@ export default function Farmacia() {
 
               <div className="farmacia-image">
                 <img
-                  src="https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=600&h=700&fit=crop"
+                  src="/images/hospital/instalaciones/farmacia-nueva.webp"
                   alt="Farmacia interna del Hospital Santa Fe"
+                />
+                <VideoPlayer
+                  src="/videos/farmacia.mp4"
+                  style={{ width: '100%', maxWidth: '300px', maxHeight: '450px', margin: 'var(--space-6) auto 0', aspectRatio: '9/16' }}
                 />
               </div>
             </div>

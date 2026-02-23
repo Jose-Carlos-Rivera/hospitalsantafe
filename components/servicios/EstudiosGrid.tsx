@@ -10,7 +10,7 @@ interface Props {
   estudios: EstudioImagen[];
 }
 
-const suggestions = ['Rayos X', 'Ecosonograma', 'Doppler', 'Mastografía', 'Endoscopía', 'Electrocardiograma'];
+const suggestions = ['Rayos X', 'Ecosonograma', 'Doppler', 'Colonoscopía', 'Endoscopía', 'Electrocardiograma'];
 
 export default function EstudiosGrid({ estudios }: Props) {
   const [searchQuery, setSearchQuery] = useState('');
@@ -74,7 +74,7 @@ export default function EstudiosGrid({ estudios }: Props) {
                 <h4>Tipos de estudio disponibles:</h4>
                 <div className="estudio-tipos-grid">
                   {estudio.tipos.map((tipo, idx) => (
-                    <div key={idx} className="estudio-tipo-item">
+                    <div key={idx} className={`estudio-tipo-item ${(tipo as any).destacado ? 'estudio-tipo-item--destacado' : ''}`}>
                       <strong>{tipo.nombre}</strong>
                       <p>{tipo.descripcion}</p>
                     </div>
@@ -109,7 +109,6 @@ export default function EstudiosGrid({ estudios }: Props) {
             </div>
 
             <div className="estudio-card__footer">
-              <div className="precio">{estudio.precio}</div>
               <a
                 href={`https://wa.me/523331198625?text=${encodeURIComponent(`Hola, me gustaría agendar un estudio de ${estudio.nombre}`)}`}
                 className="btn btn--whatsapp btn--small"

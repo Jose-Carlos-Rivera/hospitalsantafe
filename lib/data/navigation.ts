@@ -13,9 +13,10 @@ export const mainNavigation: NavItem[] = [
     children: [
       { label: "Todos los servicios", href: "/servicios" },
       { label: "Especialidades", href: "/servicios/especialidades" },
-      { label: "Paquetes Quirúrgicos", href: "/servicios/paquetes" },
+      { label: "Procedimientos Quirúrgicos", href: "/servicios/paquetes" },
       { label: "Estudios de Imagen", href: "/servicios/estudios-imagen" },
       { label: "Cuneros", href: "/servicios/cuneros" },
+      { label: "Otros Servicios", href: "/servicios/estudios-imagen#otros-servicios" },
       { label: "Maternidad", href: "/maternidad" },
     ]
   },

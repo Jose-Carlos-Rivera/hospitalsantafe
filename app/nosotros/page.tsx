@@ -16,10 +16,7 @@ export default function Nosotros() {
             <section className="nosotros-hero">
                 <div className="container">
                     <div className="nosotros-hero__content">
-                        <h1>NOSOTROS</h1>
-                        <p className="lead">
-                            Más de 20 años brindando atención médica de calidad con calidez humana
-                        </p>
+                        <h1>Nosotros</h1>
                     </div>
                 </div>
             </section>
@@ -29,27 +26,49 @@ export default function Nosotros() {
                 <div className="container">
                     <ScrollReveal className="content-split">
                         <div className="content-text" data-animate="fade-right">
-                            <h2>¿Quiénes Somos?</h2>
+                            <h2>¿Quiénes somos?</h2>
                             <p>
-                                El Hospital Santa Fe es una institución médica privada con más de dos décadas
-                                de experiencia brindando servicios de salud de calidad en Zapotlanejo, Jalisco.
-                            </p>
-                            <p>
-                                Nuestra misión es proporcionar atención médica integral, personalizada y de
-                                excelencia, con un equipo de profesionales altamente capacitados y tecnología
-                                de vanguardia.
-                            </p>
-                            <p>
-                                Nos distingue nuestro compromiso con el bienestar de nuestros pacientes y sus
-                                familias, ofreciendo un trato cercano, humano y profesional en cada consulta
-                                y procedimiento.
+                                El Hospital Santa Fe es una institución médica privada con más de 20 años de trayectoria en Zapotlanejo, Jalisco. Nacimos como un proyecto impulsado por la vocación de servicio y el compromiso con la comunidad, y hoy somos un hospital consolidado que brinda atención médica continua las 24 horas. Nos caracterizamos por ofrecer un entorno hospitalario seguro, cercano y profesional, respaldado por infraestructura en constante crecimiento y un equipo multidisciplinario de especialistas y personal de salud comprometido con el bienestar de cada paciente y su familia.
                             </p>
                         </div>
                         <div className="content-image" data-animate="fade-left">
                             <img
                                 src="/images/hospital/instalaciones/recepcion.webp"
-                                alt="Hospital Santa Fe - Recepci&oacute;n"
+                                alt="Hospital Santa Fe - Recepción"
                             />
+                        </div>
+                    </ScrollReveal>
+                </div>
+            </section>
+
+            {/* Misión y Visión */}
+            <section className="section mision-vision-section">
+                <div className="container">
+                    <ScrollReveal stagger className="mision-vision-grid">
+                        <div className="mision-vision-card" data-animate="fade-right">
+                            <div className="mision-vision-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <circle cx="12" cy="12" r="6" />
+                                    <circle cx="12" cy="12" r="2" />
+                                </svg>
+                            </div>
+                            <h3>Misión</h3>
+                            <p>
+                                Contribuir a la salud y bienestar de cada paciente, proporcionando cuidados necesarios con seguridad, calidad, calidez, respeto, humanidad y accesibilidad atendidos por profesionales calificados.
+                            </p>
+                        </div>
+                        <div className="mision-vision-card" data-animate="fade-left">
+                            <div className="mision-vision-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                    <circle cx="12" cy="12" r="3" />
+                                </svg>
+                            </div>
+                            <h3>Visión</h3>
+                            <p>
+                                Ser el hospital de mayor confianza en la zona, reconocido por su calidad médica, actitud de servicio y cercanía con la comunidad. Consolidarnos como una institución que crece de manera responsable, fortalece el empleo local y mejora continuamente para ofrecer cada día una mejor atención.
+                            </p>
                         </div>
                     </ScrollReveal>
                 </div>
@@ -105,6 +124,50 @@ export default function Nosotros() {
                             <h3>Disponibilidad</h3>
                             <p>Atención médica 24/7 para emergencias y urgencias</p>
                         </div>
+
+                        <div className="valor-card" data-animate>
+                            <div className="valor-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                </svg>
+                            </div>
+                            <h3>Confianza</h3>
+                            <p>Construimos relaciones basadas en honestidad, ética médica y seguridad en cada atención.</p>
+                        </div>
+
+                        <div className="valor-card" data-animate>
+                            <div className="valor-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                                    <polyline points="9 22 9 12 15 12 15 22" />
+                                </svg>
+                            </div>
+                            <h3>Cercanía</h3>
+                            <p>Mantenemos una relación próxima con nuestros pacientes y sus familias, ofreciendo atención personalizada y un trato accesible tanto a la comunidad como a quienes nos visitan desde otras localidades.</p>
+                        </div>
+                    </ScrollReveal>
+                </div>
+            </section>
+
+            {/* Nuestra Historia */}
+            <section className="section historia-section">
+                <div className="container">
+                    <ScrollReveal className="content-split">
+                        <div className="content-text" data-animate="fade-right">
+                            <h2>Nuestra Historia</h2>
+                            <p>
+                                El Hospital Santa Fe inició en 1999 como un consultorio médico y farmacia, fundado por el Dr. Juan Manuel Dávalos González tras detectar la necesidad de servicios médicos permanentes en la comunidad de Santa Fe, Zapotlanejo. Gracias a la confianza de los pacientes y al trabajo constante, el proyecto creció rápidamente, incorporando servicios, equipamiento y mayor capacidad de atención.
+                            </p>
+                            <p>
+                                En 2003 se inauguró la primera etapa de la entonces Clínica Santa Fe, que con el paso de los años se amplió en infraestructura, especialidades y servicios quirúrgicos hasta consolidarse como Hospital Santa Fe. Hoy, continúa evolucionando con el mismo compromiso que le dio origen: brindar atención médica accesible, profesional y cercana.
+                            </p>
+                        </div>
+                        <div className="content-image" data-animate="fade-left">
+                            <img
+                                src="/images/hospital/instalaciones/entrada-estacionamiento-nosotros.webp"
+                                alt="Hospital Santa Fe - Entrada principal"
+                            />
+                        </div>
                     </ScrollReveal>
                 </div>
             </section>
@@ -125,8 +188,8 @@ export default function Nosotros() {
                                 <p className="nosotros-video-caption">Quirófanos</p>
                             </div>
                             <div className="nosotros-video-item">
-                                <VideoPlayer src="/videos/cuneros.mp4" style={{ width: '100%', aspectRatio: '9/16' }} />
-                                <p className="nosotros-video-caption">Cuneros</p>
+                                <VideoPlayer src="/videos/farmacia.mp4" style={{ width: '100%', aspectRatio: '9/16' }} />
+                                <p className="nosotros-video-caption">Farmacia</p>
                             </div>
                             <div className="nosotros-video-item">
                                 <VideoPlayer src="/videos/cafeteria.mp4" style={{ width: '100%', aspectRatio: '9/16' }} />
@@ -169,14 +232,14 @@ export default function Nosotros() {
                         </div>
                         <div className="gallery-item" data-animate="scale-in">
                             <img
-                                src="/images/hospital/instalaciones/cafeteria.webp"
-                                alt="Cafeter&iacute;a"
+                                src="/images/hospital/instalaciones/farmacia-nueva.webp"
+                                alt="Farmacia"
                             />
                         </div>
                         <div className="gallery-item" data-animate="scale-in">
                             <img
-                                src="/images/hospital/instalaciones/estacionamiento_1.webp"
-                                alt="Estacionamiento"
+                                src="/images/hospital/instalaciones/cafeteria.webp"
+                                alt="Cafetería"
                             />
                         </div>
                     </ScrollReveal>

@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import { Montserrat, Open_Sans } from "next/font/google";
+import { Poppins, Open_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import CTABar from "@/components/layout/CTABar";
 
-const montserrat = Montserrat({
+const poppins = Poppins({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-montserrat",
+  variable: "--font-poppins",
   weight: ["400", "500", "600", "700"],
 });
 
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: "%s | Hospital Santa Fe",
   },
   description:
-    "Hospital Santa Fe ofrece atención médica personalizada desde 2003. Urgencias 24/7, más de 20 especialidades, paquetes de maternidad desde $11,000, cirugías y estudios de imagen en Zapotlanejo, Jalisco.",
+    "Hospital Santa Fe ofrece atención médica personalizada desde 2003. Urgencias 24/7, 19 especialidades, paquetes de maternidad, cirugías y estudios de imagen en Zapotlanejo, Jalisco.",
   keywords: [
     "hospital",
     "santa fe",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     siteName: "Hospital Santa Fe",
     title: "Hospital Santa Fe | Atención Médica de Calidad en Zapotlanejo",
     description:
-      "Más de 20 años brindando atención médica integral. Urgencias 24/7, 20 especialidades, paquetes de maternidad y tecnología de vanguardia.",
+      "Más de 20 años brindando atención médica integral. Urgencias 24/7, 19 especialidades, paquetes de maternidad y atención de calidad.",
   },
   robots: {
     index: true,
@@ -70,7 +70,7 @@ const jsonLd = {
   "@type": "MedicalBusiness",
   name: "Hospital Santa Fe",
   description:
-    "Hospital privado con más de 20 años de experiencia brindando atención médica de calidad en Zapotlanejo, Jalisco. Urgencias 24/7, 20 especialidades médicas.",
+    "Hospital privado con más de 20 años de experiencia brindando atención médica de calidad en Zapotlanejo, Jalisco. Urgencias 24/7, 19 especialidades médicas.",
   url: "https://hospitalsantafe.com",
   telephone: ["+52-373-734-4205", "+52-373-106-5183", "+52-333-119-8625"],
   address: {
@@ -107,32 +107,31 @@ const jsonLd = {
     },
   ],
   medicalSpecialty: [
-    "Medicina General",
-    "Ginecología y Obstetricia",
-    "Pediatría y Neonatología",
-    "Cardiología",
-    "Traumatología y Ortopedia",
-    "Cirugía General y Laparoscópica",
-    "Medicina Interna",
-    "Anestesiología",
-    "Urología",
-    "Otorrinolaringología",
-    "Dermatología",
-    "Gastroenterología",
-    "Neurología y Neurocirugía",
-    "Cirugía Plástica y Reconstructiva",
-    "Cirugía Maxilofacial",
-    "Nefrología",
-    "Cirugía Pediátrica",
     "Angiología",
-    "Cirugía de Tórax y Cardiovascular",
-    "Odontología",
+    "Cardiología",
+    "Cirugía General y Laparoscópica",
+    "Cirugía Plástica",
+    "Fisioterapia",
+    "Geriatría",
+    "Ginecología y Obstetricia",
+    "Medicina General",
+    "Medicina Interna",
+    "Nefrología",
+    "Neurología",
+    "Nutrición",
+    "Oftalmología",
+    "Otorrinolaringología",
+    "Pediatría",
+    "Psicología",
+    "Reumatología",
+    "Traumatología y Ortopedia",
+    "Urología",
   ],
   priceRange: "$$",
   currenciesAccepted: "MXN",
   paymentAccepted: "Efectivo, Tarjeta de crédito, Tarjeta de débito",
   hasMap: "https://www.google.com/maps?q=20.525694,-103.084389",
-  image: "/images/ultimologo.svg",
+  image: "/images/logo-nuevo.png",
   sameAs: [],
 };
 
@@ -149,7 +148,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className={`${montserrat.variable} ${openSans.variable}`}>
+      <body className={`${poppins.variable} ${openSans.variable}`}>
         <Header />
         <main id="main-content">{children}</main>
         <Footer />

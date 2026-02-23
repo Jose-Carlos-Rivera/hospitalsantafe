@@ -16,11 +16,10 @@ export default function Home() {
                 Desde 2003 en Zapotlanejo
               </span>
               <h1 className="hero-wave__title">
-                Tu salud,<br />nuestra misi&oacute;n
+                Vivimos para servir
               </h1>
               <p className="hero-wave__subtitle">
-                M&aacute;s de 20 a&ntilde;os brindando atenci&oacute;n m&eacute;dica de calidad con calidez humana.
-                Tecnolog&iacute;a de vanguardia y un equipo comprometido con tu bienestar.
+                M&aacute;s de 20 a&ntilde;os ofreciendo atenci&oacute;n m&eacute;dica de excelencia, con calidez humana y compromiso genuino con cada paciente. Contamos con un equipo altamente capacitado dedicado a cuidar tu salud y bienestar.
               </p>
               <div className="hero-cta-group">
                 <a href={getWhatsAppUrl('Hola, me gustaría agendar una cita')} className="btn btn--white btn--large" target="_blank" rel="noopener noreferrer">
@@ -97,7 +96,7 @@ export default function Home() {
               <div className="trust-bar__icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
               </div>
-              <span className="trust-bar__number">50+</span>
+              <span className="trust-bar__number">15+</span>
               <span className="trust-bar__label">M&eacute;dicos especialistas</span>
             </div>
             <div className="trust-bar__item" data-animate>
@@ -136,11 +135,11 @@ export default function Home() {
               <div className="paquetes-preview">
                 <div className="paquete-mini">
                   <span className="paquete-label">Parto</span>
-                  <span className="paquete-precio">$11,000</span>
+                  <span className="paquete-precio">$28,450.00</span>
                 </div>
                 <div className="paquete-mini">
                   <span className="paquete-label">Ces&aacute;rea</span>
-                  <span className="paquete-precio">$15,000</span>
+                  <span className="paquete-precio">$33,000.00</span>
                 </div>
               </div>
 
@@ -149,13 +148,13 @@ export default function Home() {
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <polyline points="20 6 9 17 4 12" />
                   </svg>
-                  <span>Apartado desde $500 pesos</span>
+                  <span>Apartado desde $1,000 pesos</span>
                 </div>
                 <div className="beneficio-item">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <polyline points="20 6 9 17 4 12" />
                   </svg>
-                  <span>Consultas prenatales incluidas</span>
+                  <span>Descuento en consultas prenatales</span>
                 </div>
                 <div className="beneficio-item">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -210,7 +209,7 @@ export default function Home() {
                 </svg>
               </div>
               <h3>Cardiolog&iacute;a</h3>
-              <p>Diagn&oacute;stico y tratamiento integral de enfermedades cardiovasculares con equipos de &uacute;ltima generaci&oacute;n.</p>
+              <p>Atenci&oacute;n y manejo integral de enfermedades cardiovasculares, apoyados en tecnolog&iacute;a actual y un equipo m&eacute;dico con experiencia y compromiso en el cuidado del coraz&oacute;n.</p>
               <Link href="/servicios/especialidades/cardiologia" className="card-link">
                 Ver m&aacute;s
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -228,7 +227,7 @@ export default function Home() {
                 </svg>
               </div>
               <h3>Diagn&oacute;stico</h3>
-              <p>Laboratorio cl&iacute;nico y estudios de imagen con resultados precisos en tiempo r&eacute;cord.</p>
+              <p>Servicios de estudios de imagen y apoyo diagn&oacute;stico, orientados a facilitar una evaluaci&oacute;n m&eacute;dica precisa y oportuna.</p>
               <Link href="/servicios/estudios-imagen" className="card-link">
                 Ver m&aacute;s
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -244,7 +243,7 @@ export default function Home() {
                 </svg>
               </div>
               <h3>Cirug&iacute;a</h3>
-              <p>Quir&oacute;fanos equipados con tecnolog&iacute;a avanzada para procedimientos de alta complejidad y seguridad.</p>
+              <p>Contamos con quir&oacute;fanos funcionales y equipamiento adecuado para procedimientos quir&uacute;rgicos, con protocolos orientados a brindar atenci&oacute;n segura y confiable.</p>
               <Link href="/servicios/paquetes" className="card-link">
                 Ver m&aacute;s
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -260,7 +259,7 @@ export default function Home() {
                 </svg>
               </div>
               <h3>Urgencias</h3>
-              <p>Atenci&oacute;n m&eacute;dica inmediata las 24 horas, los 365 d&iacute;as del a&ntilde;o con personal calificado.</p>
+              <p>Atenci&oacute;n m&eacute;dica inmediata las 24 horas, los 365 d&iacute;as del a&ntilde;o.</p>
               <Link href="/contacto" className="card-link">
                 Ver m&aacute;s
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -284,7 +283,7 @@ export default function Home() {
           <ScrollReveal className="about-split">
             <div className="about-image" data-animate="fade-left">
               <img
-                src="/images/hospital/instalaciones/recepcion.webp"
+                src="/images/hospital/instalaciones/recepcion-dr-juan-manuel.webp"
                 alt="Recepci&oacute;n Hospital Santa Fe"
               />
             </div>
@@ -320,12 +319,38 @@ export default function Home() {
             </div>
             <h2 className="section-title-modern text-center" data-animate>Nuestro Equipo</h2>
             <p className="section-subtitle-modern text-center" data-animate>
-              M&eacute;dicos especialistas con amplia experiencia y certificaci&oacute;n, comprometidos
+              M&eacute;dicos con amplia experiencia y certificaci&oacute;n, comprometidos
               con brindarte atenci&oacute;n personalizada y de la m&aacute;s alta calidad.
             </p>
           </ScrollReveal>
 
           <ScrollReveal stagger className="doctors-grid">
+            <div className="doctor-card" data-animate>
+              <div className="doctor-image">
+                <img
+                  src="/images/hospital/medicos/dr-juan-manuel-davalos.webp"
+                  alt="Dr. Juan Manuel Dávalos"
+                />
+              </div>
+              <div className="doctor-info">
+                <h3>Dr. Juan Manuel Dávalos</h3>
+                <span className="doctor-badge">Director del Área Médica</span>
+              </div>
+            </div>
+
+            <div className="doctor-card" data-animate>
+              <div className="doctor-image">
+                <img
+                  src="/images/hospital/medicos/dra-maria-gonzalez.webp"
+                  alt="Dra. María González"
+                />
+              </div>
+              <div className="doctor-info">
+                <h3>Dra. María González</h3>
+                <span className="doctor-badge">Coordinadora de Médicos</span>
+              </div>
+            </div>
+
             <div className="doctor-card" data-animate>
               <div className="doctor-image">
                 <img
@@ -335,20 +360,7 @@ export default function Home() {
               </div>
               <div className="doctor-info">
                 <h3>Dr. Javier Barajas</h3>
-                <span className="doctor-badge">M&eacute;dico Principal</span>
-              </div>
-            </div>
-
-            <div className="doctor-card" data-animate>
-              <div className="doctor-image">
-                <img
-                  src="/images/hospital/medicos/dra-maria-gonzalez.webp"
-                  alt="Dra. Mar&iacute;a Gonz&aacute;lez"
-                />
-              </div>
-              <div className="doctor-info">
-                <h3>Dra. Mar&iacute;a Gonz&aacute;lez</h3>
-                <span className="doctor-badge">M&eacute;dica Principal</span>
+                <span className="doctor-badge">Cirujano General</span>
               </div>
             </div>
           </ScrollReveal>
@@ -408,13 +420,33 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="instalacion-item instalacion-item--wide" data-animate="scale-in">
+            <div className="instalacion-item" data-animate="scale-in">
               <img
-                src="/images/hospital/instalaciones/consultorios_1.webp"
-                alt="Equipo m&eacute;dico de alta tecnolog&iacute;a"
+                src="/images/hospital/instalaciones/cafeteria.webp"
+                alt="Cafetería del Hospital Santa Fe"
               />
               <div className="instalacion-overlay">
-                <h4>Tecnolog&iacute;a Moderna</h4>
+                <h4>Cafetería</h4>
+              </div>
+            </div>
+
+            <div className="instalacion-item" data-animate="scale-in">
+              <img
+                src="/images/hospital/instalaciones/quirofanos-1.webp"
+                alt="Tecnología moderna del Hospital Santa Fe"
+              />
+              <div className="instalacion-overlay">
+                <h4>Tecnología Moderna</h4>
+              </div>
+            </div>
+
+            <div className="instalacion-item instalacion-item--wide" data-animate="scale-in">
+              <img
+                src="/images/hospital/instalaciones/consultorios.webp"
+                alt="Consultorios médicos"
+              />
+              <div className="instalacion-overlay">
+                <h4>Consultorios</h4>
               </div>
             </div>
           </ScrollReveal>

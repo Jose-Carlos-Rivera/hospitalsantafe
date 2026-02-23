@@ -56,7 +56,7 @@ export default function Header() {
         <Link href="/" className="header__logo" onClick={closeMobileMenu}>
           <div className="logo">
             <div className="logo__image">
-              <img src="/images/ultimologo.svg" alt="Hospital Santa Fe" width="180" height="60" style={{ objectFit: 'contain' }} />
+              <img src="/images/logo-nuevo.png" alt="Hospital Santa Fe" width="180" height="60" style={{ objectFit: 'contain' }} />
             </div>
           </div>
         </Link>
@@ -103,7 +103,7 @@ export default function Header() {
                   Especialidades
                 </Link>
                 <Link href="/servicios/paquetes" className="dropdown__link" role="menuitem">
-                  Paquetes Quirúrgicos
+                  Procedimientos Quirúrgicos
                 </Link>
                 <Link href="/servicios/estudios-imagen" className="dropdown__link" role="menuitem">
                   Estudios de imagen
@@ -269,7 +269,7 @@ export default function Header() {
                   Especialidades
                 </Link>
                 <Link href="/servicios/paquetes" className="mobile-nav__sublink" onClick={closeMobileMenu}>
-                  Paquetes Quirúrgicos
+                  Procedimientos Quirúrgicos
                 </Link>
                 <Link href="/servicios/estudios-imagen" className="mobile-nav__sublink" onClick={closeMobileMenu}>
                   Estudios de imagen

@@ -30,7 +30,7 @@ export default function Contacto() {
             <span className="breadcrumb__separator">/</span>
             <span className="breadcrumb__current">Contacto</span>
           </nav>
-          <h1>Contacto</h1>
+          <h1>CONTACTO</h1>
           <p className="contacto-banner__subtitle">Estamos aquí para atenderte</p>
           <p className="contacto-banner__lead">Contáctanos por cualquiera de estos medios</p>
         </div>
@@ -91,7 +91,7 @@ export default function Contacto() {
                 </div>
                 <div className="phone-item phone-item--urgencias">
                   <span className="phone-label">Urgencias 24/7</span>
-                  <a href={`tel:${PHONE_LANDLINE}`} className="phone-number">{PHONE_LANDLINE_DISPLAY}</a>
+                  <a href={`tel:${PHONE_WHATSAPP}`} className="phone-number">{PHONE_WHATSAPP_DISPLAY}</a>
                 </div>
               </div>
             </div>

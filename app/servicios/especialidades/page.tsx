@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import ScrollReveal from '@/components/common/ScrollReveal';
-import VideoPlayer from '@/components/common/VideoPlayer';
 import EspecialidadesGrid from '@/components/servicios/EspecialidadesGrid';
 import { especialidades } from '@/lib/data/especialidades';
 import { getWhatsAppUrl, PHONE_LANDLINE, PHONE_LANDLINE_DISPLAY } from '@/lib/data/navigation';
@@ -8,7 +7,7 @@ import '../servicios.css';
 
 export const metadata = {
   title: 'Especialidades Médicas',
-  description: '20 especialidades médicas en Hospital Santa Fe. Medicina general, ginecología, pediatría, cardiología, traumatología, cirugía plástica, neurología y más en Zapotlanejo, Jalisco.',
+  description: '19 especialidades médicas en Hospital Santa Fe. Medicina general, ginecología, pediatría, cardiología, traumatología, cirugía plástica, neurología y más en Zapotlanejo, Jalisco.',
 };
 
 export default function EspecialidadesPage() {
@@ -25,7 +24,7 @@ export default function EspecialidadesPage() {
           </nav>
           <h1>Especialidades Médicas</h1>
           <p className="page-hero__subtitle">
-            Contamos con 20 especialidades médicas para atender todas tus necesidades de salud con médicos certificados y comprometidos.
+            Contamos con 19 especialidades médicas para atender todas tus necesidades de salud con médicos certificados y comprometidos.
           </p>
         </div>
       </section>
@@ -35,9 +34,12 @@ export default function EspecialidadesPage() {
           <EspecialidadesGrid especialidades={especialidades} />
 
           <ScrollReveal>
-            <div data-animate style={{ maxWidth: '600px', margin: 'var(--space-12) auto 0', textAlign: 'center' }}>
-              <h3 style={{ marginBottom: 'var(--space-4)', color: 'var(--color-primary-900)' }}>Nuestros Quirófanos</h3>
-              <VideoPlayer src="/videos/quirofanos.mp4" style={{ width: '100%', aspectRatio: '9/16', maxHeight: '500px' }} />
+            <div data-animate style={{ maxWidth: '800px', margin: 'var(--space-12) auto 0', textAlign: 'center' }}>
+              <h3 style={{ marginBottom: 'var(--space-4)', color: 'var(--color-primary-900)' }}>Nuestros Consultorios</h3>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'var(--space-4)' }}>
+                <img src="/images/hospital/instalaciones/consultorios.webp" alt="Consultorios del Hospital Santa Fe" style={{ width: '100%', borderRadius: 'var(--radius-lg)', objectFit: 'cover', aspectRatio: '4/3' }} />
+                <img src="/images/hospital/instalaciones/consultorios-1.webp" alt="Consultorios del Hospital Santa Fe" style={{ width: '100%', borderRadius: 'var(--radius-lg)', objectFit: 'cover', aspectRatio: '4/3' }} />
+              </div>
             </div>
           </ScrollReveal>
         </div>
