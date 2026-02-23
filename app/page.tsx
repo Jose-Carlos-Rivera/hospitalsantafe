@@ -1,14 +1,9 @@
 import ScrollReveal from '@/components/common/ScrollReveal';
+import TestimonialsCarousel from '@/components/common/TestimonialsCarousel';
 import Link from 'next/link';
 import { getWhatsAppUrl, PHONE_LANDLINE, PHONE_LANDLINE_DISPLAY } from '@/lib/data/navigation';
 import testimoniosJson from '@/lib/data/testimonios.json';
 import './page.css';
-
-const STAR_SVG = (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-  </svg>
-);
 
 export default function Home() {
   return (
@@ -482,26 +477,7 @@ export default function Home() {
             </p>
           </ScrollReveal>
 
-          <ScrollReveal stagger className="testimonials-grid">
-            {testimoniosJson.slice(0, 3).map((t) => (
-              <div key={t.id} className="testimonial-card" data-animate>
-                <div className="testimonial-card__quote">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" opacity="0.3">
-                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151C7.563 6.068 6 8.789 6 11h4v10H0z" />
-                  </svg>
-                </div>
-                <p className="testimonial-card__text">&ldquo;{t.texto}&rdquo;</p>
-                <div className="testimonial-card__author">
-                  <span className="testimonial-card__name">{t.nombre}</span>
-                  <div className="testimonial-card__stars">
-                    {Array.from({ length: t.estrellas }).map((_, i) => (
-                      <span key={i}>{STAR_SVG}</span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </ScrollReveal>
+          <TestimonialsCarousel testimonios={testimoniosJson} />
         </div>
       </section>
 

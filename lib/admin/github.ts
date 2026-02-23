@@ -34,8 +34,9 @@ export async function commitFile(
     throw new Error(`Error al leer archivo en GitHub: ${getRes.status} — ${err}`);
   }
 
-  // 2. Base64-encode the new content
-  const encoded = Buffer.from(content, 'utf-8').toString('base64');
+  // 2. Ensure trailing newline (Git convention) and base64-encode
+  const finalContent = content.endsWith('\n') ? content : content + '\n';
+  const encoded = Buffer.from(finalContent, 'utf-8').toString('base64');
 
   // 3. Commit (create or update)
   const putRes = await fetch(

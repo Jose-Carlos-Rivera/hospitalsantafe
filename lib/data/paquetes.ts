@@ -24,6 +24,8 @@ export interface CategoriaPaquete {
   paquetes: Paquete[];
 }
 
+import preciosEditables from './precios-editables.json';
+
 export const categoriasPaquetes: CategoriaPaquete[] = [
   {
     id: "maternidad",
@@ -33,7 +35,7 @@ export const categoriasPaquetes: CategoriaPaquete[] = [
       {
         id: "parto-natural",
         nombre: "Paquete Parto Natural",
-        precio: "$28,450.00",
+        precio: `$${preciosEditables.parto_natural}`,
         categoria: "maternidad",
         destacado: false,
         descripcion: "Paquete integral para parto vaginal que incluye atención completa del parto, honorarios médicos, hospitalización y atención del recién nacido.",
@@ -55,7 +57,7 @@ export const categoriasPaquetes: CategoriaPaquete[] = [
       {
         id: "cesarea",
         nombre: "Paquete Cesárea",
-        precio: "$33,000.00",
+        precio: `$${preciosEditables.cesarea}`,
         categoria: "maternidad",
         destacado: true,
         descripcion: "Paquete completo para parto por cesárea programada con hospitalización de 2 días, anestesia y atención integral para mamá y bebé.",

@@ -7,8 +7,8 @@ import { commitFile } from '@/lib/admin/github';
 // ─── Auth Actions ─────────────────────────────────────────────────────────────
 
 export async function loginAction(formData: FormData) {
-  const password = formData.get('password') as string;
-  const correct = process.env.ADMIN_PASSWORD;
+  const password = (formData.get('password') as string ?? '').trim();
+  const correct = (process.env.ADMIN_PASSWORD ?? '').trim();
 
   if (!correct) {
     redirect('/admin?error=config');
