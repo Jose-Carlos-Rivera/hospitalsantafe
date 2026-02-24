@@ -2,11 +2,15 @@ import ScrollReveal from '@/components/common/ScrollReveal';
 import VideoPlayer from '@/components/common/VideoPlayer';
 import type { Metadata } from 'next';
 import { getWhatsAppUrl, PHONE_LANDLINE, PHONE_LANDLINE_DISPLAY } from '@/lib/data/navigation';
+import preciosEditables from '@/lib/data/precios-editables.json';
 import './page.css';
+
+const precioPartoCorto = preciosEditables.parto_natural.replace(/\.00$/, '');
+const precioCesareaCorto = preciosEditables.cesarea.replace(/\.00$/, '');
 
 export const metadata: Metadata = {
     title: 'Paquetes de Maternidad',
-    description: 'Paquetes de maternidad desde $28,450. Consultas prenatales, ecosonogramas 3D/4D, atención por especialistas. Apartado desde $1,000 pesos.',
+    description: `Paquetes de maternidad desde $${precioPartoCorto}. Consultas prenatales, ecosonogramas 3D/4D, atención por especialistas. Apartado desde $1,000 pesos.`,
 };
 
 export default function MaternidadPage() {
@@ -48,7 +52,7 @@ export default function MaternidadPage() {
                                 </svg>
                             </div>
                             <h3>Precios accesibles</h3>
-                            <p>Paquetes desde $28,450 con facilidad de pago</p>
+                            <p>Paquetes desde ${precioPartoCorto} con facilidad de pago</p>
                         </div>
 
                         <div className="benefit-card" data-animate>
@@ -169,7 +173,7 @@ export default function MaternidadPage() {
                                 <h3>Paquete de Parto</h3>
                                 <div className="package-card__price">
                                     <span className="price-currency">$</span>
-                                    <span className="price-amount">28,450</span>
+                                    <span className="price-amount">{precioPartoCorto}</span>
                                     <span className="price-note">*</span>
                                 </div>
                                 <p className="price-description">Habitación Normal</p>
@@ -190,7 +194,7 @@ export default function MaternidadPage() {
                                 </ul>
 
                                 <a
-                                    href={getWhatsAppUrl('Hola, me interesa información sobre el Paquete de Parto Natural de $28,450')}
+                                    href={getWhatsAppUrl(`Hola, me interesa información sobre el Paquete de Parto Natural de $${precioPartoCorto}`)}
                                     className="btn btn--rosa"
                                     style={{ width: '100%', marginTop: 'var(--space-6)' }}
                                     target="_blank"
@@ -213,7 +217,7 @@ export default function MaternidadPage() {
                                 <h3>Paquete de Ces&aacute;rea</h3>
                                 <div className="package-card__price">
                                     <span className="price-currency">$</span>
-                                    <span className="price-amount">33,000</span>
+                                    <span className="price-amount">{precioCesareaCorto}</span>
                                     <span className="price-note">*</span>
                                 </div>
                                 <p className="price-description">Habitación Normal</p>
@@ -234,7 +238,7 @@ export default function MaternidadPage() {
                                 </ul>
 
                                 <a
-                                    href={getWhatsAppUrl('Hola, me interesa información sobre el Paquete de Cesárea de $33,000')}
+                                    href={getWhatsAppUrl(`Hola, me interesa información sobre el Paquete de Cesárea de $${precioCesareaCorto}`)}
                                     className="btn btn--rosa"
                                     style={{ width: '100%', marginTop: 'var(--space-6)' }}
                                     target="_blank"

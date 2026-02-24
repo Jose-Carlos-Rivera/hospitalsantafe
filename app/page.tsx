@@ -3,6 +3,7 @@ import TestimonialsCarousel from '@/components/common/TestimonialsCarousel';
 import Link from 'next/link';
 import { getWhatsAppUrl, PHONE_LANDLINE, PHONE_LANDLINE_DISPLAY } from '@/lib/data/navigation';
 import testimoniosJson from '@/lib/data/testimonios.json';
+import preciosEditables from '@/lib/data/precios-editables.json';
 import './page.css';
 
 export default function Home() {
@@ -137,11 +138,11 @@ export default function Home() {
               <div className="paquetes-preview">
                 <div className="paquete-mini">
                   <span className="paquete-label">Parto</span>
-                  <span className="paquete-precio">$28,450.00</span>
+                  <span className="paquete-precio">{`$${preciosEditables.parto_natural}`}</span>
                 </div>
                 <div className="paquete-mini">
                   <span className="paquete-label">Ces&aacute;rea</span>
-                  <span className="paquete-precio">$33,000.00</span>
+                  <span className="paquete-precio">{`$${preciosEditables.cesarea}`}</span>
                 </div>
               </div>
 
