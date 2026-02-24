@@ -3,6 +3,7 @@ import VideoPlayer from '@/components/common/VideoPlayer';
 import type { Metadata } from 'next';
 import { getWhatsAppUrl, PHONE_LANDLINE, PHONE_LANDLINE_DISPLAY } from '@/lib/data/navigation';
 import preciosEditables from '@/lib/data/precios-editables.json';
+import faqsJson from '@/lib/data/faqs.json';
 import './page.css';
 
 const precioPartoCorto = preciosEditables.parto_natural.replace(/\.00$/, '');
@@ -364,45 +365,12 @@ export default function MaternidadPage() {
                     </div>
 
                     <ScrollReveal stagger className="faq-list">
-                        <details className="faq-item" data-animate>
-                            <summary>¿Puede mi familiar estar presente durante el parto?</summary>
-                            <p>Sí, puede estar presente un familiar durante el parto o la cesárea si así lo desea. Entendemos la importancia del apoyo emocional en este momento tan especial.</p>
-                        </details>
-
-                        <details className="faq-item" data-animate>
-                            <summary>¿Cuánto debo de abonar cada mes?</summary>
-                            <p>No hay una cantidad fija obligatoria. Lo recomendable es abonar mínimo $1,000 pesos cada mes durante tu control prenatal para que el paquete esté casi pagado al final del embarazo. Puedes hacer abonos mayores según tu conveniencia.</p>
-                        </details>
-
-                        <details className="faq-item" data-animate>
-                            <summary>¿Tienen diferentes tipos de habitaciones?</summary>
-                            <p>Sí, tenemos 3 tipos de habitaciones: Habitación Normal (Privada) incluida en el paquete, Habitación Suite con mayor espacio, y Habitación Master Suite con amenidades premium. Las Suite y Master Suite tienen un costo adicional.</p>
-                        </details>
-
-                        <details className="faq-item" data-animate>
-                            <summary>¿Puedo traer a mi ginecólogo(a) a atender mi parto?</summary>
-                            <p>Claro que sí, puedes solicitar que tu ginecólogo(a) de confianza atienda tu parto en nuestras instalaciones. Solo es necesario comentarlo con anticipación para coordinar días u horarios según disponibilidad del especialista.</p>
-                        </details>
-
-                        <details className="faq-item" data-animate>
-                            <summary>¿Aceptan tarjetas de crédito y débito?</summary>
-                            <p>Sí, aceptamos todas las tarjetas de débito y de crédito Visa y MasterCard. Excepto American Express.</p>
-                        </details>
-
-                        <details className="faq-item" data-animate>
-                            <summary>¿Se puede pagar a meses sin intereses?</summary>
-                            <p>Actualmente tenemos el servicio de meses sin intereses disponible con tarjetas Bancomer. Consulta las opciones de plazo al momento de realizar tu pago.</p>
-                        </details>
-
-                        <details className="faq-item" data-animate>
-                            <summary>¿Tienen servicio de urgencias las 24 horas?</summary>
-                            <p>Sí, el servicio de urgencias está disponible las 24 horas del día, los 365 días del año. Contamos con personal médico y de enfermería de guardia en todo momento.</p>
-                        </details>
-
-                        <details className="faq-item" data-animate>
-                            <summary>¿Los ecosonogramas 3D/4D tienen costo adicional?</summary>
-                            <p>Los ecosonogramas 2D de rutina están incluidos en las consultas prenatales. Los ecosonogramas 3D/4D/5D tienen precio especial para pacientes con paquete de maternidad. Consulta tarifas en tu cita prenatal.</p>
-                        </details>
+                        {faqsJson.map((faq) => (
+                            <details key={faq.id} className="faq-item" data-animate>
+                                <summary>{faq.pregunta}</summary>
+                                <p>{faq.respuesta}</p>
+                            </details>
+                        ))}
                     </ScrollReveal>
                 </div>
             </section>

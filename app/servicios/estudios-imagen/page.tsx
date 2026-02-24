@@ -4,6 +4,7 @@ import VideoPlayer from '@/components/common/VideoPlayer';
 import EstudiosGrid from '@/components/servicios/EstudiosGrid';
 import { estudiosImagen, otrosServicios } from '@/lib/data/estudios-imagen';
 import { getWhatsAppUrl } from '@/lib/data/navigation';
+import horariosJson from '@/lib/data/horarios.json';
 import '../servicios.css';
 
 export const metadata = {
@@ -125,7 +126,7 @@ export default function EstudiosImagenPage() {
                 <strong>Resultados rápidos:</strong> La mayoría de nuestros estudios están disponibles en un plazo de 24 a 48 horas. Los rayos X y electrocardiogramas tienen resultados inmediatos.
               </p>
               <p>
-                <strong>Horarios:</strong> Servicio de lunes a sábado de 7:00 AM a 8:00 PM. Urgencias con disponibilidad las 24 horas.
+                <strong>Horarios:</strong> {horariosJson.estudios_imagen.horario_semana}. {horariosJson.estudios_imagen.horario_urgencias}.
               </p>
             </div>
           </ScrollReveal>

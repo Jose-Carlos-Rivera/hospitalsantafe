@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import ScrollReveal from '@/components/common/ScrollReveal';
+import preciosJson from '@/lib/data/precios-editables.json';
 import './instalaciones.css';
 
 export const metadata = {
@@ -40,7 +41,7 @@ export default function InstalacionesPage() {
               </div>
               <div className="instalacion-hub-card__content">
                 <h2>Habitaciones</h2>
-                <p>Habitaciones privadas desde $1,200/día y compartidas desde $800/día. Cómodas, limpias y con atención de enfermería 24/7.</p>
+                <p>{`Habitaciones privadas desde $${preciosJson.habitacion_privada}/día y compartidas desde $${preciosJson.habitacion_compartida}/día. Cómodas, limpias y con atención de enfermería 24/7.`}</p>
                 <span className="instalacion-hub-card__link">
                   Ver habitaciones
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
@@ -76,7 +77,7 @@ export default function InstalacionesPage() {
               </div>
               <div className="instalacion-hub-card__content">
                 <h2>Cafetería</h2>
-                <p>Abierta de 7AM a 8PM con desayunos desde $50, menú del día desde $80 y servicio a habitación disponible.</p>
+                <p>{`Abierta de 7AM a 8PM con desayunos desde $${preciosJson.desayuno_desde}, menú del día desde $${preciosJson.menu_dia_desde} y servicio a habitación disponible.`}</p>
                 <span className="instalacion-hub-card__link">
                   Ver cafetería
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7" /></svg>

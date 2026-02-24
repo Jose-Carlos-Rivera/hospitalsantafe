@@ -1,0 +1,26 @@
+[
+  {
+    "id": "experiencia",
+    "numero": "20+",
+    "label": "Años de experiencia",
+    "icono": "shield"
+  },
+  {
+    "id": "medicos",
+    "numero": "15+",
+    "label": "Médicos especialistas",
+    "icono": "users"
+  },
+  {
+    "id": "urgencias",
+    "numero": "24/7",
+    "label": "Urgencias",
+    "icono": "clock"
+  },
+  {
+    "id": "fundacion",
+    "numero": "2003",
+    "label": "Desde",
+    "icono": "calendar"
+  }
+]

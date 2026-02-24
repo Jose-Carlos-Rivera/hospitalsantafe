@@ -1,0 +1,32 @@
+{
+  "urgencias": {
+    "label": "Urgencias",
+    "horario": "24 horas, 365 días"
+  },
+  "consultas": {
+    "label": "Consultas",
+    "horario_semana": "Lun - Vie: 8:00 AM - 8:00 PM",
+    "horario_sabado": "Sábados: 9:00 AM - 2:00 PM"
+  },
+  "farmacia": {
+    "label": "Farmacia",
+    "horario_semana": "Lunes a Sábado: 8:00 AM - 9:00 PM",
+    "horario_finde": "Domingos y días festivos: 9:00 AM - 3:00 PM"
+  },
+  "cafeteria": {
+    "label": "Cafetería",
+    "horario_semana": "Lunes a Viernes: 9:00 AM - 8:00 PM",
+    "horario_finde": "Sábado y Domingo: 9:00 AM - 4:00 PM"
+  },
+  "estudios_imagen": {
+    "label": "Estudios de Imagen",
+    "horario_semana": "Lunes a Sábado: 7:00 AM - 8:00 PM",
+    "horario_urgencias": "Urgencias con disponibilidad las 24 horas"
+  },
+  "cuneros_visitas": {
+    "label": "Cuneros (Visitas)",
+    "horario_padres": "Padres: en cualquier momento",
+    "horario_familiares": "Familiares: 10:00 AM - 8:00 PM",
+    "nota": "Máximo 2 visitantes a la vez"
+  }
+}

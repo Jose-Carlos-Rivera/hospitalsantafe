@@ -73,6 +73,68 @@ export default function PreciosClient({ initialPrecios }: Props) {
         </div>
       </div>
 
+      {/* Precios de Habitaciones y Cafetería */}
+      <div className="admin-card">
+        <h2>Precios de Habitaciones y Cafetería</h2>
+        <div className="admin-form">
+          <div className="admin-form-row">
+            <div className="admin-form-group">
+              <label>Habitación Privada (por día)</label>
+              <div className="admin-price-input-wrap">
+                <span>$</span>
+                <input
+                  type="text"
+                  placeholder="1,200"
+                  value={precios.habitacion_privada}
+                  onChange={(e) => update('habitacion_privada', e.target.value)}
+                />
+              </div>
+            </div>
+            <div className="admin-form-group">
+              <label>Habitación Compartida (por día)</label>
+              <div className="admin-price-input-wrap">
+                <span>$</span>
+                <input
+                  type="text"
+                  placeholder="800"
+                  value={precios.habitacion_compartida}
+                  onChange={(e) => update('habitacion_compartida', e.target.value)}
+                />
+              </div>
+            </div>
+          </div>
+          <div className="admin-form-row">
+            <div className="admin-form-group">
+              <label>Desayunos desde</label>
+              <div className="admin-price-input-wrap">
+                <span>$</span>
+                <input
+                  type="text"
+                  placeholder="50"
+                  value={precios.desayuno_desde}
+                  onChange={(e) => update('desayuno_desde', e.target.value)}
+                />
+              </div>
+            </div>
+            <div className="admin-form-group">
+              <label>Menú del día desde</label>
+              <div className="admin-price-input-wrap">
+                <span>$</span>
+                <input
+                  type="text"
+                  placeholder="80"
+                  value={precios.menu_dia_desde}
+                  onChange={(e) => update('menu_dia_desde', e.target.value)}
+                />
+              </div>
+            </div>
+          </div>
+          <p style={{ fontSize: '12px', color: '#888', margin: '4px 0 0' }}>
+            Estos precios aparecen en la página de Instalaciones.
+          </p>
+        </div>
+      </div>
+
       {/* Datos de contacto */}
       <div className="admin-card">
         <h2>Datos de Contacto</h2>

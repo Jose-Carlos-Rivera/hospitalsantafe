@@ -4,7 +4,24 @@ import Link from 'next/link';
 import { getWhatsAppUrl, PHONE_LANDLINE, PHONE_LANDLINE_DISPLAY } from '@/lib/data/navigation';
 import testimoniosJson from '@/lib/data/testimonios.json';
 import preciosEditables from '@/lib/data/precios-editables.json';
+import estadisticasJson from '@/lib/data/estadisticas.json';
+import doctoresJson from '@/lib/data/doctores.json';
 import './page.css';
+
+const STAT_ICONS = {
+  shield: (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+  ),
+  users: (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
+  ),
+  clock: (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
+  ),
+  calendar: (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2" /><line x1="16" y1="2" x2="16" y2="6" /><line x1="8" y1="2" x2="8" y2="6" /><line x1="3" y1="10" x2="21" y2="10" /></svg>
+  ),
+};
 
 export default function Home() {
   return (
@@ -88,34 +105,15 @@ export default function Home() {
       <section className="trust-bar">
         <div className="container">
           <ScrollReveal stagger className="trust-bar__grid">
-            <div className="trust-bar__item" data-animate>
-              <div className="trust-bar__icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+            {estadisticasJson.map((stat) => (
+              <div key={stat.id} className="trust-bar__item" data-animate>
+                <div className="trust-bar__icon">
+                  {STAT_ICONS[stat.icono as keyof typeof STAT_ICONS]}
+                </div>
+                <span className="trust-bar__number">{stat.numero}</span>
+                <span className="trust-bar__label">{stat.label}</span>
               </div>
-              <span className="trust-bar__number">20+</span>
-              <span className="trust-bar__label">A&ntilde;os de experiencia</span>
-            </div>
-            <div className="trust-bar__item" data-animate>
-              <div className="trust-bar__icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
-              </div>
-              <span className="trust-bar__number">15+</span>
-              <span className="trust-bar__label">M&eacute;dicos especialistas</span>
-            </div>
-            <div className="trust-bar__item" data-animate>
-              <div className="trust-bar__icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
-              </div>
-              <span className="trust-bar__number">24/7</span>
-              <span className="trust-bar__label">Urgencias</span>
-            </div>
-            <div className="trust-bar__item" data-animate>
-              <div className="trust-bar__icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2" /><line x1="16" y1="2" x2="16" y2="6" /><line x1="8" y1="2" x2="8" y2="6" /><line x1="3" y1="10" x2="21" y2="10" /></svg>
-              </div>
-              <span className="trust-bar__number">2003</span>
-              <span className="trust-bar__label">Desde</span>
-            </div>
+            ))}
           </ScrollReveal>
         </div>
       </section>
@@ -328,44 +326,17 @@ export default function Home() {
           </ScrollReveal>
 
           <ScrollReveal stagger className="doctors-grid">
-            <div className="doctor-card" data-animate>
-              <div className="doctor-image">
-                <img
-                  src="/images/hospital/medicos/dr-juan-manuel-davalos.webp"
-                  alt="Dr. Juan Manuel Dávalos"
-                />
+            {doctoresJson.map((doc) => (
+              <div key={doc.id} className="doctor-card" data-animate>
+                <div className="doctor-image">
+                  <img src={doc.foto} alt={doc.nombre} />
+                </div>
+                <div className="doctor-info">
+                  <h3>{doc.nombre}</h3>
+                  <span className="doctor-badge">{doc.cargo}</span>
+                </div>
               </div>
-              <div className="doctor-info">
-                <h3>Dr. Juan Manuel Dávalos</h3>
-                <span className="doctor-badge">Director del Área Médica</span>
-              </div>
-            </div>
-
-            <div className="doctor-card" data-animate>
-              <div className="doctor-image">
-                <img
-                  src="/images/hospital/medicos/dra-maria-gonzalez.webp"
-                  alt="Dra. María González"
-                />
-              </div>
-              <div className="doctor-info">
-                <h3>Dra. María González</h3>
-                <span className="doctor-badge">Coordinadora de Médicos</span>
-              </div>
-            </div>
-
-            <div className="doctor-card" data-animate>
-              <div className="doctor-image">
-                <img
-                  src="/images/hospital/medicos/dr-javier-barajas.webp"
-                  alt="Dr. Javier Barajas"
-                />
-              </div>
-              <div className="doctor-info">
-                <h3>Dr. Javier Barajas</h3>
-                <span className="doctor-badge">Cirujano General</span>
-              </div>
-            </div>
+            ))}
           </ScrollReveal>
 
           <div className="text-center section-cta-spacer">

@@ -1,0 +1,54 @@
+{
+  "secciones": [
+    {
+      "id": "desayunos",
+      "titulo": "Desayunos (9:00 AM - 11:00 AM)",
+      "items": [
+        "Desayunos completos desde $60.00",
+        "Jugos naturales",
+        "Fruta fresca",
+        "Chilaquiles",
+        "Huevo al gusto"
+      ]
+    },
+    {
+      "id": "comidas",
+      "titulo": "Comidas (1:00 PM - 4:00 PM)",
+      "items": [
+        "Menú del día $90.00",
+        "Platos a la carta",
+        "Ensaladas"
+      ]
+    },
+    {
+      "id": "todo-el-dia",
+      "titulo": "Todo el día",
+      "items": [
+        "Café y bebidas",
+        "Refrescos y agua",
+        "Snacks",
+        "Sandwiches",
+        "Burritos"
+      ]
+    }
+  ],
+  "servicio_habitaciones": "Disponible para pacientes hospitalizados y sus familiares, Ext. 30.",
+  "info_cards": [
+    {
+      "titulo": "Abierta al público",
+      "texto": "No necesitas ser paciente para visitarnos. Nuestra cafetería está abierta a cualquier persona que desee disfrutar de nuestros alimentos."
+    },
+    {
+      "titulo": "Dentro del hospital",
+      "texto": "Ubicada en la planta baja del hospital, a pasos de la recepción principal. Ideal para familiares que acompañan a sus pacientes."
+    },
+    {
+      "titulo": "Precios accesibles",
+      "texto": "Desayunos desde $60 y comidas completas desde $90. Ofrecemos opciones para todos los presupuestos."
+    },
+    {
+      "titulo": "Variedad de opciones",
+      "texto": "Desde desayunos completos hasta comidas balanceadas y snacks saludables, tenemos opciones para todos los gustos y necesidades dietéticas."
+    }
+  ]
+}

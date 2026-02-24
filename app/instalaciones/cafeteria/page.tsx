@@ -2,6 +2,8 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import ScrollReveal from '@/components/common/ScrollReveal';
 import VideoPlayer from '@/components/common/VideoPlayer';
+import cafeteriaJson from '@/lib/data/cafeteria.json';
+import horariosJson from '@/lib/data/horarios.json';
 import '../instalaciones.css';
 
 export const metadata: Metadata = {
@@ -57,44 +59,30 @@ export default function Cafeteria() {
                   <h3>Horario de Servicio</h3>
                   <div className="horario-item">
                     <strong>Lunes a Viernes:</strong>
-                    <span>9:00 AM - 8:00 PM</span>
+                    <span>{horariosJson.cafeteria.horario_semana.split(': ')[1]}</span>
                   </div>
                   <div className="horario-item">
                     <strong>Sábado y Domingo:</strong>
-                    <span>9:00 AM - 4:00 PM</span>
+                    <span>{horariosJson.cafeteria.horario_finde.split(': ')[1]}</span>
                   </div>
                 </div>
 
                 <h3>Menú</h3>
                 <div className="menu-section">
-                  <h4>Desayunos (9:00 AM - 11:00 AM)</h4>
-                  <ul>
-                    <li>Desayunos completos desde $60.00</li>
-                    <li>Jugos naturales</li>
-                    <li>Fruta fresca</li>
-                    <li>Chilaquiles</li>
-                    <li>Huevo al gusto</li>
-                  </ul>
-
-                  <h4>Comidas (1:00 PM - 4:00 PM)</h4>
-                  <ul>
-                    <li>Menú del día $90.00</li>
-                    <li>Platos a la carta</li>
-                    <li>Ensaladas</li>
-                  </ul>
-
-                  <h4>Todo el día</h4>
-                  <ul>
-                    <li>Café y bebidas</li>
-                    <li>Refrescos y agua</li>
-                    <li>Snacks</li>
-                    <li>Sandwiches</li>
-                    <li>Burritos</li>
-                  </ul>
+                  {cafeteriaJson.secciones.map((seccion) => (
+                    <div key={seccion.id}>
+                      <h4>{seccion.titulo}</h4>
+                      <ul>
+                        {seccion.items.map((item, idx) => (
+                          <li key={idx}>{item}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
                 </div>
 
                 <div className="info-box">
-                  <strong>Servicio a habitaciones:</strong> Disponible para pacientes hospitalizados y sus familiares, Ext. 30.
+                  <strong>Servicio a habitaciones:</strong> {cafeteriaJson.servicio_habitaciones}
                 </div>
               </div>
             </div>
@@ -105,22 +93,12 @@ export default function Cafeteria() {
       <section className="section" style={{ background: 'var(--color-neutral-50)' }}>
         <div className="container">
           <ScrollReveal stagger className="info-grid">
-            <div className="info-item" data-animate>
-              <h4>Abierta al público</h4>
-              <p>No necesitas ser paciente para visitarnos. Nuestra cafetería está abierta a cualquier persona que desee disfrutar de nuestros alimentos.</p>
-            </div>
-            <div className="info-item" data-animate>
-              <h4>Dentro del hospital</h4>
-              <p>Ubicada en la planta baja del hospital, a pasos de la recepción principal. Ideal para familiares que acompañan a sus pacientes.</p>
-            </div>
-            <div className="info-item" data-animate>
-              <h4>Precios accesibles</h4>
-              <p>Desayunos desde $60 y comidas completas desde $90. Ofrecemos opciones para todos los presupuestos.</p>
-            </div>
-            <div className="info-item" data-animate>
-              <h4>Variedad de opciones</h4>
-              <p>Desde desayunos completos hasta comidas balanceadas y snacks saludables, tenemos opciones para todos los gustos y necesidades dietéticas.</p>
-            </div>
+            {cafeteriaJson.info_cards.map((card, idx) => (
+              <div key={idx} className="info-item" data-animate>
+                <h4>{card.titulo}</h4>
+                <p>{card.texto}</p>
+              </div>
+            ))}
           </ScrollReveal>
         </div>
       </section>

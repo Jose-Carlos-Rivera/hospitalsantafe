@@ -1,0 +1,27 @@
+[
+  {
+    "id": "medicamentos",
+    "titulo": "Medicamentos de patente y genéricos",
+    "descripcion": "Amplio inventario de medicamentos tanto de marca como genéricos intercambiables de alta calidad."
+  },
+  {
+    "id": "curacion",
+    "titulo": "Material de curación",
+    "descripcion": "Gasas, vendas, algodón, cintas adhesivas y todo el material necesario para curaciones, cuidados postquirúrgicos y artículos de ortopedia."
+  },
+  {
+    "id": "salud",
+    "titulo": "Productos para la salud",
+    "descripcion": "Artículos de higiene personal, suplementos vitamínicos y productos para el bienestar general."
+  },
+  {
+    "id": "recetas",
+    "titulo": "Surtido de recetas médicas",
+    "descripcion": "Surtimos recetas de los médicos del hospital y de consultorios externos. Medicamentos controlados con receta retenida."
+  },
+  {
+    "id": "maternidad",
+    "titulo": "Productos de Maternidad y bebés",
+    "descripcion": "Artículos para bebé, lactancia, fajas post parto."
+  }
+]

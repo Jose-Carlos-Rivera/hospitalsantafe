@@ -3,5 +3,9 @@
   "cesarea": "33,000.00",
   "telefono_whatsapp": "3331198625",
   "telefono_fijo": "3737344205",
-  "telefono_movil": "3731065183"
+  "telefono_movil": "3731065183",
+  "habitacion_privada": "1,200",
+  "habitacion_compartida": "800",
+  "desayuno_desde": "50",
+  "menu_dia_desde": "80"
 }

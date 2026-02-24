@@ -1,0 +1,36 @@
+{
+  "mision": "Contribuir a la salud y bienestar de cada paciente, proporcionando cuidados necesarios con seguridad, calidad, calidez, respeto, humanidad y accesibilidad atendidos por profesionales calificados.",
+  "vision": "Ser el hospital de mayor confianza en la zona, reconocido por su calidad médica, actitud de servicio y cercanía con la comunidad. Consolidarnos como una institución que crece de manera responsable, fortalece el empleo local y mejora continuamente para ofrecer cada día una mejor atención.",
+  "valores": [
+    {
+      "id": "compromiso",
+      "nombre": "Compromiso",
+      "descripcion": "Dedicados al bienestar y recuperación de cada paciente"
+    },
+    {
+      "id": "excelencia",
+      "nombre": "Excelencia",
+      "descripcion": "Estándares de calidad en todos nuestros servicios médicos"
+    },
+    {
+      "id": "humanidad",
+      "nombre": "Humanidad",
+      "descripcion": "Trato cálido y empático con cada paciente y familiar"
+    },
+    {
+      "id": "disponibilidad",
+      "nombre": "Disponibilidad",
+      "descripcion": "Atención médica 24/7 para emergencias y urgencias"
+    },
+    {
+      "id": "confianza",
+      "nombre": "Confianza",
+      "descripcion": "Construimos relaciones basadas en honestidad, ética médica y seguridad en cada atención."
+    },
+    {
+      "id": "cercania",
+      "nombre": "Cercanía",
+      "descripcion": "Mantenemos una relación próxima con nuestros pacientes y sus familias, ofreciendo atención personalizada y un trato accesible tanto a la comunidad como a quienes nos visitan desde otras localidades."
+    }
+  ]
+}

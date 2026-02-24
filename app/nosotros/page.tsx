@@ -2,11 +2,51 @@ import Link from 'next/link';
 import ScrollReveal from '@/components/common/ScrollReveal';
 import VideoPlayer from '@/components/common/VideoPlayer';
 import type { Metadata } from 'next';
+import nosotrosJson from '@/lib/data/nosotros.json';
 import './nosotros.css';
 
 export const metadata: Metadata = {
   title: 'Quiénes Somos',
   description: 'Conoce la historia de Hospital Santa Fe. Más de 20 años brindando atención médica de calidad en Zapotlanejo, Jalisco. Nuestro equipo, misión y valores.',
+};
+
+const VALOR_ICONS: Record<string, React.ReactNode> = {
+  compromiso: (
+    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+    </svg>
+  ),
+  excelencia: (
+    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <path d="M12 2L2 7l10 5 10-5-10-5z" />
+      <path d="M2 17l10 5 10-5M2 12l10 5 10-5" />
+    </svg>
+  ),
+  humanidad: (
+    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+      <circle cx="9" cy="7" r="4" />
+      <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+    </svg>
+  ),
+  disponibilidad: (
+    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <circle cx="12" cy="12" r="10" />
+      <polyline points="12 6 12 12 16 14" />
+    </svg>
+  ),
+  confianza: (
+    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+    </svg>
+  ),
+  cercania: (
+    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+      <polyline points="9 22 9 12 15 12 15 22" />
+    </svg>
+  ),
 };
 
 export default function Nosotros() {
@@ -55,7 +95,7 @@ export default function Nosotros() {
                             </div>
                             <h3>Misión</h3>
                             <p>
-                                Contribuir a la salud y bienestar de cada paciente, proporcionando cuidados necesarios con seguridad, calidad, calidez, respeto, humanidad y accesibilidad atendidos por profesionales calificados.
+                                {nosotrosJson.mision}
                             </p>
                         </div>
                         <div className="mision-vision-card" data-animate="fade-left">
@@ -67,7 +107,7 @@ export default function Nosotros() {
                             </div>
                             <h3>Visión</h3>
                             <p>
-                                Ser el hospital de mayor confianza en la zona, reconocido por su calidad médica, actitud de servicio y cercanía con la comunidad. Consolidarnos como una institución que crece de manera responsable, fortalece el empleo local y mejora continuamente para ofrecer cada día una mejor atención.
+                                {nosotrosJson.vision}
                             </p>
                         </div>
                     </ScrollReveal>
@@ -80,71 +120,15 @@ export default function Nosotros() {
                     <h2 className="text-center">Nuestros Valores</h2>
 
                     <ScrollReveal stagger className="valores-grid">
-                        <div className="valor-card" data-animate>
-                            <div className="valor-icon">
-                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-                                </svg>
+                        {nosotrosJson.valores.map((valor) => (
+                            <div key={valor.id} className="valor-card" data-animate>
+                                <div className="valor-icon">
+                                    {VALOR_ICONS[valor.id]}
+                                </div>
+                                <h3>{valor.nombre}</h3>
+                                <p>{valor.descripcion}</p>
                             </div>
-                            <h3>Compromiso</h3>
-                            <p>Dedicados al bienestar y recuperación de cada paciente</p>
-                        </div>
-
-                        <div className="valor-card" data-animate>
-                            <div className="valor-icon">
-                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                    <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                                    <path d="M2 17l10 5 10-5M2 12l10 5 10-5" />
-                                </svg>
-                            </div>
-                            <h3>Excelencia</h3>
-                            <p>Estándares de calidad en todos nuestros servicios médicos</p>
-                        </div>
-
-                        <div className="valor-card" data-animate>
-                            <div className="valor-icon">
-                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                                    <circle cx="9" cy="7" r="4" />
-                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-                                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                                </svg>
-                            </div>
-                            <h3>Humanidad</h3>
-                            <p>Trato cálido y empático con cada paciente y familiar</p>
-                        </div>
-
-                        <div className="valor-card" data-animate>
-                            <div className="valor-icon">
-                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                    <circle cx="12" cy="12" r="10" />
-                                    <polyline points="12 6 12 12 16 14" />
-                                </svg>
-                            </div>
-                            <h3>Disponibilidad</h3>
-                            <p>Atención médica 24/7 para emergencias y urgencias</p>
-                        </div>
-
-                        <div className="valor-card" data-animate>
-                            <div className="valor-icon">
-                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                                </svg>
-                            </div>
-                            <h3>Confianza</h3>
-                            <p>Construimos relaciones basadas en honestidad, ética médica y seguridad en cada atención.</p>
-                        </div>
-
-                        <div className="valor-card" data-animate>
-                            <div className="valor-icon">
-                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                                    <polyline points="9 22 9 12 15 12 15 22" />
-                                </svg>
-                            </div>
-                            <h3>Cercanía</h3>
-                            <p>Mantenemos una relación próxima con nuestros pacientes y sus familias, ofreciendo atención personalizada y un trato accesible tanto a la comunidad como a quienes nos visitan desde otras localidades.</p>
-                        </div>
+                        ))}
                     </ScrollReveal>
                 </div>
             </section>

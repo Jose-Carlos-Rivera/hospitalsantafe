@@ -2,35 +2,14 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import ScrollReveal from '@/components/common/ScrollReveal';
 import VideoPlayer from '@/components/common/VideoPlayer';
+import farmaciaJson from '@/lib/data/farmacia.json';
+import horariosJson from '@/lib/data/horarios.json';
 import '../instalaciones.css';
 
 export const metadata: Metadata = {
   title: 'Farmacia',
   description: 'Farmacia interna de Hospital Santa Fe en Zapotlanejo. Medicamentos de patente y genéricos, material de curación, surtido de recetas. Disponible para pacientes y público general.',
 };
-
-const serviciosFarmacia = [
-  {
-    titulo: 'Medicamentos de patente y genéricos',
-    descripcion: 'Amplio inventario de medicamentos tanto de marca como genéricos intercambiables de alta calidad.',
-  },
-  {
-    titulo: 'Material de curación',
-    descripcion: 'Gasas, vendas, algodón, cintas adhesivas y todo el material necesario para curaciones, cuidados postquirúrgicos y artículos de ortopedia.',
-  },
-  {
-    titulo: 'Productos para la salud',
-    descripcion: 'Artículos de higiene personal, suplementos vitamínicos y productos para el bienestar general.',
-  },
-  {
-    titulo: 'Surtido de recetas médicas',
-    descripcion: 'Surtimos recetas de los médicos del hospital y de consultorios externos. Medicamentos controlados con receta retenida.',
-  },
-  {
-    titulo: 'Productos de Maternidad y bebés',
-    descripcion: 'Artículos para bebé, lactancia, fajas post parto.',
-  },
-];
 
 export default function Farmacia() {
   return (
@@ -67,17 +46,17 @@ export default function Farmacia() {
                   <h3>Horario de Atención</h3>
                   <div className="horario-item">
                     <strong>Lunes a Sábado:</strong>
-                    <span>8:00 AM - 9:00 PM</span>
+                    <span>{horariosJson.farmacia.horario_semana.split(': ')[1]}</span>
                   </div>
                   <div className="horario-item">
                     <strong>Domingos y días festivos:</strong>
-                    <span>9:00 AM - 3:00 PM</span>
+                    <span>{horariosJson.farmacia.horario_finde.split(': ')[1]}</span>
                   </div>
                 </div>
 
                 <h3>Servicios Disponibles</h3>
                 <div className="servicios-farmacia">
-                  {serviciosFarmacia.map((servicio, index) => (
+                  {farmaciaJson.map((servicio, index) => (
                     <div key={index} className="servicio-item">
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                         <polyline points="20 6 9 17 4 12" />

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "familiar-presente",
+    "pregunta": "¿Puede mi familiar estar presente durante el parto?",
+    "respuesta": "Sí, puede estar presente un familiar durante el parto o la cesárea si así lo desea. Entendemos la importancia del apoyo emocional en este momento tan especial."
+  },
+  {
+    "id": "abono-mensual",
+    "pregunta": "¿Cuánto debo de abonar cada mes?",
+    "respuesta": "No hay una cantidad fija obligatoria. Lo recomendable es abonar mínimo $1,000 pesos cada mes durante tu control prenatal para que el paquete esté casi pagado al final del embarazo. Puedes hacer abonos mayores según tu conveniencia."
+  },
+  {
+    "id": "tipos-habitaciones",
+    "pregunta": "¿Tienen diferentes tipos de habitaciones?",
+    "respuesta": "Sí, tenemos 3 tipos de habitaciones: Habitación Normal (Privada) incluida en el paquete, Habitación Suite con mayor espacio, y Habitación Master Suite con amenidades premium. Las Suite y Master Suite tienen un costo adicional."
+  },
+  {
+    "id": "ginecologo-externo",
+    "pregunta": "¿Puedo traer a mi ginecólogo(a) a atender mi parto?",
+    "respuesta": "Claro que sí, puedes solicitar que tu ginecólogo(a) de confianza atienda tu parto en nuestras instalaciones. Solo es necesario comentarlo con anticipación para coordinar días u horarios según disponibilidad del especialista."
+  },
+  {
+    "id": "tarjetas",
+    "pregunta": "¿Aceptan tarjetas de crédito y débito?",
+    "respuesta": "Sí, aceptamos todas las tarjetas de débito y de crédito Visa y MasterCard. Excepto American Express."
+  },
+  {
+    "id": "meses-sin-intereses",
+    "pregunta": "¿Se puede pagar a meses sin intereses?",
+    "respuesta": "Actualmente tenemos el servicio de meses sin intereses disponible con tarjetas Bancomer. Consulta las opciones de plazo al momento de realizar tu pago."
+  },
+  {
+    "id": "urgencias-24h",
+    "pregunta": "¿Tienen servicio de urgencias las 24 horas?",
+    "respuesta": "Sí, el servicio de urgencias está disponible las 24 horas del día, los 365 días del año. Contamos con personal médico y de enfermería de guardia en todo momento."
+  },
+  {
+    "id": "ecosonogramas",
+    "pregunta": "¿Los ecosonogramas 3D/4D tienen costo adicional?",
+    "respuesta": "Los ecosonogramas 2D de rutina están incluidos en las consultas prenatales. Los ecosonogramas 3D/4D/5D tienen precio especial para pacientes con paquete de maternidad. Consulta tarifas en tu cita prenatal."
+  }
+]

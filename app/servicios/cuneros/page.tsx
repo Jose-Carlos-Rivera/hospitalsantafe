@@ -2,6 +2,7 @@ import Link from 'next/link';
 import ScrollReveal from '@/components/common/ScrollReveal';
 import VideoPlayer from '@/components/common/VideoPlayer';
 import { getWhatsAppUrl } from '@/lib/data/navigation';
+import horariosJson from '@/lib/data/horarios.json';
 import '../servicios.css';
 
 export const metadata = {
@@ -208,9 +209,8 @@ export default function CunerosPage() {
                 <div className="info-item" data-animate>
                   <h4>Horarios de Visita</h4>
                   <p>
-                    Los padres pueden visitar a su bebé en cualquier momento. Para familiares,
-                    el horario de visita es de 10:00 AM a 8:00 PM. Se permite máximo 2 visitantes
-                    a la vez para mantener un ambiente tranquilo.
+                    {horariosJson.cuneros_visitas.horario_padres}. Para familiares,
+                    el horario de visita es {horariosJson.cuneros_visitas.horario_familiares}. {horariosJson.cuneros_visitas.nota} para mantener un ambiente seguro y tranquilo para los recién nacidos.
                   </p>
                 </div>
                 <div className="info-item" data-animate>

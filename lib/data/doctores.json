@@ -1,0 +1,20 @@
+[
+  {
+    "id": "dr-davalos",
+    "nombre": "Dr. Juan Manuel Dávalos",
+    "cargo": "Director del Área Médica",
+    "foto": "/images/hospital/medicos/dr-juan-manuel-davalos.webp"
+  },
+  {
+    "id": "dra-gonzalez",
+    "nombre": "Dra. María González",
+    "cargo": "Coordinadora de Médicos",
+    "foto": "/images/hospital/medicos/dra-maria-gonzalez.webp"
+  },
+  {
+    "id": "dr-barajas",
+    "nombre": "Dr. Javier Barajas",
+    "cargo": "Cirujano General",
+    "foto": "/images/hospital/medicos/dr-javier-barajas.webp"
+  }
+]

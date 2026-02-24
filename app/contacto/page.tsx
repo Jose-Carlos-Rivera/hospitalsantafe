@@ -12,6 +12,7 @@ import {
   GOOGLE_MAPS_LINK,
   GOOGLE_MAPS_EMBED_URL,
 } from '@/lib/data/navigation';
+import horariosJson from '@/lib/data/horarios.json';
 import './contacto.css';
 
 export const metadata = {
@@ -108,15 +109,15 @@ export default function Contacto() {
               <div className="contacto-card__schedule">
                 <div className="schedule-item">
                   <span className="schedule-label">Urgencias</span>
-                  <span className="schedule-value schedule-value--highlight">24 horas, 365 días</span>
+                  <span className="schedule-value schedule-value--highlight">{horariosJson.urgencias.horario}</span>
                 </div>
                 <div className="schedule-item">
                   <span className="schedule-label">Consultas</span>
-                  <span className="schedule-value">Lun - Vie: 8:00 AM - 8:00 PM</span>
+                  <span className="schedule-value">{horariosJson.consultas.horario_semana}</span>
                 </div>
                 <div className="schedule-item">
                   <span className="schedule-label">Sábados</span>
-                  <span className="schedule-value">9:00 AM - 2:00 PM</span>
+                  <span className="schedule-value">{horariosJson.consultas.horario_sabado}</span>
                 </div>
               </div>
             </div>
