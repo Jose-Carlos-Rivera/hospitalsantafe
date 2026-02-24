@@ -53,7 +53,7 @@ export default function InstalacionesPage() {
             <Link href="/instalaciones/farmacia" className="instalacion-hub-card" data-animate>
               <div className="instalacion-hub-card__image">
                 <img
-                  src="https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=600&h=400&fit=crop"
+                  src="/images/hospital/instalaciones/farmacia-nueva.webp"
                   alt="Farmacia del Hospital Santa Fe"
                 />
               </div>

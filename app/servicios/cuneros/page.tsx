@@ -235,7 +235,7 @@ export default function CunerosPage() {
       </section>
 
       {/* CTA Final */}
-      <section className="section cta-final">
+      <section className="section cta-final cta-final--rosa">
         <div className="container">
           <ScrollReveal>
             <div className="cta-final__content" data-animate>

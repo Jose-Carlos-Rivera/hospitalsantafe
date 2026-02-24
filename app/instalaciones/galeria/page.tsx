@@ -12,8 +12,7 @@ const galeriaImages = [
   { src: '/images/hospital/instalaciones/recepcion-2.webp', alt: 'Recepción del hospital', categoria: 'instalaciones' },
   { src: '/images/hospital/instalaciones/recepcion-principal.webp', alt: 'Recepción principal del Hospital Santa Fe', categoria: 'instalaciones' },
   { src: '/images/hospital/instalaciones/recepcion-dr-juan-manuel-1.webp', alt: 'Recepción con Dr. Juan Manuel', categoria: 'instalaciones' },
-  // Entrada y Estacionamiento (4)
-  { src: '/images/hospital/instalaciones/entrada-estacionamiento.webp', alt: 'Entrada principal del Hospital Santa Fe', categoria: 'instalaciones' },
+  // Entrada y Estacionamiento (3)
   { src: '/images/hospital/instalaciones/entrada-estacionamiento-nosotros.webp', alt: 'Fachada del Hospital Santa Fe', categoria: 'instalaciones' },
   { src: '/images/hospital/instalaciones/estacionamiento_1.webp', alt: 'Estacionamiento principal', categoria: 'instalaciones' },
   { src: '/images/hospital/instalaciones/estacionamiento_3.webp', alt: 'Estacionamiento del hospital', categoria: 'instalaciones' },
