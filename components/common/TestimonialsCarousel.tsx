@@ -69,7 +69,7 @@ export default function TestimonialsCarousel({ testimonios }: Props) {
       {/* Cards Grid */}
       <div className="testimonials-grid" style={{ minHeight: '280px' }}>
         {visibleTestimonios.map((t) => (
-          <div key={t.id} className="testimonial-card" data-animate>
+          <div key={t.id} className="testimonial-card">
             <div className="testimonial-card__quote">{QUOTE_SVG}</div>
             <p className="testimonial-card__text">&ldquo;{t.texto}&rdquo;</p>
             <div className="testimonial-card__author">
